@@ -1,0 +1,593 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+	title="Contact Us | String Prairie Heating & Air"
+	description="Contact String Prairie Heating & Air for all your HVAC needs in Bastrop, TX. Call (512) 988-0939 or request a quote online."
+>
+	<section class="page-header">
+		<div class="container">
+			<h1>Contact Us</h1>
+			<p>We're here to help with all your heating and air conditioning needs</p>
+		</div>
+	</section>
+
+	<section class="contact-content">
+		<div class="container">
+			<div class="contact-grid">
+				<div class="contact-info">
+					<h2>Get in Touch</h2>
+					<p class="intro-text">
+						Ready to schedule service or have questions about your HVAC system?
+						We're here to help. Contact us today for professional and courteous service.
+					</p>
+
+					<div class="info-items">
+						<div class="info-item">
+							<div class="info-icon">📞</div>
+							<div class="info-details">
+								<h3>Phone</h3>
+								<a href="tel:5129880939">(512) 988-0939</a>
+								<p>Call us for immediate assistance</p>
+							</div>
+						</div>
+
+						<div class="info-item">
+							<div class="info-icon">📍</div>
+							<div class="info-details">
+								<h3>Location</h3>
+								<p>Rosanky, TX 78953</p>
+								<p>Serving Bastrop County & Surrounding Areas</p>
+							</div>
+						</div>
+
+						<div class="info-item">
+							<div class="info-icon">🌐</div>
+							<div class="info-details">
+								<h3>Website</h3>
+								<p>www.stringprairieheatingandair.com</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="service-hours">
+						<h3>Service Areas</h3>
+						<p>We proudly serve:</p>
+						<ul>
+							<li>Bastrop</li>
+							<li>Rosanky</li>
+							<li>Smithville</li>
+							<li>Elgin</li>
+							<li>Paige</li>
+							<li>And surrounding areas</li>
+						</ul>
+					</div>
+
+					<div class="map-container">
+						<h3>Find Us</h3>
+						<iframe
+							src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3449.7647893!2d-97.3336647!3d29.8914741!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864363ecca03be35%3A0x1f7670034fca8de3!2sString%20Prairie%20Heating%20%26%20Air!5e0!3m2!1sen!2sus!4v1234567890"
+							width="100%"
+							height="300"
+							style="border:0; border-radius: 8px;"
+							allowfullscreen=""
+							loading="lazy"
+							referrerpolicy="no-referrer-when-downgrade">
+						</iframe>
+					</div>
+				</div>
+
+				<div class="contact-form-section">
+					<h2>Request a Quote</h2>
+					<div class="booking-option">
+						<a href="https://book.housecallpro.com/book/String-Prairie-Heating--Air/df82ded280ce43f4a9ee6ee6d36aef76?v2=true" target="_blank" rel="noopener noreferrer" class="booking-btn">
+							📅 Book Online Now
+						</a>
+						<p class="booking-text">Schedule your service instantly with our online booking system</p>
+					</div>
+					<div class="form-divider">
+						<span>Or fill out the form below</span>
+					</div>
+					<form class="contact-form" id="contactForm">
+						<div class="form-group">
+							<label for="name">Name *</label>
+							<input type="text" id="name" name="name" required />
+						</div>
+
+						<div class="form-group">
+							<label for="email">Email *</label>
+							<input type="email" id="email" name="email" required />
+						</div>
+
+						<div class="form-group">
+							<label for="phone">Phone *</label>
+							<input type="tel" id="phone" name="phone" required />
+						</div>
+
+						<div class="form-group">
+							<label for="service">Service Type</label>
+							<select id="service" name="service">
+								<option value="">Select a service</option>
+								<option value="ac-repair">AC Repair</option>
+								<option value="ac-installation">AC Installation</option>
+								<option value="heating-repair">Heating Repair</option>
+								<option value="heating-installation">Heating Installation</option>
+								<option value="maintenance">Maintenance</option>
+								<option value="emergency">Emergency Service</option>
+								<option value="other">Other</option>
+							</select>
+						</div>
+
+						<div class="form-group">
+							<label for="message">Message *</label>
+							<textarea id="message" name="message" rows="5" required></textarea>
+						</div>
+
+						<button type="submit" class="submit-btn">Send Message</button>
+					</form>
+					<div id="formMessage" class="form-message" style="display: none;"></div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="emergency-banner">
+		<div class="container">
+			<h2>Need Emergency Service?</h2>
+			<p>We understand that HVAC emergencies can't wait. Call us now for fast response.</p>
+			<a href="tel:5129880939" class="emergency-btn">Call (512) 988-0939</a>
+		</div>
+	</section>
+</Layout>
+
+<style>
+	.page-header {
+		background: linear-gradient(135deg, var(--dark-blue) 0%, var(--primary-blue) 100%);
+		color: white;
+		padding: 5rem 0;
+		text-align: center;
+		position: relative;
+		overflow: hidden;
+	}
+
+	.page-header::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: radial-gradient(circle at 30% 50%, rgba(233, 30, 34, 0.1) 0%, transparent 50%);
+		pointer-events: none;
+	}
+
+	.page-header h1 {
+		font-size: 3rem;
+		margin-bottom: 1rem;
+		font-weight: 800;
+		text-transform: uppercase;
+		letter-spacing: 0.5px;
+		position: relative;
+		z-index: 1;
+	}
+
+	.page-header p {
+		font-size: 1.35rem;
+		opacity: 0.95;
+		font-weight: 300;
+		position: relative;
+		z-index: 1;
+	}
+
+	.contact-content {
+		padding: 5rem 0;
+		background: white;
+	}
+
+	.contact-grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 4rem;
+	}
+
+	.contact-info h2,
+	.contact-form-section h2 {
+		color: var(--dark-blue);
+		font-size: 2.5rem;
+		margin-bottom: 2rem;
+		font-weight: 800;
+		text-transform: uppercase;
+		letter-spacing: 0.5px;
+	}
+
+	.intro-text {
+		color: var(--text-dark);
+		line-height: 1.8;
+		margin-bottom: 2.5rem;
+		font-weight: 300;
+		font-size: 1.05rem;
+	}
+
+	.info-items {
+		margin-bottom: 3rem;
+	}
+
+	.info-item {
+		display: flex;
+		gap: 1.5rem;
+		padding: 1.75rem 0;
+		border-bottom: 1px solid rgba(41, 94, 147, 0.1);
+	}
+
+	.info-item:last-child {
+		border-bottom: none;
+	}
+
+	.info-icon {
+		font-size: 2.5rem;
+		flex-shrink: 0;
+		filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+	}
+
+	.info-details h3 {
+		color: var(--primary-blue);
+		margin-bottom: 0.75rem;
+		font-size: 1.15rem;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.5px;
+	}
+
+	.info-details a {
+		color: var(--accent-red);
+		text-decoration: none;
+		font-weight: 700;
+		font-size: 1.35rem;
+		display: block;
+		margin-bottom: 0.5rem;
+		transition: opacity 0.3s;
+	}
+
+	.info-details a:hover {
+		opacity: 0.8;
+	}
+
+	.info-details p {
+		color: var(--text-light);
+		margin: 0.35rem 0;
+		font-weight: 300;
+		line-height: 1.6;
+	}
+
+	.service-hours {
+		background: var(--bg-light);
+		padding: 2.5rem;
+		border-radius: 12px;
+		border-left: 5px solid var(--accent-red);
+		box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+	}
+
+	.service-hours h3 {
+		color: var(--primary-blue);
+		margin-bottom: 1rem;
+		font-weight: 700;
+		font-size: 1.2rem;
+		text-transform: uppercase;
+		letter-spacing: 0.5px;
+	}
+
+	.service-hours p {
+		color: var(--text-dark);
+		margin-bottom: 0.75rem;
+		font-weight: 300;
+		line-height: 1.6;
+	}
+
+	.service-hours ul {
+		list-style: none;
+		padding: 0;
+		margin-top: 1rem;
+	}
+
+	.service-hours li {
+		padding: 0.6rem 0 0.6rem 2rem;
+		position: relative;
+		color: var(--text-dark);
+		font-weight: 300;
+	}
+
+	.service-hours li:before {
+		content: "✓";
+		position: absolute;
+		left: 0;
+		color: var(--accent-red);
+		font-weight: bold;
+		font-size: 1.1rem;
+	}
+
+	.map-container {
+		background: var(--bg-light);
+		padding: 2.5rem;
+		border-radius: 12px;
+		border-left: 5px solid var(--primary-blue);
+		box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+		margin-top: 2rem;
+	}
+
+	.map-container h3 {
+		color: var(--primary-blue);
+		margin-bottom: 1.5rem;
+		font-weight: 700;
+		font-size: 1.2rem;
+		text-transform: uppercase;
+		letter-spacing: 0.5px;
+	}
+
+	.map-container iframe {
+		width: 100%;
+		box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+	}
+
+	.booking-option {
+		text-align: center;
+		margin-bottom: 2rem;
+	}
+
+	.booking-btn {
+		display: inline-block;
+		width: 100%;
+		padding: 1.5rem 2.5rem;
+		background: radial-gradient(circle, var(--accent-red) 0%, var(--dark-red) 100%);
+		color: white;
+		text-decoration: none;
+		font-weight: 700;
+		font-size: 1.2rem;
+		border-radius: 50px;
+		transition: all 0.3s;
+		text-transform: uppercase;
+		letter-spacing: 0.5px;
+		box-shadow: 0 4px 12px rgba(34, 197, 94, 0.3);
+	}
+
+	.booking-btn:hover {
+		box-shadow: 0 6px 16px rgba(34, 197, 94, 0.4);
+		transform: translateY(-3px);
+	}
+
+	.booking-text {
+		margin-top: 1rem;
+		color: var(--text-light);
+		font-weight: 300;
+		font-size: 0.95rem;
+	}
+
+	.form-divider {
+		text-align: center;
+		margin: 2.5rem 0;
+		position: relative;
+	}
+
+	.form-divider::before {
+		content: '';
+		position: absolute;
+		top: 50%;
+		left: 0;
+		right: 0;
+		height: 1px;
+		background: rgba(41, 94, 147, 0.2);
+	}
+
+	.form-divider span {
+		background: white;
+		padding: 0 1rem;
+		color: var(--text-light);
+		font-weight: 400;
+		position: relative;
+		z-index: 1;
+		text-transform: uppercase;
+		font-size: 0.85rem;
+		letter-spacing: 0.5px;
+	}
+
+	.contact-form {
+		background: var(--bg-light);
+		padding: 2.5rem;
+		border-radius: 12px;
+		box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+	}
+
+	.form-group {
+		margin-bottom: 1.75rem;
+	}
+
+	.form-group label {
+		display: block;
+		margin-bottom: 0.75rem;
+		color: var(--primary-blue);
+		font-weight: 600;
+		text-transform: uppercase;
+		font-size: 0.9rem;
+		letter-spacing: 0.5px;
+	}
+
+	.form-group input,
+	.form-group select,
+	.form-group textarea {
+		width: 100%;
+		padding: 1rem;
+		border: 2px solid rgba(41, 94, 147, 0.2);
+		border-radius: 8px;
+		font-family: 'Outfit', sans-serif;
+		font-size: 1rem;
+		font-weight: 300;
+		transition: all 0.3s;
+		background: white;
+	}
+
+	.form-group input:focus,
+	.form-group select:focus,
+	.form-group textarea:focus {
+		outline: none;
+		border-color: var(--primary-blue);
+		box-shadow: 0 0 0 3px rgba(41, 94, 147, 0.1);
+	}
+
+	.form-group textarea {
+		resize: vertical;
+	}
+
+	.submit-btn {
+		width: 100%;
+		padding: 1.25rem;
+		background: radial-gradient(circle, var(--accent-red) 0%, var(--dark-red) 100%);
+		color: white;
+		border: none;
+		border-radius: 50px;
+		font-size: 1.1rem;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.5px;
+		cursor: pointer;
+		transition: all 0.3s;
+		box-shadow: 0 4px 12px rgba(233, 30, 34, 0.3);
+	}
+
+	.submit-btn:hover {
+		box-shadow: 0 6px 16px rgba(233, 30, 34, 0.4);
+		transform: translateY(-3px);
+	}
+
+	.form-message {
+		margin-top: 1rem;
+		padding: 1rem;
+		border-radius: 4px;
+		text-align: center;
+		font-weight: 600;
+	}
+
+	.form-message.success {
+		background: #d1fae5;
+		color: #065f46;
+	}
+
+	.form-message.error {
+		background: #fee2e2;
+		color: #991b1b;
+	}
+
+	.emergency-banner {
+		background: linear-gradient(135deg, var(--accent-red) 0%, var(--dark-red) 100%);
+		color: white;
+		padding: 5rem 0;
+		text-align: center;
+		position: relative;
+		overflow: hidden;
+	}
+
+	.emergency-banner::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: radial-gradient(circle at 70% 50%, rgba(11, 58, 105, 0.2) 0%, transparent 50%);
+		pointer-events: none;
+	}
+
+	.emergency-banner h2 {
+		font-size: 2.5rem;
+		margin-bottom: 1rem;
+		font-weight: 800;
+		text-transform: uppercase;
+		letter-spacing: 0.5px;
+		position: relative;
+		z-index: 1;
+	}
+
+	.emergency-banner p {
+		font-size: 1.35rem;
+		margin-bottom: 2.5rem;
+		opacity: 0.95;
+		font-weight: 300;
+		position: relative;
+		z-index: 1;
+	}
+
+	.emergency-btn {
+		display: inline-block;
+		padding: 1.25rem 2.5rem;
+		background: white;
+		color: var(--accent-red);
+		text-decoration: none;
+		font-weight: 700;
+		font-size: 1.1rem;
+		border-radius: 50px;
+		transition: all 0.3s;
+		text-transform: uppercase;
+		letter-spacing: 0.5px;
+		box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
+		position: relative;
+		z-index: 1;
+	}
+
+	.emergency-btn:hover {
+		transform: translateY(-3px);
+		box-shadow: 0 6px 16px rgba(255, 255, 255, 0.4);
+	}
+
+	@media (max-width: 968px) {
+		.contact-grid {
+			grid-template-columns: 1fr;
+			gap: 3rem;
+		}
+
+		.page-header h1 {
+			font-size: 2.25rem;
+		}
+
+		.page-header p {
+			font-size: 1.15rem;
+		}
+
+		.contact-info h2,
+		.contact-form-section h2,
+		.emergency-banner h2 {
+			font-size: 2rem;
+		}
+	}
+</style>
+
+<script>
+	document.getElementById('contactForm')?.addEventListener('submit', async (e) => {
+		e.preventDefault();
+
+		const form = e.target as HTMLFormElement;
+		const formMessage = document.getElementById('formMessage');
+
+		if (!formMessage) return;
+
+		// Show loading state
+		const submitBtn = form.querySelector('.submit-btn') as HTMLButtonElement;
+		const originalText = submitBtn.textContent;
+		submitBtn.textContent = 'Sending...';
+		submitBtn.disabled = true;
+
+		// Simulate form submission (in production, this would send to a backend)
+		setTimeout(() => {
+			formMessage.style.display = 'block';
+			formMessage.className = 'form-message success';
+			formMessage.textContent = 'Thank you! Your message has been received. We\'ll contact you soon.';
+
+			form.reset();
+			submitBtn.textContent = originalText;
+			submitBtn.disabled = false;
+
+			// Hide message after 5 seconds
+			setTimeout(() => {
+				formMessage.style.display = 'none';
+			}, 5000);
+		}, 1000);
+	});
+</script>

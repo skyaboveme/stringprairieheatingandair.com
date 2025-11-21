@@ -1,0 +1,448 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+	title="About Us | String Prairie Heating & Air"
+	description="Learn about String Prairie Heating & Air, a family-owned HVAC company serving Bastrop, TX with professional heating and air conditioning services."
+>
+	<section class="page-header">
+		<div class="container">
+			<h1>About String Prairie Heating & Air</h1>
+			<p>Your trusted partner for heating and air conditioning services</p>
+		</div>
+	</section>
+
+	<section class="about-content">
+		<div class="container">
+			<div class="about-intro">
+				<h2>Family-Owned and -Operated</h2>
+				<p class="lead">
+					We are an HVAC mechanical contractor specializing in residential and commercial services,
+					providing professional and courteous work for our customers in Bastrop County and surrounding areas.
+				</p>
+			</div>
+
+			<div class="values-grid">
+				<div class="value-card">
+					<div class="value-icon">🏠</div>
+					<h3>Family Values</h3>
+					<p>
+						As a family-owned business, we understand the importance of trust and reliability.
+						We treat every customer like family and every home like our own.
+					</p>
+				</div>
+				<div class="value-card">
+					<div class="value-icon">🔧</div>
+					<h3>Professional Service</h3>
+					<p>
+						Our team of experienced technicians is trained to handle all your HVAC needs with
+						professionalism, expertise, and attention to detail.
+					</p>
+				</div>
+				<div class="value-card">
+					<div class="value-icon">✓</div>
+					<h3>Quality Workmanship</h3>
+					<p>
+						We take pride in our work and stand behind every installation, repair, and maintenance
+						service we provide. Your satisfaction is our priority.
+					</p>
+				</div>
+				<div class="value-card">
+					<div class="value-icon">💼</div>
+					<h3>Customer Commitment</h3>
+					<p>
+						We're committed to providing honest assessments, fair pricing, and reliable service.
+						No surprises, just quality HVAC solutions.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="service-area">
+		<div class="container">
+			<h2>Serving Bastrop County</h2>
+			<p class="section-subtitle">
+				Based in Rosanky, TX, we proudly serve residential and commercial customers throughout
+				Bastrop County and the surrounding areas with comprehensive HVAC services.
+			</p>
+			<div class="area-features">
+				<div class="area-item">
+					<h3>Local Expertise</h3>
+					<p>We understand the unique climate challenges of Central Texas and provide solutions tailored to our local conditions.</p>
+				</div>
+				<div class="area-item">
+					<h3>Prompt Service</h3>
+					<p>As a local company, we can respond quickly to your heating and cooling needs, especially during emergencies.</p>
+				</div>
+				<div class="area-item">
+					<h3>Community Focused</h3>
+					<p>We're proud to be part of the Bastrop community and committed to keeping our neighbors comfortable year-round.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="our-promise">
+		<div class="container">
+			<div class="promise-content">
+				<h2>Our Promise to You</h2>
+				<ul class="promise-list">
+					<li>Professional and courteous service on every job</li>
+					<li>Honest assessments and transparent pricing</li>
+					<li>Quality workmanship backed by our commitment to excellence</li>
+					<li>Respect for your home and property</li>
+					<li>Clear communication throughout the service process</li>
+					<li>Expert advice to help you make informed decisions</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+
+	<section class="cta-section">
+		<div class="container">
+			<h2>Experience the Difference</h2>
+			<p>Discover why customers trust String Prairie Heating & Air for their HVAC needs</p>
+			<div class="cta-buttons">
+				<a href="https://book.housecallpro.com/book/String-Prairie-Heating--Air/df82ded280ce43f4a9ee6ee6d36aef76?v2=true" target="_blank" rel="noopener noreferrer" class="btn btn-light">📅 Book Online</a>
+				<a href="/services" class="btn btn-outline">View Our Services</a>
+			</div>
+		</div>
+	</section>
+</Layout>
+
+<style>
+	.page-header {
+		background: linear-gradient(135deg, var(--dark-blue) 0%, var(--primary-blue) 100%);
+		color: white;
+		padding: 5rem 0;
+		text-align: center;
+		position: relative;
+		overflow: hidden;
+	}
+
+	.page-header::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: radial-gradient(circle at 30% 50%, rgba(233, 30, 34, 0.1) 0%, transparent 50%);
+		pointer-events: none;
+	}
+
+	.page-header h1 {
+		font-size: 3rem;
+		margin-bottom: 1rem;
+		font-weight: 800;
+		text-transform: uppercase;
+		letter-spacing: 0.5px;
+		position: relative;
+		z-index: 1;
+	}
+
+	.page-header p {
+		font-size: 1.35rem;
+		opacity: 0.95;
+		font-weight: 300;
+		position: relative;
+		z-index: 1;
+	}
+
+	.about-content {
+		padding: 5rem 0;
+		background: white;
+	}
+
+	.about-intro {
+		text-align: center;
+		max-width: 850px;
+		margin: 0 auto 4.5rem;
+	}
+
+	.about-intro h2 {
+		color: var(--dark-blue);
+		font-size: 2.5rem;
+		margin-bottom: 1.5rem;
+		font-weight: 800;
+		text-transform: uppercase;
+		letter-spacing: 0.5px;
+	}
+
+	.lead {
+		font-size: 1.25rem;
+		color: var(--text-dark);
+		line-height: 1.8;
+		font-weight: 300;
+	}
+
+	.values-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+		gap: 2.5rem;
+	}
+
+	.value-card {
+		background: var(--bg-light);
+		padding: 2.5rem;
+		border-radius: 12px;
+		text-align: center;
+		transition: all 0.3s;
+		box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+		border: 1px solid rgba(41, 94, 147, 0.1);
+	}
+
+	.value-card:hover {
+		transform: translateY(-8px);
+		box-shadow: 0 8px 30px rgba(41, 94, 147, 0.15);
+		border-color: var(--primary-blue);
+		background: white;
+	}
+
+	.value-icon {
+		font-size: 3.5rem;
+		margin-bottom: 1.25rem;
+		filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+	}
+
+	.value-card h3 {
+		color: var(--primary-blue);
+		margin-bottom: 1rem;
+		font-size: 1.25rem;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.5px;
+	}
+
+	.value-card p {
+		color: var(--text-light);
+		line-height: 1.7;
+		font-weight: 300;
+	}
+
+	.service-area {
+		background: var(--bg-light);
+		padding: 5rem 0;
+	}
+
+	.service-area h2 {
+		text-align: center;
+		color: var(--dark-blue);
+		font-size: 2.5rem;
+		margin-bottom: 1rem;
+		font-weight: 800;
+		text-transform: uppercase;
+		letter-spacing: 0.5px;
+	}
+
+	.section-subtitle {
+		text-align: center;
+		color: var(--text-light);
+		font-size: 1.15rem;
+		max-width: 750px;
+		margin: 0 auto 3.5rem;
+		line-height: 1.8;
+		font-weight: 300;
+	}
+
+	.area-features {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 2.5rem;
+	}
+
+	.area-item {
+		background: white;
+		padding: 2.5rem;
+		border-radius: 12px;
+		border-left: 5px solid var(--accent-red);
+		box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+		transition: all 0.3s;
+	}
+
+	.area-item:hover {
+		transform: translateY(-5px);
+		box-shadow: 0 8px 30px rgba(41, 94, 147, 0.12);
+		border-left-color: var(--primary-blue);
+	}
+
+	.area-item h3 {
+		color: var(--primary-blue);
+		margin-bottom: 1rem;
+		font-size: 1.35rem;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.5px;
+	}
+
+	.area-item p {
+		color: var(--text-dark);
+		line-height: 1.7;
+		font-weight: 300;
+	}
+
+	.our-promise {
+		padding: 5rem 0;
+		background: white;
+	}
+
+	.promise-content {
+		max-width: 850px;
+		margin: 0 auto;
+	}
+
+	.promise-content h2 {
+		color: var(--dark-blue);
+		font-size: 2.5rem;
+		margin-bottom: 3rem;
+		text-align: center;
+		font-weight: 800;
+		text-transform: uppercase;
+		letter-spacing: 0.5px;
+	}
+
+	.promise-list {
+		list-style: none;
+		padding: 0;
+	}
+
+	.promise-list li {
+		padding: 1.25rem 0 1.25rem 3rem;
+		position: relative;
+		font-size: 1.15rem;
+		color: var(--text-dark);
+		line-height: 1.7;
+		border-bottom: 1px solid rgba(41, 94, 147, 0.1);
+		font-weight: 300;
+	}
+
+	.promise-list li:last-child {
+		border-bottom: none;
+	}
+
+	.promise-list li:before {
+		content: "✓";
+		position: absolute;
+		left: 0;
+		color: var(--accent-red);
+		font-weight: bold;
+		font-size: 1.75rem;
+	}
+
+	.cta-section {
+		background: linear-gradient(135deg, var(--accent-red) 0%, var(--dark-red) 100%);
+		color: white;
+		padding: 5rem 0;
+		text-align: center;
+		position: relative;
+		overflow: hidden;
+	}
+
+	.cta-section::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: radial-gradient(circle at 70% 50%, rgba(11, 58, 105, 0.2) 0%, transparent 50%);
+		pointer-events: none;
+	}
+
+	.cta-section h2 {
+		font-size: 2.5rem;
+		margin-bottom: 1rem;
+		font-weight: 800;
+		text-transform: uppercase;
+		letter-spacing: 0.5px;
+		position: relative;
+		z-index: 1;
+	}
+
+	.cta-section p {
+		font-size: 1.35rem;
+		margin-bottom: 2.5rem;
+		opacity: 0.95;
+		font-weight: 300;
+		position: relative;
+		z-index: 1;
+	}
+
+	.cta-buttons {
+		display: flex;
+		gap: 1.5rem;
+		justify-content: center;
+		flex-wrap: wrap;
+		position: relative;
+		z-index: 1;
+	}
+
+	.btn {
+		padding: 1.25rem 2.5rem;
+		border-radius: 50px;
+		text-decoration: none;
+		font-weight: 700;
+		transition: all 0.3s;
+		display: inline-block;
+		text-transform: uppercase;
+		letter-spacing: 0.5px;
+		font-size: 1rem;
+	}
+
+	.btn-light {
+		background: white;
+		color: var(--primary-blue);
+		box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
+	}
+
+	.btn-light:hover {
+		background: rgba(255, 255, 255, 0.95);
+		transform: translateY(-3px);
+		box-shadow: 0 6px 16px rgba(255, 255, 255, 0.4);
+	}
+
+	.btn-outline {
+		background: transparent;
+		color: white;
+		border: 2px solid white;
+		box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
+	}
+
+	.btn-outline:hover {
+		background: white;
+		color: var(--accent-red);
+		transform: translateY(-3px);
+		box-shadow: 0 6px 16px rgba(255, 255, 255, 0.3);
+	}
+
+	@media (max-width: 768px) {
+		.page-header h1 {
+			font-size: 2.25rem;
+		}
+
+		.page-header p {
+			font-size: 1.15rem;
+		}
+
+		.about-intro h2,
+		.service-area h2,
+		.promise-content h2,
+		.cta-section h2 {
+			font-size: 2rem;
+		}
+
+		.values-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.area-features {
+			grid-template-columns: 1fr;
+		}
+
+		.lead {
+			font-size: 1.1rem;
+		}
+	}
+</style>
