@@ -1,0 +1,203 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout
+	title="HVAC Services in Elgin, TX | String Prairie Heating & Air"
+	description="Expert HVAC services in Elgin, Texas. Local heating and air conditioning company providing AC repair, furnace installation, and maintenance in Elgin."
+>
+	<section class="page-header">
+		<div class="container">
+			<h1>HVAC Services in Elgin, TX</h1>
+			<p>Your trusted local HVAC experts in Elgin</p>
+		</div>
+	</section>
+
+	<section class="area-content">
+		<div class="container">
+			<div class="area-intro">
+				<h2>Quality HVAC Services for Elgin Residents</h2>
+				<p class="lead">
+					Serving the Elgin community with pride, String Prairie Heating & Air delivers professional heating and cooling solutions you can count on. Whether you need a new system, emergency repairs, or seasonal maintenance, we're your local HVAC partner.
+				</p>
+			</div>
+
+			<div class="services-list">
+				<h3>Our Elgin HVAC Services Include:</h3>
+				<ul>
+					<li>Air conditioning installation, repair, and maintenance</li>
+					<li>Heating system installation and repair</li>
+					<li>Emergency HVAC service</li>
+					<li>Preventive maintenance plans</li>
+					<li>Energy-efficient system upgrades</li>
+					<li>Ductwork inspection and repair</li>
+				</ul>
+			</div>
+
+			<div class="cta-section-local">
+				<h2>Schedule HVAC Service in Elgin Today</h2>
+				<p>Fast, reliable service from your local HVAC experts!</p>
+				<div class="cta-buttons">
+					<a href="https://book.housecallpro.com/book/String-Prairie-Heating--Air/df82ded280ce43f4a9ee6ee6d36aef76?v2=true" target="_blank" rel="noopener noreferrer" class="btn btn-primary">📅 Book Online</a>
+					<a href="tel:5129880939" class="btn btn-secondary">Call (512) 988-0939</a>
+				</div>
+			</div>
+		</div>
+	</section>
+</Layout>
+
+<style>
+	.page-header {
+		background: linear-gradient(135deg, var(--dark-blue) 0%, var(--primary-blue) 100%);
+		color: white;
+		padding: 5rem 0;
+		text-align: center;
+	}
+
+	.page-header h1 {
+		font-size: 3rem;
+		margin-bottom: 1rem;
+		font-weight: 800;
+		text-transform: uppercase;
+	}
+
+	.page-header p {
+		font-size: 1.35rem;
+		opacity: 0.95;
+		font-weight: 300;
+	}
+
+	.area-content {
+		padding: 5rem 0;
+	}
+
+	.area-intro {
+		max-width: 850px;
+		margin: 0 auto 4rem;
+		text-align: center;
+	}
+
+	.area-intro h2 {
+		color: var(--dark-blue);
+		font-size: 2.5rem;
+		margin-bottom: 2rem;
+		font-weight: 800;
+		text-transform: uppercase;
+	}
+
+	.lead {
+		font-size: 1.15rem;
+		color: var(--text-dark);
+		line-height: 1.8;
+		font-weight: 300;
+	}
+
+	.services-list {
+		background: var(--bg-light);
+		padding: 3rem;
+		border-radius: 12px;
+		margin: 4rem 0;
+		border-left: 5px solid var(--accent-red);
+	}
+
+	.services-list h3 {
+		color: var(--primary-blue);
+		font-size: 1.75rem;
+		margin-bottom: 1.5rem;
+		font-weight: 700;
+		text-transform: uppercase;
+	}
+
+	.services-list ul {
+		list-style: none;
+		padding: 0;
+	}
+
+	.services-list li {
+		padding: 0.75rem 0 0.75rem 2.5rem;
+		position: relative;
+		color: var(--text-dark);
+		font-weight: 300;
+		font-size: 1.1rem;
+		line-height: 1.7;
+	}
+
+	.services-list li:before {
+		content: "✓";
+		position: absolute;
+		left: 0;
+		color: var(--accent-red);
+		font-weight: bold;
+		font-size: 1.25rem;
+	}
+
+	.cta-section-local {
+		text-align: center;
+		background: linear-gradient(135deg, var(--accent-red) 0%, var(--dark-red) 100%);
+		color: white;
+		padding: 4rem 3rem;
+		border-radius: 12px;
+	}
+
+	.cta-section-local h2 {
+		font-size: 2.25rem;
+		margin-bottom: 1rem;
+		font-weight: 800;
+		text-transform: uppercase;
+	}
+
+	.cta-section-local p {
+		font-size: 1.25rem;
+		margin-bottom: 2rem;
+		opacity: 0.95;
+		font-weight: 300;
+	}
+
+	.cta-buttons {
+		display: flex;
+		gap: 1.5rem;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+
+	.btn {
+		padding: 1.25rem 2.5rem;
+		border-radius: 50px;
+		text-decoration: none;
+		font-weight: 700;
+		transition: all 0.3s;
+		display: inline-block;
+		text-transform: uppercase;
+		letter-spacing: 0.5px;
+		font-size: 1rem;
+	}
+
+	.btn-primary {
+		background: white;
+		color: var(--accent-red);
+		box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
+	}
+
+	.btn-primary:hover {
+		transform: translateY(-3px);
+		box-shadow: 0 6px 16px rgba(255, 255, 255, 0.4);
+	}
+
+	.btn-secondary {
+		background: transparent;
+		color: white;
+		border: 2px solid white;
+	}
+
+	.btn-secondary:hover {
+		background: white;
+		color: var(--accent-red);
+		transform: translateY(-3px);
+	}
+
+	@media (max-width: 768px) {
+		.page-header h1 {
+			font-size: 2rem;
+		}
+	}
+</style>

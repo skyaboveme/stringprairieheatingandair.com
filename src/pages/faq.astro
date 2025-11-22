@@ -1,0 +1,428 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const faqs = [
+	{
+		category: "General Questions",
+		questions: [
+			{
+				q: "What areas do you serve?",
+				a: "We serve Bastrop County and surrounding areas including Bastrop, Rosanky, Smithville, Elgin, Paige, and neighboring communities."
+			},
+			{
+				q: "Do you offer emergency HVAC services?",
+				a: "Yes! We understand HVAC emergencies can't wait. Call us at (512) 988-0939 for fast emergency service when you need immediate assistance with your heating or cooling system."
+			},
+			{
+				q: "Are you licensed and insured?",
+				a: "Yes, String Prairie Heating & Air is fully licensed and insured. We are a professional HVAC mechanical contractor specializing in both residential and commercial services."
+			},
+			{
+				q: "Do you offer free estimates?",
+				a: "Yes, we provide free estimates for HVAC installations and major repairs. Contact us or book online to schedule your consultation."
+			}
+		]
+	},
+	{
+		category: "Maintenance & Repairs",
+		questions: [
+			{
+				q: "How often should I have my HVAC system serviced?",
+				a: "We recommend having your HVAC system serviced twice a year - once in spring before cooling season and once in fall before heating season. Regular maintenance helps prevent breakdowns, improves efficiency, and extends the life of your system."
+			},
+			{
+				q: "What's included in a maintenance tune-up?",
+				a: "Our comprehensive maintenance service includes filter replacement, cleaning coils, checking refrigerant levels, inspecting electrical connections, testing safety controls, measuring airflow, lubricating moving parts, and ensuring your system is running at peak efficiency."
+			},
+			{
+				q: "How do I know if my system needs repair or replacement?",
+				a: "Consider replacement if your system is 10-15 years old, requires frequent repairs, causes high energy bills, or can't maintain comfortable temperatures. Our technicians will provide honest assessments and help you make the best decision for your situation and budget."
+			},
+			{
+				q: "Why is my AC not cooling properly?",
+				a: "Common causes include dirty air filters, low refrigerant, frozen evaporator coils, thermostat issues, or a failing compressor. We recommend scheduling a service call so our technicians can diagnose and fix the problem."
+			}
+		]
+	},
+	{
+		category: "Installation & Replacement",
+		questions: [
+			{
+				q: "How long does it take to install a new HVAC system?",
+				a: "Most residential HVAC installations take 1-2 days depending on the complexity of the job. We'll provide a detailed timeline during your consultation and work efficiently to minimize disruption to your home."
+			},
+			{
+				q: "What size HVAC system do I need?",
+				a: "The right size depends on factors like your home's square footage, insulation, ceiling height, windows, and climate. Our technicians perform detailed load calculations to ensure you get a properly sized system for maximum efficiency and comfort."
+			},
+			{
+				q: "Do you offer financing options?",
+				a: "Yes, we offer financing options to make HVAC installations and major repairs more affordable. Contact us to learn about our current financing programs."
+			},
+			{
+				q: "What brands do you install?",
+				a: "We work with top-quality HVAC brands known for reliability and efficiency. During your consultation, we'll recommend the best options for your needs and budget."
+			}
+		]
+	},
+	{
+		category: "Energy Efficiency",
+		questions: [
+			{
+				q: "How can I reduce my energy bills?",
+				a: "Key steps include: regular maintenance, replacing filters monthly, using a programmable thermostat, sealing ductwork, improving insulation, and upgrading to an energy-efficient system. Even small changes can lead to significant savings."
+			},
+			{
+				q: "What is a SEER rating?",
+				a: "SEER (Seasonal Energy Efficiency Ratio) measures air conditioning efficiency. Higher SEER ratings mean greater efficiency and lower energy costs. Modern systems typically range from 14-25 SEER, with higher ratings providing better energy savings."
+			},
+			{
+				q: "Should I upgrade to a smart thermostat?",
+				a: "Smart thermostats can save 10-30% on heating and cooling costs through automatic temperature adjustments, remote control, and energy usage insights. They're a worthwhile investment for most homeowners."
+			},
+			{
+				q: "How often should I change my air filter?",
+				a: "Standard 1-inch filters should be changed every 1-3 months depending on usage, pets, and allergies. Thicker filters (4-5 inches) can last 6-12 months. Check filters monthly and replace when visibly dirty."
+			}
+		]
+	},
+	{
+		category: "Seasonal Questions",
+		questions: [
+			{
+				q: "How do I prepare my AC for summer?",
+				a: "Spring preparation includes: replacing filters, cleaning the outdoor unit, checking refrigerant levels, testing the thermostat, ensuring proper airflow, and scheduling professional maintenance. This prevents breakdowns during peak heat."
+			},
+			{
+				q: "How do I winterize my heating system?",
+				a: "Fall preparation includes: replacing filters, testing your heating system early, checking for carbon monoxide leaks, inspecting ductwork, programming your thermostat, and scheduling professional maintenance before cold weather arrives."
+			},
+			{
+				q: "Should I cover my outdoor AC unit in winter?",
+				a: "You don't need to cover the entire unit, as they're designed to withstand weather. However, you can place a board or cover on top to prevent debris from falling in. Never completely wrap the unit as it needs ventilation to prevent moisture buildup."
+			}
+		]
+	}
+];
+---
+
+<Layout
+	title="HVAC FAQ - Common Questions Answered | String Prairie Heating & Air"
+	description="Find answers to common HVAC questions about maintenance, repairs, installation, and energy efficiency from String Prairie Heating & Air in Bastrop, TX."
+>
+	<section class="page-header">
+		<div class="container">
+			<h1>Frequently Asked Questions</h1>
+			<p>Find answers to common HVAC questions</p>
+		</div>
+	</section>
+
+	<section class="faq-content">
+		<div class="container">
+			<div class="faq-intro">
+				<p class="lead">
+					Have questions about your HVAC system? We've compiled answers to the most common questions we receive from homeowners in Bastrop County. If you don't find your answer here, don't hesitate to contact us directly.
+				</p>
+			</div>
+
+			{faqs.map((category) => (
+				<div class="faq-category">
+					<h2>{category.category}</h2>
+					<div class="faq-list">
+						{category.questions.map((item, index) => (
+							<div class="faq-item">
+								<button class="faq-question" aria-expanded="false">
+									<span class="question-text">{item.q}</span>
+									<span class="faq-icon">+</span>
+								</button>
+								<div class="faq-answer">
+									<p>{item.a}</p>
+								</div>
+							</div>
+						))}
+					</div>
+				</div>
+			))}
+
+			<div class="cta-box">
+				<h3>Still Have Questions?</h3>
+				<p>Our friendly team is here to help! Contact us for personalized answers to your HVAC questions.</p>
+				<div class="cta-buttons">
+					<a href="https://book.housecallpro.com/book/String-Prairie-Heating--Air/df82ded280ce43f4a9ee6ee6d36aef76?v2=true" target="_blank" rel="noopener noreferrer" class="btn btn-primary">📅 Book Online</a>
+					<a href="/contact" class="btn btn-secondary">Contact Us</a>
+				</div>
+			</div>
+		</div>
+	</section>
+</Layout>
+
+<style>
+	.page-header {
+		background: linear-gradient(135deg, var(--dark-blue) 0%, var(--primary-blue) 100%);
+		color: white;
+		padding: 5rem 0;
+		text-align: center;
+		position: relative;
+		overflow: hidden;
+	}
+
+	.page-header::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: radial-gradient(circle at 30% 50%, rgba(233, 30, 34, 0.1) 0%, transparent 50%);
+		pointer-events: none;
+	}
+
+	.page-header h1 {
+		font-size: 3rem;
+		margin-bottom: 1rem;
+		font-weight: 800;
+		text-transform: uppercase;
+		letter-spacing: 0.5px;
+		position: relative;
+		z-index: 1;
+	}
+
+	.page-header p {
+		font-size: 1.35rem;
+		opacity: 0.95;
+		font-weight: 300;
+		position: relative;
+		z-index: 1;
+	}
+
+	.faq-content {
+		padding: 5rem 0;
+		background: white;
+	}
+
+	.faq-intro {
+		text-align: center;
+		max-width: 800px;
+		margin: 0 auto 4rem;
+	}
+
+	.lead {
+		font-size: 1.25rem;
+		color: var(--text-dark);
+		line-height: 1.8;
+		font-weight: 300;
+	}
+
+	.faq-category {
+		margin-bottom: 4rem;
+	}
+
+	.faq-category h2 {
+		color: var(--dark-blue);
+		font-size: 2rem;
+		margin-bottom: 2rem;
+		font-weight: 800;
+		text-transform: uppercase;
+		letter-spacing: 0.5px;
+		padding-bottom: 1rem;
+		border-bottom: 3px solid var(--accent-red);
+	}
+
+	.faq-list {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+	}
+
+	.faq-item {
+		background: var(--bg-light);
+		border-radius: 8px;
+		overflow: hidden;
+		border-left: 4px solid var(--primary-blue);
+		transition: all 0.3s;
+	}
+
+	.faq-item:hover {
+		box-shadow: 0 4px 12px rgba(41, 94, 147, 0.1);
+		border-left-color: var(--accent-red);
+	}
+
+	.faq-question {
+		width: 100%;
+		padding: 1.5rem 2rem;
+		background: none;
+		border: none;
+		text-align: left;
+		cursor: pointer;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 1rem;
+		transition: background 0.3s;
+	}
+
+	.faq-question:hover {
+		background: rgba(41, 94, 147, 0.05);
+	}
+
+	.question-text {
+		color: var(--primary-blue);
+		font-size: 1.15rem;
+		font-weight: 700;
+		flex: 1;
+	}
+
+	.faq-icon {
+		color: var(--accent-red);
+		font-size: 1.5rem;
+		font-weight: 700;
+		transition: transform 0.3s;
+		flex-shrink: 0;
+	}
+
+	.faq-item.active .faq-icon {
+		transform: rotate(45deg);
+	}
+
+	.faq-answer {
+		max-height: 0;
+		overflow: hidden;
+		transition: max-height 0.3s ease;
+	}
+
+	.faq-item.active .faq-answer {
+		max-height: 500px;
+	}
+
+	.faq-answer p {
+		padding: 0 2rem 1.5rem 2rem;
+		color: var(--text-dark);
+		line-height: 1.8;
+		font-weight: 300;
+		font-size: 1.05rem;
+	}
+
+	.cta-box {
+		background: var(--bg-light);
+		padding: 3rem;
+		border-radius: 12px;
+		border-left: 5px solid var(--accent-red);
+		margin: 4rem 0 0;
+		text-align: center;
+	}
+
+	.cta-box h3 {
+		color: var(--dark-blue);
+		font-size: 1.75rem;
+		margin-bottom: 1rem;
+		font-weight: 800;
+		text-transform: uppercase;
+		letter-spacing: 0.5px;
+	}
+
+	.cta-box p {
+		margin-bottom: 2rem;
+		color: var(--text-dark);
+		font-size: 1.1rem;
+	}
+
+	.cta-buttons {
+		display: flex;
+		gap: 1.5rem;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+
+	.btn {
+		padding: 1.25rem 2.5rem;
+		border-radius: 50px;
+		text-decoration: none;
+		font-weight: 700;
+		transition: all 0.3s;
+		display: inline-block;
+		text-transform: uppercase;
+		letter-spacing: 0.5px;
+		font-size: 1rem;
+	}
+
+	.btn-primary {
+		background: radial-gradient(circle, var(--accent-red) 0%, var(--dark-red) 100%);
+		color: white;
+		box-shadow: 0 4px 12px rgba(34, 197, 94, 0.3);
+	}
+
+	.btn-primary:hover {
+		box-shadow: 0 6px 16px rgba(34, 197, 94, 0.4);
+		transform: translateY(-3px);
+	}
+
+	.btn-secondary {
+		background: white;
+		color: var(--primary-blue);
+		border: 2px solid var(--primary-blue);
+		box-shadow: 0 4px 12px rgba(41, 94, 147, 0.2);
+	}
+
+	.btn-secondary:hover {
+		background: var(--primary-blue);
+		color: white;
+		transform: translateY(-3px);
+		box-shadow: 0 6px 16px rgba(41, 94, 147, 0.3);
+	}
+
+	@media (max-width: 768px) {
+		.page-header h1 {
+			font-size: 2.25rem;
+		}
+
+		.page-header p {
+			font-size: 1.15rem;
+		}
+
+		.faq-category h2 {
+			font-size: 1.5rem;
+		}
+
+		.question-text {
+			font-size: 1rem;
+		}
+
+		.faq-question {
+			padding: 1.25rem 1.5rem;
+		}
+
+		.faq-answer p {
+			padding: 0 1.5rem 1.25rem 1.5rem;
+			font-size: 0.95rem;
+		}
+
+		.cta-buttons {
+			flex-direction: column;
+		}
+	}
+</style>
+
+<script>
+	// FAQ accordion functionality
+	const faqQuestions = document.querySelectorAll('.faq-question');
+
+	faqQuestions.forEach(question => {
+		question.addEventListener('click', () => {
+			const faqItem = question.parentElement;
+			const isActive = faqItem?.classList.contains('active');
+
+			// Close all other FAQs
+			document.querySelectorAll('.faq-item').forEach(item => {
+				item.classList.remove('active');
+				const btn = item.querySelector('.faq-question');
+				if (btn) btn.setAttribute('aria-expanded', 'false');
+			});
+
+			// Toggle current FAQ
+			if (!isActive && faqItem) {
+				faqItem.classList.add('active');
+				question.setAttribute('aria-expanded', 'true');
+			}
+		});
+	});
+</script>

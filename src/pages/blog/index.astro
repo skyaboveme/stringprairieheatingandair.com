@@ -1,0 +1,292 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const posts = [
+	{
+		slug: 'winterize-your-hvac-system',
+		title: 'How to Winterize Your Home\'s HVAC System',
+		excerpt: 'Essential tips for preparing your heating system for winter in Central Texas. Learn how to winterize your HVAC system for maximum efficiency and comfort.',
+		date: '2024-11-22',
+		image: '❄️',
+	},
+	{
+		slug: 'when-to-replace-your-hvac-system',
+		title: '5 Signs It\'s Time to Replace Your HVAC System',
+		excerpt: 'Learn the key indicators that your heating and air conditioning system needs replacement, and how investing in a new system can save you money.',
+		date: '2024-11-15',
+		image: '🔧',
+	},
+	{
+		slug: 'spring-hvac-maintenance-tips',
+		title: 'Spring HVAC Maintenance: Getting Your System Ready for Summer',
+		excerpt: 'Prepare your air conditioning system for the hot Texas summer with these essential maintenance tips and tasks.',
+		date: '2024-11-01',
+		image: '🌸',
+	},
+];
+---
+
+<Layout
+	title="HVAC Tips & Advice Blog | String Prairie Heating & Air"
+	description="Expert HVAC tips, maintenance advice, and industry insights from String Prairie Heating & Air serving Bastrop, TX."
+>
+	<section class="page-header">
+		<div class="container">
+			<h1>HVAC Tips & Advice</h1>
+			<p>Expert insights and helpful tips for your heating and cooling needs</p>
+		</div>
+	</section>
+
+	<section class="blog-content">
+		<div class="container">
+			<div class="blog-grid">
+				{posts.map((post) => (
+					<article class="blog-card">
+						<div class="blog-icon">{post.image}</div>
+						<div class="blog-date">{new Date(post.date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</div>
+						<h2><a href={`/blog/${post.slug}`}>{post.title}</a></h2>
+						<p class="blog-excerpt">{post.excerpt}</p>
+						<a href={`/blog/${post.slug}`} class="read-more">Read More →</a>
+					</article>
+				))}
+			</div>
+		</div>
+	</section>
+
+	<section class="cta-section">
+		<div class="container">
+			<h2>Need HVAC Service?</h2>
+			<p>Our expert technicians are ready to help with all your heating and cooling needs</p>
+			<div class="cta-buttons">
+				<a href="https://book.housecallpro.com/book/String-Prairie-Heating--Air/df82ded280ce43f4a9ee6ee6d36aef76?v2=true" target="_blank" rel="noopener noreferrer" class="btn btn-light">📅 Book Online</a>
+				<a href="/contact" class="btn btn-outline">Contact Us</a>
+			</div>
+		</div>
+	</section>
+</Layout>
+
+<style>
+	.page-header {
+		background: linear-gradient(135deg, var(--dark-blue) 0%, var(--primary-blue) 100%);
+		color: white;
+		padding: 5rem 0;
+		text-align: center;
+		position: relative;
+		overflow: hidden;
+	}
+
+	.page-header::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: radial-gradient(circle at 30% 50%, rgba(233, 30, 34, 0.1) 0%, transparent 50%);
+		pointer-events: none;
+	}
+
+	.page-header h1 {
+		font-size: 3rem;
+		margin-bottom: 1rem;
+		font-weight: 800;
+		text-transform: uppercase;
+		letter-spacing: 0.5px;
+		position: relative;
+		z-index: 1;
+	}
+
+	.page-header p {
+		font-size: 1.35rem;
+		opacity: 0.95;
+		font-weight: 300;
+		position: relative;
+		z-index: 1;
+	}
+
+	.blog-content {
+		padding: 5rem 0;
+		background: white;
+	}
+
+	.blog-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+		gap: 3rem;
+	}
+
+	.blog-card {
+		background: var(--bg-light);
+		padding: 2.5rem;
+		border-radius: 12px;
+		border-top: 5px solid var(--accent-red);
+		box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+		transition: all 0.3s;
+	}
+
+	.blog-card:hover {
+		transform: translateY(-8px);
+		box-shadow: 0 8px 30px rgba(41, 94, 147, 0.15);
+		border-top-color: var(--primary-blue);
+		background: white;
+	}
+
+	.blog-icon {
+		font-size: 3.5rem;
+		margin-bottom: 1rem;
+		filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+	}
+
+	.blog-date {
+		color: var(--text-light);
+		font-size: 0.9rem;
+		margin-bottom: 1rem;
+		font-weight: 400;
+		text-transform: uppercase;
+		letter-spacing: 0.5px;
+	}
+
+	.blog-card h2 {
+		margin-bottom: 1rem;
+		font-size: 1.5rem;
+		font-weight: 700;
+		line-height: 1.3;
+	}
+
+	.blog-card h2 a {
+		color: var(--dark-blue);
+		text-decoration: none;
+		transition: color 0.3s;
+	}
+
+	.blog-card h2 a:hover {
+		color: var(--primary-blue);
+	}
+
+	.blog-excerpt {
+		color: var(--text-dark);
+		line-height: 1.7;
+		margin-bottom: 1.5rem;
+		font-weight: 300;
+	}
+
+	.read-more {
+		color: var(--accent-red);
+		text-decoration: none;
+		font-weight: 700;
+		font-size: 1rem;
+		text-transform: uppercase;
+		letter-spacing: 0.5px;
+		transition: all 0.3s;
+		display: inline-block;
+	}
+
+	.read-more:hover {
+		color: var(--dark-red);
+		transform: translateX(5px);
+	}
+
+	.cta-section {
+		background: linear-gradient(135deg, var(--accent-red) 0%, var(--dark-red) 100%);
+		color: white;
+		padding: 5rem 0;
+		text-align: center;
+		position: relative;
+		overflow: hidden;
+	}
+
+	.cta-section::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: radial-gradient(circle at 70% 50%, rgba(11, 58, 105, 0.2) 0%, transparent 50%);
+		pointer-events: none;
+	}
+
+	.cta-section h2 {
+		font-size: 2.5rem;
+		margin-bottom: 1rem;
+		font-weight: 800;
+		text-transform: uppercase;
+		letter-spacing: 0.5px;
+		position: relative;
+		z-index: 1;
+	}
+
+	.cta-section p {
+		font-size: 1.35rem;
+		margin-bottom: 2.5rem;
+		opacity: 0.95;
+		font-weight: 300;
+		position: relative;
+		z-index: 1;
+	}
+
+	.cta-buttons {
+		display: flex;
+		gap: 1.5rem;
+		justify-content: center;
+		flex-wrap: wrap;
+		position: relative;
+		z-index: 1;
+	}
+
+	.btn {
+		padding: 1.25rem 2.5rem;
+		border-radius: 50px;
+		text-decoration: none;
+		font-weight: 700;
+		transition: all 0.3s;
+		display: inline-block;
+		text-transform: uppercase;
+		letter-spacing: 0.5px;
+		font-size: 1rem;
+	}
+
+	.btn-light {
+		background: white;
+		color: var(--primary-blue);
+		box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
+	}
+
+	.btn-light:hover {
+		background: rgba(255, 255, 255, 0.95);
+		transform: translateY(-3px);
+		box-shadow: 0 6px 16px rgba(255, 255, 255, 0.4);
+	}
+
+	.btn-outline {
+		background: transparent;
+		color: white;
+		border: 2px solid white;
+		box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
+	}
+
+	.btn-outline:hover {
+		background: white;
+		color: var(--accent-red);
+		transform: translateY(-3px);
+		box-shadow: 0 6px 16px rgba(255, 255, 255, 0.3);
+	}
+
+	@media (max-width: 768px) {
+		.page-header h1 {
+			font-size: 2.25rem;
+		}
+
+		.page-header p {
+			font-size: 1.15rem;
+		}
+
+		.blog-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.cta-section h2 {
+			font-size: 2rem;
+		}
+	}
+</style>
