@@ -20,25 +20,91 @@ import Layout from '../../layouts/Layout.astro';
 				<p class="lead">
 					Serving the Elgin community with pride, String Prairie Heating & Air delivers professional heating and cooling solutions you can count on. Whether you need a new system, emergency repairs, or seasonal maintenance, we're your local HVAC partner.
 				</p>
+				<p class="lead">
+					Our experienced technicians understand Elgin's climate and provide reliable service that keeps your home comfortable year-round.
+				</p>
 			</div>
 
-			<div class="services-list">
-				<h3>Our Elgin HVAC Services Include:</h3>
-				<ul>
-					<li>Air conditioning installation, repair, and maintenance</li>
-					<li>Heating system installation and repair</li>
-					<li>Emergency HVAC service</li>
-					<li>Preventive maintenance plans</li>
-					<li>Energy-efficient system upgrades</li>
-					<li>Ductwork inspection and repair</li>
+			<div class="services-overview">
+				<h2>Complete HVAC Services for Elgin Homes & Businesses</h2>
+				<div class="services-list">
+					<div class="service-item">
+						<h3>❄️ Air Conditioning</h3>
+						<p>AC installation, repair, maintenance, and emergency service for cool comfort during hot Texas summers.</p>
+					</div>
+					<div class="service-item">
+						<h3>🔥 Heating Systems</h3>
+						<p>Furnace and heat pump installation, repair, and maintenance for cozy winters.</p>
+					</div>
+					<div class="service-item">
+						<h3>🔧 Preventive Maintenance</h3>
+						<p>Maintenance plans to keep your system running efficiently and prevent costly breakdowns.</p>
+					</div>
+					<div class="service-item">
+						<h3>⚡ Emergency Service</h3>
+						<p>Fast response when you need help urgently - HVAC emergencies can't wait.</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="local-advantages">
+				<h2>Why Elgin Residents Choose String Prairie</h2>
+				<ul class="advantage-list">
+					<li>Family-owned business serving your local community</li>
+					<li>Fast response times when you need service</li>
+					<li>Honest, upfront pricing with no hidden charges</li>
+					<li>Fully licensed and insured HVAC contractor</li>
+					<li>Expert knowledge of Central Texas HVAC needs</li>
+					<li>Quality work backed by reliable warranties</li>
 				</ul>
+			</div>
+
+			<div class="map-section">
+				<h2>Find Us on the Map</h2>
+				<p class="map-subtitle">Proudly serving Elgin and surrounding areas</p>
+				<div class="map-container">
+					<iframe
+						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d110345.67!2d-97.37!3d30.35!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864364a4f4f4a4f4%3A0x9a9a9a9a9a9a9a9a!2sElgin%2C%20TX%2078621!5e0!3m2!1sen!2sus!4v1234567890"
+						width="100%"
+						height="450"
+						style="border:0; border-radius: 12px;"
+						allowfullscreen=""
+						loading="lazy"
+						referrerpolicy="no-referrer-when-downgrade">
+					</iframe>
+				</div>
+			</div>
+
+			<div class="testimonials-section">
+				<h2>What Elgin Customers Say</h2>
+				<p class="testimonials-subtitle">Hear from your neighbors about their experience with String Prairie Heating & Air</p>
+				<div class="testimonials-grid">
+					<div class="testimonial-card">
+						<div class="stars">⭐⭐⭐⭐⭐</div>
+						<p class="testimonial-text">"Fantastic service! Our AC went out on the hottest day of summer and String Prairie had a technician here within hours. Fixed it quickly and the price was very reasonable. Highly recommend!"</p>
+						<p class="testimonial-author">— Robert P., Elgin</p>
+					</div>
+					<div class="testimonial-card">
+						<div class="stars">⭐⭐⭐⭐⭐</div>
+						<p class="testimonial-text">"We had a new HVAC system installed and couldn't be happier. The crew was professional, clean, and thorough. Ron answered all our questions and made sure we understood everything. Great experience!"</p>
+						<p class="testimonial-author">— Amanda G., Elgin</p>
+					</div>
+					<div class="testimonial-card">
+						<div class="stars">⭐⭐⭐⭐⭐</div>
+						<p class="testimonial-text">"String Prairie has been maintaining our HVAC system for years. They're always punctual, professional, and honest. It's nice to have a local company you can rely on!"</p>
+						<p class="testimonial-author">— Charles M., Elgin</p>
+					</div>
+				</div>
+				<div class="review-cta">
+					<a href="https://www.google.com/maps/place/String+Prairie+Heating+%26+Air/@29.8918229,-97.3320232" target="_blank" rel="noopener noreferrer" class="review-link">Leave us a Google Review</a>
+				</div>
 			</div>
 
 			<div class="cta-section-local">
 				<h2>Schedule HVAC Service in Elgin Today</h2>
 				<p>Fast, reliable service from your local HVAC experts!</p>
 				<div class="cta-buttons">
-					<a href="https://book.housecallpro.com/book/String-Prairie-Heating--Air/df82ded280ce43f4a9ee6ee6d36aef76?v2=true" target="_blank" rel="noopener noreferrer" class="btn btn-primary">📅 Book Online</a>
+					<a href="https://book.housecallpro.com/book/String-Prairie-Heating--Air/df82ded280ce43f4a9ee6ee6d36aef76?v2=true" target="_blank" rel="noopener noreferrer" class="btn btn-primary">🔖 Book Online</a>
 					<a href="tel:5129249744" class="btn btn-secondary">Call (512) 924-9744</a>
 				</div>
 			</div>
@@ -52,6 +118,8 @@ import Layout from '../../layouts/Layout.astro';
 		color: white;
 		padding: 5rem 0;
 		text-align: center;
+		position: relative;
+		overflow: hidden;
 	}
 
 	.page-header h1 {
@@ -59,6 +127,7 @@ import Layout from '../../layouts/Layout.astro';
 		margin-bottom: 1rem;
 		font-weight: 800;
 		text-transform: uppercase;
+		letter-spacing: 0.5px;
 	}
 
 	.page-header p {
@@ -83,6 +152,7 @@ import Layout from '../../layouts/Layout.astro';
 		margin-bottom: 2rem;
 		font-weight: 800;
 		text-transform: uppercase;
+		letter-spacing: 0.5px;
 	}
 
 	.lead {
@@ -90,45 +160,225 @@ import Layout from '../../layouts/Layout.astro';
 		color: var(--text-dark);
 		line-height: 1.8;
 		font-weight: 300;
+		margin-bottom: 1.5rem;
+	}
+
+	.services-overview {
+		margin: 4rem 0;
+	}
+
+	.services-overview h2 {
+		color: var(--dark-blue);
+		font-size: 2.25rem;
+		margin-bottom: 2.5rem;
+		text-align: center;
+		font-weight: 800;
+		text-transform: uppercase;
+		letter-spacing: 0.5px;
 	}
 
 	.services-list {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 2rem;
+	}
+
+	.service-item {
 		background: var(--bg-light);
-		padding: 3rem;
+		padding: 2rem;
+		border-radius: 12px;
+		border-left: 5px solid var(--accent-red);
+		transition: all 0.3s;
+	}
+
+	.service-item:hover {
+		transform: translateY(-5px);
+		box-shadow: 0 8px 25px rgba(41, 94, 147, 0.12);
+		border-left-color: var(--primary-blue);
+	}
+
+	.service-item h3 {
+		color: var(--primary-blue);
+		margin-bottom: 1rem;
+		font-size: 1.25rem;
+		font-weight: 700;
+	}
+
+	.service-item p {
+		color: var(--text-dark);
+		line-height: 1.7;
+		font-weight: 300;
+	}
+
+	.local-advantages {
+		background: var(--bg-light);
+		padding: 4rem 3rem;
 		border-radius: 12px;
 		margin: 4rem 0;
-		border-left: 5px solid var(--accent-red);
 	}
 
-	.services-list h3 {
-		color: var(--primary-blue);
-		font-size: 1.75rem;
-		margin-bottom: 1.5rem;
-		font-weight: 700;
+	.local-advantages h2 {
+		color: var(--dark-blue);
+		font-size: 2.25rem;
+		margin-bottom: 2rem;
+		text-align: center;
+		font-weight: 800;
 		text-transform: uppercase;
+		letter-spacing: 0.5px;
 	}
 
-	.services-list ul {
+	.advantage-list {
 		list-style: none;
 		padding: 0;
+		max-width: 750px;
+		margin: 0 auto;
 	}
 
-	.services-list li {
-		padding: 0.75rem 0 0.75rem 2.5rem;
+	.advantage-list li {
+		padding: 1rem 0 1rem 2.5rem;
 		position: relative;
 		color: var(--text-dark);
 		font-weight: 300;
 		font-size: 1.1rem;
 		line-height: 1.7;
+		border-bottom: 1px solid rgba(41, 94, 147, 0.1);
 	}
 
-	.services-list li:before {
+	.advantage-list li:last-child {
+		border-bottom: none;
+	}
+
+	.advantage-list li:before {
 		content: "✓";
 		position: absolute;
 		left: 0;
 		color: var(--accent-red);
 		font-weight: bold;
+		font-size: 1.5rem;
+	}
+
+	.map-section {
+		margin: 4rem 0;
+		padding: 4rem 3rem;
+		background: var(--bg-light);
+		border-radius: 12px;
+	}
+
+	.map-section h2 {
+		color: var(--dark-blue);
+		font-size: 2.25rem;
+		margin-bottom: 1rem;
+		text-align: center;
+		font-weight: 800;
+		text-transform: uppercase;
+		letter-spacing: 0.5px;
+	}
+
+	.map-subtitle {
+		text-align: center;
+		color: var(--text-light);
+		font-size: 1.1rem;
+		margin-bottom: 2.5rem;
+		font-weight: 300;
+	}
+
+	.map-container {
+		max-width: 1000px;
+		margin: 0 auto;
+		box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+		border-radius: 12px;
+		overflow: hidden;
+	}
+
+	.testimonials-section {
+		margin: 4rem 0;
+	}
+
+	.testimonials-section h2 {
+		color: var(--dark-blue);
+		font-size: 2.25rem;
+		margin-bottom: 1rem;
+		text-align: center;
+		font-weight: 800;
+		text-transform: uppercase;
+		letter-spacing: 0.5px;
+	}
+
+	.testimonials-subtitle {
+		text-align: center;
+		color: var(--text-light);
+		font-size: 1.1rem;
+		margin-bottom: 3rem;
+		font-weight: 300;
+	}
+
+	.testimonials-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 2.5rem;
+		margin-bottom: 3rem;
+	}
+
+	.testimonial-card {
+		background: white;
+		padding: 2.5rem;
+		border-radius: 12px;
+		box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+		border-left: 5px solid var(--accent-red);
+		transition: all 0.3s;
+	}
+
+	.testimonial-card:hover {
+		transform: translateY(-5px);
+		box-shadow: 0 8px 30px rgba(41, 94, 147, 0.12);
+		border-left-color: var(--primary-blue);
+	}
+
+	.stars {
 		font-size: 1.25rem;
+		margin-bottom: 1rem;
+		letter-spacing: 2px;
+	}
+
+	.testimonial-text {
+		color: var(--text-dark);
+		line-height: 1.8;
+		font-weight: 300;
+		font-size: 1.05rem;
+		margin-bottom: 1.5rem;
+		font-style: italic;
+	}
+
+	.testimonial-author {
+		color: var(--primary-blue);
+		font-weight: 700;
+		font-size: 0.95rem;
+		text-transform: uppercase;
+		letter-spacing: 0.5px;
+	}
+
+	.review-cta {
+		text-align: center;
+	}
+
+	.review-link {
+		display: inline-block;
+		padding: 1rem 2.5rem;
+		background: linear-gradient(135deg, var(--primary-blue) 0%, var(--dark-blue) 100%);
+		color: white;
+		text-decoration: none;
+		border-radius: 50px;
+		font-weight: 700;
+		font-size: 1rem;
+		text-transform: uppercase;
+		letter-spacing: 0.5px;
+		transition: all 0.3s;
+		box-shadow: 0 4px 12px rgba(41, 94, 147, 0.3);
+	}
+
+	.review-link:hover {
+		transform: translateY(-3px);
+		box-shadow: 0 6px 16px rgba(41, 94, 147, 0.4);
 	}
 
 	.cta-section-local {
@@ -144,6 +394,7 @@ import Layout from '../../layouts/Layout.astro';
 		margin-bottom: 1rem;
 		font-weight: 800;
 		text-transform: uppercase;
+		letter-spacing: 0.5px;
 	}
 
 	.cta-section-local p {
@@ -187,6 +438,7 @@ import Layout from '../../layouts/Layout.astro';
 		background: transparent;
 		color: white;
 		border: 2px solid white;
+		box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
 	}
 
 	.btn-secondary:hover {
@@ -198,6 +450,31 @@ import Layout from '../../layouts/Layout.astro';
 	@media (max-width: 768px) {
 		.page-header h1 {
 			font-size: 2rem;
+		}
+
+		.area-intro h2,
+		.services-overview h2,
+		.local-advantages h2,
+		.map-section h2,
+		.testimonials-section h2,
+		.cta-section-local h2 {
+			font-size: 1.75rem;
+		}
+
+		.services-list {
+			grid-template-columns: 1fr;
+		}
+
+		.map-section {
+			padding: 2.5rem 1.5rem;
+		}
+
+		.testimonials-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.cta-buttons {
+			flex-direction: column;
 		}
 	}
 </style>
