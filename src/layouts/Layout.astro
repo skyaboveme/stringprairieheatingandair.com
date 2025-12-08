@@ -208,6 +208,7 @@ const { title, description = "Family-Owned and -Operated Heating & Air Services 
 				</div>
 				<div class="footer-bottom">
 					<p>&copy; {new Date().getFullYear()} String Prairie Heating & Air. All rights reserved.</p>
+					<p class="footer-links"><a href="/privacy">Privacy Policy</a></p>
 				</div>
 			</div>
 		</footer>
@@ -465,6 +466,21 @@ const { title, description = "Family-Owned and -Operated Heating & Air Services 
 		text-align: center;
 		color: rgba(255, 255, 255, 0.8);
 		font-weight: 300;
+	}
+
+	.footer-links {
+		margin-top: 0.75rem;
+	}
+
+	.footer-links a {
+		color: rgba(255, 255, 255, 0.8);
+		text-decoration: none;
+		font-size: 0.9rem;
+		transition: color 0.3s;
+	}
+
+	.footer-links a:hover {
+		color: var(--white);
 	}
 
 	.mobile-menu-toggle {
