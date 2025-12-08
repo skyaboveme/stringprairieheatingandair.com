@@ -89,7 +89,7 @@ import Layout from '../layouts/Layout.astro';
 					<div class="form-divider">
 						<span>Or fill out the form below</span>
 					</div>
-					<form class="contact-form" id="contactForm">
+					<form class="contact-form" id="contactForm" action="https://formspree.io/f/xpwzgkdr" method="POST">
 						<div class="form-group">
 							<label for="name">Name *</label>
 							<input type="text" id="name" name="name" required />
@@ -574,20 +574,35 @@ import Layout from '../layouts/Layout.astro';
 		submitBtn.textContent = 'Sending...';
 		submitBtn.disabled = true;
 
-		// Simulate form submission (in production, this would send to a backend)
-		setTimeout(() => {
+		try {
+			const response = await fetch(form.action, {
+				method: 'POST',
+				body: new FormData(form),
+				headers: {
+					'Accept': 'application/json'
+				}
+			});
+
+			if (response.ok) {
+				formMessage.style.display = 'block';
+				formMessage.className = 'form-message success';
+				formMessage.textContent = 'Thank you! Your message has been received. We\'ll contact you soon.';
+				form.reset();
+			} else {
+				throw new Error('Form submission failed');
+			}
+		} catch (error) {
 			formMessage.style.display = 'block';
-			formMessage.className = 'form-message success';
-			formMessage.textContent = 'Thank you! Your message has been received. We\'ll contact you soon.';
+			formMessage.className = 'form-message error';
+			formMessage.textContent = 'Oops! Something went wrong. Please try again or call us directly.';
+		}
 
-			form.reset();
-			submitBtn.textContent = originalText;
-			submitBtn.disabled = false;
+		submitBtn.textContent = originalText;
+		submitBtn.disabled = false;
 
-			// Hide message after 5 seconds
-			setTimeout(() => {
-				formMessage.style.display = 'none';
-			}, 5000);
-		}, 1000);
+		// Hide message after 5 seconds
+		setTimeout(() => {
+			formMessage.style.display = 'none';
+		}, 5000);
 	});
 </script>
