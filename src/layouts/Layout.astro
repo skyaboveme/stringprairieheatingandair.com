@@ -166,9 +166,14 @@ const { title, description = "Family-Owned and -Operated Heating & Air Services 
 				<ul class="nav-links">
 					<li><a href="/">Home</a></li>
 					<li><a href="/services">Services</a></li>
-					<li><a href="/about">About</a></li>
+					<li class="has-dropdown">
+						<a href="/about">About</a>
+						<ul class="dropdown">
+							<li><a href="/about">About Us</a></li>
+							<li><a href="/faq">FAQ</a></li>
+						</ul>
+					</li>
 					<li><a href="/blog">Blog</a></li>
-					<li><a href="/faq">FAQ</a></li>
 					<li><a href="/contact">Contact</a></li>
 				</ul>
 				<a href="tel:5129249744" class="cta-button">Call (512) 924-9744</a>
@@ -318,6 +323,58 @@ const { title, description = "Family-Owned and -Operated Heating & Air Services 
 
 	.nav-links a:hover {
 		color: var(--primary-blue);
+	}
+
+	.has-dropdown {
+		position: relative;
+	}
+
+	.has-dropdown > a::after {
+		content: ' ▼';
+		font-size: 0.6rem;
+		position: static;
+		background: none;
+		transform: none;
+		height: auto;
+		width: auto;
+	}
+
+	.dropdown {
+		display: none;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		background: var(--white);
+		min-width: 160px;
+		box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+		border-radius: 8px;
+		padding: 0.5rem 0;
+		z-index: 1000;
+		list-style: none;
+	}
+
+	.has-dropdown:hover .dropdown {
+		display: block;
+	}
+
+	.dropdown li {
+		width: 100%;
+	}
+
+	.dropdown a {
+		display: block;
+		padding: 0.75rem 1.25rem;
+		white-space: nowrap;
+		text-transform: none;
+		font-size: 0.95rem;
+	}
+
+	.dropdown a::after {
+		display: none;
+	}
+
+	.dropdown a:hover {
+		background: var(--bg-light);
 	}
 
 	.cta-button {
@@ -499,6 +556,29 @@ const { title, description = "Family-Owned and -Operated Heating & Air Services 
 		.nav-links a {
 			display: block;
 			padding: 1rem 0;
+		}
+
+		.has-dropdown > a::after {
+			content: '';
+		}
+
+		.dropdown {
+			position: static;
+			display: block;
+			box-shadow: none;
+			padding: 0;
+			padding-left: 1rem;
+			background: transparent;
+		}
+
+		.dropdown li {
+			border-bottom: none;
+		}
+
+		.dropdown a {
+			padding: 0.5rem 0;
+			font-size: 0.9rem;
+			color: var(--text-light);
 		}
 
 		.cta-button {
