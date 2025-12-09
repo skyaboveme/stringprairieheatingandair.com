@@ -165,7 +165,16 @@ const { title, description = "Quality care, expert service from a local family y
 				</button>
 				<ul class="nav-links">
 					<li><a href="/">Home</a></li>
-					<li><a href="/services">Services</a></li>
+					<li class="has-dropdown">
+						<a href="/services">Services</a>
+						<ul class="dropdown">
+							<li><a href="/services">All Services</a></li>
+							<li><a href="/services/ac-repair">AC Repair</a></li>
+							<li><a href="/services/ac-installation">AC Installation</a></li>
+							<li><a href="/services/heating-repair">Heating / Furnace Repair</a></li>
+							<li><a href="/services/maintenance">Maintenance / Tune-Ups</a></li>
+						</ul>
+					</li>
 					<li class="has-dropdown">
 						<a href="/about">About</a>
 						<ul class="dropdown">
