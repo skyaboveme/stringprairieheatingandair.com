@@ -3,8 +3,8 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout
-	title="About Us | String Prairie Heating & Air"
-	description="Learn about String Prairie Heating & Air, a family-owned HVAC company serving Bastrop, TX with professional heating and air conditioning services."
+	title="About Us | String Prairie Heating & Air - Bastrop County HVAC"
+	description="Learn about String Prairie Heating & Air, a family-owned HVAC company serving Bastrop, Rosanky, Smithville, Elgin, and Central Texas with professional heating and air conditioning services."
 >
 	<section class="page-header">
 		<div class="container">
@@ -31,7 +31,10 @@ import Layout from '../layouts/Layout.astro';
 					<h2>About the Owner</h2>
 					<h3>Ron M. Hammons</h3>
 					<p>
-						Raised in Rosanky, Texas, I went to school in Smithville and graduated in 2006. I started AC after high school and started my own company in 2014 with my father who also worked in AC his whole life. He is now retired. I am a devout Catholic, active in my community, help teach Sunday School, and am a father of 6 with a beautiful wife.
+						Raised in Rosanky, Texas, I went to school in Smithville and graduated from Smithville High School in 2006. Growing up in Bastrop County, I learned the value of hard work and community. I started working in AC right after high school and founded String Prairie Heating & Air in 2014 with my father, who also worked in HVAC his whole life. He's now retired, but his knowledge and work ethic live on in everything we do.
+					</p>
+					<p>
+						I'm a devout Catholic, active at Sacred Heart Catholic Church, help teach Sunday School, and am proud to be raising my 6 children here in the same community where I grew up. From the Colorado River bottoms to the pine forests around Bastrop State Park, this is home—and I'm honored to serve my neighbors throughout String Prairie, Rosanky, Smithville, Elgin, Paige, and all of Bastrop County.
 					</p>
 				</div>
 			</div>
@@ -75,24 +78,28 @@ import Layout from '../layouts/Layout.astro';
 
 	<section class="service-area">
 		<div class="container">
-			<h2>Serving Bastrop County</h2>
+			<h2>Serving Bastrop County & Central Texas</h2>
 			<p class="section-subtitle">
 				Based in Rosanky, TX, we proudly serve residential and commercial customers throughout
-				Bastrop County and the surrounding areas with comprehensive HVAC services.
+				Bastrop County and the surrounding areas. From historic downtown Bastrop along Main Street to rural properties near Lake Bastrop, we're your local HVAC experts.
 			</p>
 			<div class="area-features">
 				<div class="area-item">
 					<h3>Local Expertise</h3>
-					<p>We understand the unique climate challenges of Central Texas and provide solutions tailored to our local conditions.</p>
+					<p>We understand Central Texas weather—the scorching summers that push past 100°F and the occasional winter freeze. Our solutions are designed for the unique demands of Bastrop County's climate.</p>
 				</div>
 				<div class="area-item">
-					<h3>Prompt Service</h3>
-					<p>As a local company, we can respond quickly to your heating and cooling needs, especially during emergencies.</p>
+					<h3>Quick Response</h3>
+					<p>Whether you're in Bastrop near the Colorado River, out in Paige along Highway 290, or anywhere in between, we're never far away. We respond quickly because we know Texas heat doesn't wait.</p>
 				</div>
 				<div class="area-item">
-					<h3>Community Focused</h3>
-					<p>We're proud to be part of the Bastrop community and committed to keeping our neighbors comfortable year-round.</p>
+					<h3>Community Roots</h3>
+					<p>We shop at the same HEB, attend the same churches, and cheer at the same Friday night football games. Serving our Bastrop County neighbors isn't just business—it's personal.</p>
 				</div>
+			</div>
+			<div class="local-areas">
+				<h3>Communities We Serve</h3>
+				<p>Bastrop • Rosanky • String Prairie • Smithville • Elgin • Paige • Red Rock • Cedar Creek • McDade • Circle D-KC Estates • Camp Swift • Wyldwood</p>
 			</div>
 		</div>
 	</section>
@@ -338,6 +345,30 @@ import Layout from '../layouts/Layout.astro';
 		color: var(--text-dark);
 		line-height: 1.7;
 		font-weight: 300;
+	}
+
+	.local-areas {
+		margin-top: 3rem;
+		text-align: center;
+		padding: 2rem;
+		background: white;
+		border-radius: 12px;
+		box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+	}
+
+	.local-areas h3 {
+		color: var(--primary-blue);
+		font-size: 1.25rem;
+		margin-bottom: 1rem;
+		font-weight: 700;
+		text-transform: uppercase;
+	}
+
+	.local-areas p {
+		color: var(--text-dark);
+		font-size: 1.1rem;
+		line-height: 2;
+		font-weight: 400;
 	}
 
 	.our-promise {
