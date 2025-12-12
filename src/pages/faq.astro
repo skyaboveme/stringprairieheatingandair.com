@@ -7,7 +7,7 @@ const faqs = [
 		questions: [
 			{
 				q: "What areas do you serve?",
-				a: "We serve Bastrop County and surrounding areas including Bastrop, Rosanky, Smithville, Elgin, Paige, and neighboring communities."
+				a: "We serve Bastrop County and surrounding areas including Bastrop, Rosanky, Smithville, Elgin, Paige, and neighboring communities in Central Texas."
 			},
 			{
 				q: "Do you offer emergency HVAC services?",
@@ -16,6 +16,18 @@ const faqs = [
 			{
 				q: "Are you licensed and insured?",
 				a: "Yes, String Prairie Heating & Air is fully licensed and insured. We are a professional HVAC mechanical contractor specializing in both residential and commercial services."
+			},
+			{
+				q: "How much does HVAC service cost in Bastrop County?",
+				a: "HVAC costs vary based on the service needed. Diagnostic service calls typically range from $75-$125. Repairs range from $150-$2,500 depending on parts needed. New system installations range from $3,500-$15,000 depending on size and efficiency. We provide upfront pricing before any work begins."
+			},
+			{
+				q: "Do you service rural properties outside of Bastrop city limits?",
+				a: "Absolutely! We proudly serve all of Bastrop County including rural areas around Rosanky, Paige, Red Rock, Cedar Creek, and other communities. We're familiar with the unique needs of country properties and well-water homes."
+			},
+			{
+				q: "How long have you been serving the Bastrop area?",
+				a: "String Prairie Heating & Air is a family-owned business with deep roots in Bastrop County. We're your neighbors, and our reputation in this community matters to us. We treat every customer like family."
 			}
 		]
 	},
@@ -96,6 +108,14 @@ const faqs = [
 			{
 				q: "Should I cover my outdoor AC unit in winter?",
 				a: "You don't need to cover the entire unit, as they're designed to withstand weather. However, you can place a board or cover on top to prevent debris from falling in. Never completely wrap the unit as it needs ventilation to prevent moisture buildup."
+			},
+			{
+				q: "How hot does it get in Bastrop County and what size AC do I need?",
+				a: "Bastrop County regularly sees summer temperatures exceeding 100°F. Most homes need 1 ton of cooling per 400-500 square feet, but factors like insulation, ceiling height, and window exposure affect sizing. We perform Manual J load calculations to ensure proper sizing for our Texas climate."
+			},
+			{
+				q: "Do I need a heat pump or furnace in Central Texas?",
+				a: "Both work well in our climate. Heat pumps are highly efficient for our mild winters and provide both heating and cooling. Gas furnaces heat quickly during cold snaps. Many Bastrop County homes use heat pumps with gas furnace backup (dual fuel systems) for optimal efficiency year-round."
 			}
 		]
 	}
@@ -106,6 +126,22 @@ const faqs = [
 	title="HVAC FAQ - Common Questions Answered | String Prairie Heating & Air"
 	description="Find answers to common HVAC questions about maintenance, repairs, installation, and energy efficiency from String Prairie Heating & Air in Bastrop, TX."
 >
+	<!-- FAQPage Schema for AI and Search Engine Visibility -->
+	<script is:inline type="application/ld+json" set:html={JSON.stringify({
+		"@context": "https://schema.org",
+		"@type": "FAQPage",
+		"mainEntity": faqs.flatMap(category =>
+			category.questions.map(item => ({
+				"@type": "Question",
+				"name": item.q,
+				"acceptedAnswer": {
+					"@type": "Answer",
+					"text": item.a
+				}
+			}))
+		)
+	})} />
+
 	<section class="page-header">
 		<div class="container">
 			<h1>Frequently Asked Questions</h1>
