@@ -1,15 +1,35 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
+const breadcrumbs = [
+	{ name: "Home", url: "https://stringprairieheatingandair.com/" },
+	{ name: "Services", url: "https://stringprairieheatingandair.com/services" }
+];
 ---
 
 <Layout
 	title="HVAC Services | String Prairie Heating & Air"
 	description="Professional heating, cooling, and HVAC services for residential and commercial properties in Bastrop, TX and surrounding areas."
+	breadcrumbs={breadcrumbs}
 >
 	<section class="page-header">
 		<div class="container">
 			<h1>Our Services</h1>
 			<p>Professional HVAC solutions for your comfort and peace of mind</p>
+		</div>
+	</section>
+
+	<section class="service-hero-image">
+		<div class="container">
+			<div class="service-hero-grid">
+				<div class="service-hero-content">
+					<h2>Professional HVAC Service You Can Trust</h2>
+					<p>From AC repairs to complete system installations, our experienced team delivers quality workmanship on every job. We're your neighbors, serving Bastrop County with pride.</p>
+				</div>
+				<div class="service-hero-img">
+					<img src="/Images/ron-working-ac-unit.jpg" alt="Ron from String Prairie working on AC unit" loading="lazy" />
+				</div>
+			</div>
 		</div>
 	</section>
 
@@ -165,6 +185,56 @@ import Layout from '../layouts/Layout.astro';
 		font-weight: 300;
 		position: relative;
 		z-index: 1;
+	}
+
+	.service-hero-image {
+		padding: 4rem 0;
+		background: var(--bg-light);
+	}
+
+	.service-hero-grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 3rem;
+		align-items: center;
+	}
+
+	.service-hero-content h2 {
+		color: var(--dark-blue);
+		font-size: 2rem;
+		margin-bottom: 1rem;
+		font-weight: 800;
+		text-transform: uppercase;
+		letter-spacing: 0.5px;
+	}
+
+	.service-hero-content p {
+		color: var(--text-dark);
+		line-height: 1.8;
+		font-weight: 300;
+		font-size: 1.1rem;
+	}
+
+	.service-hero-img {
+		border-radius: 12px;
+		overflow: hidden;
+		box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+	}
+
+	.service-hero-img img {
+		width: 100%;
+		height: auto;
+		display: block;
+	}
+
+	@media (max-width: 768px) {
+		.service-hero-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.service-hero-img {
+			order: -1;
+		}
 	}
 
 	.services-detail {

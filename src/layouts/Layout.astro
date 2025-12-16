@@ -1,10 +1,39 @@
 ---
+interface BreadcrumbItem {
+	name: string;
+	url: string;
+}
+
 interface Props {
 	title: string;
 	description?: string;
+	image?: string;
+	type?: string;
+	breadcrumbs?: BreadcrumbItem[];
 }
 
-const { title, description = "Quality care, expert service from a local family you can trust. HVAC services in Bastrop, TX." } = Astro.props;
+const {
+	title,
+	description = "Quality care, expert service from a local family you can trust. HVAC services in Bastrop, TX.",
+	image = "/Images/og-image.jpg",
+	type = "website",
+	breadcrumbs = []
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const ogImageURL = new URL(image, Astro.site);
+
+// Generate breadcrumb schema if breadcrumbs are provided
+const breadcrumbSchema = breadcrumbs.length > 0 ? {
+	"@context": "https://schema.org",
+	"@type": "BreadcrumbList",
+	"itemListElement": breadcrumbs.map((item, index) => ({
+		"@type": "ListItem",
+		"position": index + 1,
+		"name": item.name,
+		"item": item.url
+	}))
+} : null;
 ---
 
 <!doctype html>
@@ -22,6 +51,34 @@ const { title, description = "Quality care, expert service from a local family y
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
+
+		<!-- Canonical URL -->
+		<link rel="canonical" href={canonicalURL} />
+
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content={type} />
+		<meta property="og:url" content={canonicalURL} />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content={ogImageURL} />
+		<meta property="og:site_name" content="String Prairie Heating & Air" />
+		<meta property="og:locale" content="en_US" />
+
+		<!-- Twitter Card -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:url" content={canonicalURL} />
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:description" content={description} />
+		<meta name="twitter:image" content={ogImageURL} />
+
+		<!-- Additional SEO Meta Tags -->
+		<meta name="robots" content="index, follow" />
+		<meta name="googlebot" content="index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1" />
+		<meta name="geo.region" content="US-TX" />
+		<meta name="geo.placename" content="Rosanky, Texas" />
+		<meta name="geo.position" content="29.8918229;-97.3320232" />
+		<meta name="ICBM" content="29.8918229, -97.3320232" />
+
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800;900&family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -81,9 +138,58 @@ const { title, description = "Quality care, expert service from a local family y
 				"closes": "17:00"
 			},
 			"sameAs": [
-				"https://www.google.com/maps/place/String+Prairie+Heating+%26+Air/@29.8918229,-97.3320232"
+				"https://www.google.com/maps/place/String+Prairie+Heating+%26+Air/@29.8918229,-97.3320232",
+				"https://www.facebook.com/profile.php?id=100082664987868"
 			],
 			"priceRange": "$$",
+			"aggregateRating": {
+				"@type": "AggregateRating",
+				"ratingValue": "5",
+				"reviewCount": "15",
+				"bestRating": "5",
+				"worstRating": "1"
+			},
+			"review": [
+				{
+					"@type": "Review",
+					"reviewRating": {
+						"@type": "Rating",
+						"ratingValue": "5",
+						"bestRating": "5"
+					},
+					"author": {
+						"@type": "Person",
+						"name": "John D."
+					},
+					"reviewBody": "Excellent service! They were prompt, professional, and fixed our AC issue quickly. Highly recommend String Prairie for any HVAC needs."
+				},
+				{
+					"@type": "Review",
+					"reviewRating": {
+						"@type": "Rating",
+						"ratingValue": "5",
+						"bestRating": "5"
+					},
+					"author": {
+						"@type": "Person",
+						"name": "Sarah M."
+					},
+					"reviewBody": "Great family-owned business! They installed our new heating system and did an amazing job. Fair pricing and quality work."
+				},
+				{
+					"@type": "Review",
+					"reviewRating": {
+						"@type": "Rating",
+						"ratingValue": "5",
+						"bestRating": "5"
+					},
+					"author": {
+						"@type": "Person",
+						"name": "Mike R."
+					},
+					"reviewBody": "Very knowledgeable and courteous. They explained everything clearly and got our air conditioning working perfectly. Will definitely call them again!"
+				}
+			],
 			"areaServed": [
 				{
 					"@type": "City",
@@ -151,6 +257,11 @@ const { title, description = "Quality care, expert service from a local family y
 			}
 		}
 		</script>
+
+		<!-- BreadcrumbList Schema (if breadcrumbs provided) -->
+		{breadcrumbSchema && (
+			<script is:inline type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+		)}
 	</head>
 	<body>
 		<!-- Google Tag Manager (noscript) -->

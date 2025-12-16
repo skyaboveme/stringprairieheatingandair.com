@@ -1,6 +1,12 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
+const breadcrumbs = [
+	{ name: "Home", url: "https://stringprairieheatingandair.com/" },
+	{ name: "About", url: "https://stringprairieheatingandair.com/about" },
+	{ name: "FAQ", url: "https://stringprairieheatingandair.com/faq" }
+];
+
 const faqs = [
 	{
 		category: "General Questions",
@@ -125,6 +131,7 @@ const faqs = [
 <Layout
 	title="HVAC FAQ - Common Questions Answered | String Prairie Heating & Air"
 	description="Find answers to common HVAC questions about maintenance, repairs, installation, and energy efficiency from String Prairie Heating & Air in Bastrop, TX."
+	breadcrumbs={breadcrumbs}
 >
 	<!-- FAQPage Schema for AI and Search Engine Visibility -->
 	<script is:inline type="application/ld+json" set:html={JSON.stringify({

@@ -1,10 +1,16 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
+const breadcrumbs = [
+	{ name: "Home", url: "https://stringprairieheatingandair.com/" },
+	{ name: "Contact", url: "https://stringprairieheatingandair.com/contact" }
+];
 ---
 
 <Layout
 	title="Contact Us | String Prairie Heating & Air"
 	description="Contact String Prairie Heating & Air for all your HVAC needs in Bastrop, TX. Call (512) 924-9744 or request a quote online."
+	breadcrumbs={breadcrumbs}
 >
 	<section class="page-header">
 		<div class="container">
@@ -61,6 +67,10 @@ import Layout from '../layouts/Layout.astro';
 							<li>Paige</li>
 							<li>And surrounding areas</li>
 						</ul>
+					</div>
+
+					<div class="van-image">
+						<img src="/Images/service-van-full.jpg" alt="String Prairie Heating & Air service van" loading="lazy" />
 					</div>
 
 					<div class="map-container">
@@ -304,6 +314,19 @@ import Layout from '../layouts/Layout.astro';
 		color: var(--accent-red);
 		font-weight: bold;
 		font-size: 1.1rem;
+	}
+
+	.van-image {
+		margin-top: 2rem;
+		border-radius: 12px;
+		overflow: hidden;
+		box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+	}
+
+	.van-image img {
+		width: 100%;
+		height: auto;
+		display: block;
 	}
 
 	.map-container {

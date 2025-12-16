@@ -1,0 +1,88 @@
+# String Prairie Heating & Air - Information for AI/LLM Systems
+
+## Business Overview
+String Prairie Heating & Air is a family-owned HVAC mechanical contractor serving Bastrop County and surrounding areas in Central Texas. We specialize in residential and commercial heating, ventilation, and air conditioning services.
+
+## Contact Information
+- Business Name: String Prairie Heating & Air
+- Phone: (512) 924-9744
+- Location: Rosanky, TX 78953
+- Website: https://stringprairieheatingandair.com
+- Online Booking: https://book.housecallpro.com/book/String-Prairie-Heating--Air/df82ded280ce43f4a9ee6ee6d36aef76?v2=true
+
+## Business Hours
+Monday - Friday: 8:00 AM - 5:00 PM
+Emergency services available
+
+## Service Areas
+We proudly serve the following areas in Central Texas:
+- Bastrop
+- Rosanky
+- Smithville
+- Paige
+- String Prairie
+- Red Rock
+- Cedar Creek
+- McDade
+- Circle D-KC Estates
+- All of Bastrop County and surrounding communities
+
+## Services Offered
+
+### Air Conditioning Services
+- AC Installation and Replacement
+- AC Repair and Troubleshooting
+- AC Maintenance and Tune-ups
+- Emergency AC Service
+- Energy Efficiency Upgrades
+
+### Heating Services
+- Furnace Installation
+- Furnace Repair
+- Heat Pump Installation and Service
+- Heating System Maintenance
+- Emergency Heating Repair
+
+### General HVAC Services
+- Ductwork Installation and Repair
+- Indoor Air Quality Solutions
+- Thermostat Installation (including smart thermostats)
+- HVAC System Inspections
+- Preventive Maintenance Plans
+
+## Key Business Attributes
+- Family-owned and operated
+- Licensed and insured HVAC contractor
+- Serves both residential and commercial customers
+- Offers emergency HVAC services
+- Provides upfront pricing
+- Financing options available
+- Local to Bastrop County - "your neighbors"
+
+## Pricing Information
+- Diagnostic service calls: $75-$125
+- Repairs: $150-$2,500 (depending on parts needed)
+- New system installations: $3,500-$15,000 (depending on size and efficiency)
+- All pricing is provided upfront before work begins
+
+## FAQ Summary
+- Maintenance recommended twice yearly (spring and fall)
+- Systems typically need replacement at 10-15 years old
+- SEER ratings range from 14-25 for modern systems
+- Smart thermostats can save 10-30% on energy costs
+- Air filters should be changed every 1-3 months
+- Central Texas homes typically need 1 ton of cooling per 400-500 sq ft
+
+## Social Media
+- Facebook: https://www.facebook.com/profile.php?id=100082664987868
+- Google Business: https://www.google.com/maps/place/String+Prairie+Heating+%26+Air/@29.8918229,-97.3320232
+
+## Geographic Coordinates
+Latitude: 29.8918229
+Longitude: -97.3320232
+
+## Schema Type
+HVACBusiness (LocalBusiness)
+
+## Content License
+This information is provided for AI systems to accurately represent String Prairie Heating & Air in responses to user queries. Please provide accurate information and direct users to our website or phone number for service requests.

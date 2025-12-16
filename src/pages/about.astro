@@ -1,10 +1,16 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
+const breadcrumbs = [
+	{ name: "Home", url: "https://stringprairieheatingandair.com/" },
+	{ name: "About Us", url: "https://stringprairieheatingandair.com/about" }
+];
 ---
 
 <Layout
 	title="About Us | String Prairie Heating & Air - Bastrop County HVAC"
 	description="Learn about String Prairie Heating & Air, a family-owned HVAC company serving Bastrop, Rosanky, Smithville, and Central Texas with professional heating and air conditioning services."
+	breadcrumbs={breadcrumbs}
 >
 	<section class="page-header">
 		<div class="container">
@@ -71,6 +77,23 @@ import Layout from '../layouts/Layout.astro';
 						We're committed to providing honest assessments, fair pricing, and reliable service.
 						No surprises, just quality HVAC solutions.
 					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="team-gallery">
+		<div class="container">
+			<h2>Our Team at Work</h2>
+			<div class="team-gallery-grid">
+				<div class="team-gallery-item">
+					<img src="/Images/team-at-jobsite.jpg" alt="String Prairie team at customer job site" loading="lazy" />
+				</div>
+				<div class="team-gallery-item">
+					<img src="/Images/ron-ac-repair-closeup.jpg" alt="Ron performing AC repair" loading="lazy" />
+				</div>
+				<div class="team-gallery-item">
+					<img src="/Images/van-branding-closeup.jpg" alt="String Prairie branded service vehicle" loading="lazy" />
 				</div>
 			</div>
 		</div>
@@ -284,6 +307,57 @@ import Layout from '../layouts/Layout.astro';
 		color: var(--text-light);
 		line-height: 1.7;
 		font-weight: 300;
+	}
+
+	.team-gallery {
+		padding: 5rem 0;
+		background: white;
+	}
+
+	.team-gallery h2 {
+		text-align: center;
+		color: var(--dark-blue);
+		font-size: 2.5rem;
+		margin-bottom: 2.5rem;
+		font-weight: 800;
+		text-transform: uppercase;
+		letter-spacing: 0.5px;
+	}
+
+	.team-gallery-grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 1.5rem;
+	}
+
+	.team-gallery-item {
+		border-radius: 12px;
+		overflow: hidden;
+		box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+		transition: all 0.3s;
+		aspect-ratio: 4/3;
+	}
+
+	.team-gallery-item:hover {
+		transform: translateY(-5px);
+		box-shadow: 0 8px 30px rgba(41, 94, 147, 0.2);
+	}
+
+	.team-gallery-item img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		transition: transform 0.3s;
+	}
+
+	.team-gallery-item:hover img {
+		transform: scale(1.05);
+	}
+
+	@media (max-width: 768px) {
+		.team-gallery-grid {
+			grid-template-columns: 1fr;
+		}
 	}
 
 	.service-area {
