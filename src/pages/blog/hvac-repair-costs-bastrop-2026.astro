@@ -60,6 +60,10 @@ import Layout from '../../layouts/Layout.astro';
 					When your AC quits on a 100-degree Texas day, the last thing you want is a surprise repair bill. As a family-owned HVAC company serving Bastrop County, we believe you deserve to know what repairs actually cost in 2026. Here's our honest breakdown of current HVAC repair pricing in the Bastrop, Smithville, Rosanky, and Paige areas.
 				</p>
 
+				<div class="featured-image">
+					<img src="/Images/average-hvac-repair-cost.jpg" alt="Average HVAC repair costs in Bastrop County 2026" loading="lazy" />
+				</div>
+
 				<h2>What Determines HVAC Repair Costs?</h2>
 				<p>
 					Before we get into specific numbers, understand that repair costs depend on several factors:
@@ -375,9 +379,22 @@ import Layout from '../../layouts/Layout.astro';
 		color: var(--text-dark);
 		line-height: 1.8;
 		font-weight: 400;
-		margin-bottom: 3rem;
+		margin-bottom: 2rem;
 		padding-bottom: 2rem;
 		border-bottom: 2px solid var(--bg-light);
+	}
+
+	.featured-image {
+		margin: 2rem 0 3rem;
+		border-radius: 12px;
+		overflow: hidden;
+		box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+	}
+
+	.featured-image img {
+		width: 100%;
+		height: auto;
+		display: block;
 	}
 
 	.post-content h2 {
