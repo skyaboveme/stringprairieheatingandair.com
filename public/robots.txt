@@ -44,6 +44,3 @@ Allow: /
 
 User-agent: DuckDuckBot
 Allow: /
-
-# Crawl delay to prevent server overload
-Crawl-delay: 1
