@@ -3,6 +3,7 @@
 
 User-agent: *
 Allow: /
+Disallow: /_api/
 
 # Sitemap location
 Sitemap: https://stringprairieheatingandair.com/sitemap-index.xml
