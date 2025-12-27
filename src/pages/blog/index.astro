@@ -1,76 +1,86 @@
 ---
-import Layout from '../../layouts/Layout.astro';
+import Layout from "../../layouts/Layout.astro";
 
 const posts = [
 	{
-		slug: 'preparing-heating-system-texas-winter',
-		title: 'Preparing Your Heating System for Texas Winter',
-		excerpt: 'Get your heating system ready for Texas winter. Expert tips on furnace maintenance, heat pump care, and staying warm during unexpected cold snaps in Bastrop County.',
-		date: '2024-12-15',
-		image: '❄️',
+		slug: "preparing-heating-system-texas-winter",
+		title: "Preparing Your Heating System for Texas Winter",
+		excerpt:
+			"Get your heating system ready for Texas winter. Expert tips on furnace maintenance, heat pump care, and staying warm during unexpected cold snaps in Bastrop County.",
+		date: "2024-12-15",
+		image: "❄️",
 	},
 	{
-		slug: 'hvac-repair-costs-bastrop-2026',
-		title: 'Average HVAC Repair Costs in Bastrop County 2026',
-		excerpt: 'What does HVAC repair cost in Bastrop, TX in 2026? Get honest pricing for AC repairs, furnace repairs, and emergency service from your local experts.',
-		date: '2025-12-17',
-		image: '🔧',
+		slug: "hvac-repair-costs-bastrop-2026",
+		title: "Average HVAC Repair Costs in Bastrop County 2026",
+		excerpt:
+			"What does HVAC repair cost in Bastrop, TX in 2026? Get honest pricing for AC repairs, furnace repairs, and emergency service from your local experts.",
+		date: "2025-12-17",
+		image: "🔧",
 	},
 	{
-		slug: 'how-long-does-ac-last-texas',
-		title: 'How Long Does an AC Last in Texas?',
-		excerpt: 'Learn how long air conditioners typically last in the Texas climate and what you can do to extend your AC lifespan.',
-		date: '2024-12-11',
-		image: '⏱️',
+		slug: "how-long-does-ac-last-texas",
+		title: "How Long Does an AC Last in Texas?",
+		excerpt:
+			"Learn how long air conditioners typically last in the Texas climate and what you can do to extend your AC lifespan.",
+		date: "2024-12-11",
+		image: "⏱️",
 	},
 	{
-		slug: 'best-thermostat-settings-texas-summer',
-		title: 'Best Thermostat Settings for Texas Summers',
-		excerpt: 'What\'s the ideal thermostat setting for Texas heat? Learn the best temperatures for comfort, savings, and AC efficiency.',
-		date: '2024-12-11',
-		image: '🌡️',
+		slug: "best-thermostat-settings-texas-summer",
+		title: "Best Thermostat Settings for Texas Summers",
+		excerpt:
+			"What's the ideal thermostat setting for Texas heat? Learn the best temperatures for comfort, savings, and AC efficiency.",
+		date: "2024-12-11",
+		image: "🌡️",
 	},
 	{
-		slug: 'hvac-costs-bastrop-county',
-		title: 'HVAC Costs in Bastrop County: What to Expect',
-		excerpt: 'Learn about typical HVAC service costs in Bastrop, Rosanky, Smithville, and Paige. Honest pricing information from your local HVAC experts.',
-		date: '2024-12-10',
-		image: '💰',
+		slug: "hvac-costs-bastrop-county",
+		title: "HVAC Costs in Bastrop County: What to Expect",
+		excerpt:
+			"Learn about typical HVAC service costs in Bastrop, Rosanky, Smithville, and Paige. Honest pricing information from your local HVAC experts.",
+		date: "2024-12-10",
+		image: "💰",
 	},
 	{
-		slug: 'signs-ductwork-needs-repair',
-		title: 'Signs Your Ductwork Needs Repair',
-		excerpt: 'Learn the warning signs that indicate your ductwork needs repair. Leaky or damaged ducts waste energy and reduce comfort in your home.',
-		date: '2024-12-10',
-		image: '🔍',
+		slug: "signs-ductwork-needs-repair",
+		title: "Signs Your Ductwork Needs Repair",
+		excerpt:
+			"Learn the warning signs that indicate your ductwork needs repair. Leaky or damaged ducts waste energy and reduce comfort in your home.",
+		date: "2024-12-10",
+		image: "🔍",
 	},
 	{
-		slug: 'how-to-choose-right-ac-size',
-		title: 'How to Choose the Right AC Size for Your Home',
-		excerpt: 'Learn how to properly size your air conditioning system. Avoid costly mistakes with our guide to choosing the right AC size for your Texas home.',
-		date: '2024-12-10',
-		image: '📏',
+		slug: "how-to-choose-right-ac-size",
+		title: "How to Choose the Right AC Size for Your Home",
+		excerpt:
+			"Learn how to properly size your air conditioning system. Avoid costly mistakes with our guide to choosing the right AC size for your Texas home.",
+		date: "2024-12-10",
+		image: "📏",
 	},
 	{
-		slug: 'winterize-your-hvac-system',
-		title: 'How to Winterize Your Home\'s HVAC System',
-		excerpt: 'Essential tips for preparing your heating system for winter in Central Texas. Learn how to winterize your HVAC system for maximum efficiency and comfort.',
-		date: '2024-11-22',
-		image: '❄️',
+		slug: "winterize-your-hvac-system",
+		title: "How to Winterize Your Home's HVAC System",
+		excerpt:
+			"Essential tips for preparing your heating system for winter in Central Texas. Learn how to winterize your HVAC system for maximum efficiency and comfort.",
+		date: "2024-11-22",
+		image: "❄️",
 	},
 	{
-		slug: 'when-to-replace-your-hvac-system',
-		title: '5 Signs It\'s Time to Replace Your HVAC System',
-		excerpt: 'Learn the key indicators that your heating and air conditioning system needs replacement, and how investing in a new system can save you money.',
-		date: '2024-11-15',
-		image: '🔧',
+		slug: "when-to-replace-your-hvac-system",
+		title: "5 Signs It's Time to Replace Your HVAC System",
+		excerpt:
+			"Learn the key indicators that your heating and air conditioning system needs replacement, and how investing in a new system can save you money.",
+		date: "2024-11-15",
+		image: "🔧",
 	},
 	{
-		slug: 'spring-hvac-maintenance-tips',
-		title: 'Spring HVAC Maintenance: Getting Your System Ready for Summer',
-		excerpt: 'Prepare your air conditioning system for the hot Texas summer with these essential maintenance tips and tasks.',
-		date: '2024-11-01',
-		image: '🌸',
+		slug: "spring-hvac-maintenance-tips",
+		title: "Spring HVAC Maintenance: Getting Your System Ready for Summer",
+		excerpt:
+			"Prepare your air conditioning system for the hot Texas summer with these essential maintenance tips and tasks.",
+		date: "2024-11-01",
+		image: "🌸",
 	},
 ];
 ---
@@ -82,22 +92,40 @@ const posts = [
 	<section class="page-header">
 		<div class="container">
 			<h1>HVAC Tips & Advice</h1>
-			<p>Expert insights and helpful tips for your heating and cooling needs</p>
+			<p>
+				Expert insights and helpful tips for your heating and cooling
+				needs
+			</p>
 		</div>
 	</section>
 
 	<section class="blog-content">
 		<div class="container">
 			<div class="blog-grid">
-				{posts.map((post) => (
-					<article class="blog-card">
-						<div class="blog-icon">{post.image}</div>
-						<div class="blog-date">{new Date(post.date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</div>
-						<h2><a href={`/blog/${post.slug}`}>{post.title}</a></h2>
-						<p class="blog-excerpt">{post.excerpt}</p>
-						<a href={`/blog/${post.slug}`} class="read-more">Read More →</a>
-					</article>
-				))}
+				{
+					posts.map((post) => (
+						<article class="blog-card">
+							<div class="blog-icon">{post.image}</div>
+							<div class="blog-date">
+								{new Date(post.date).toLocaleDateString(
+									"en-US",
+									{
+										month: "long",
+										day: "numeric",
+										year: "numeric",
+									},
+								)}
+							</div>
+							<h2>
+								<a href={`/blog/${post.slug}`}>{post.title}</a>
+							</h2>
+							<p class="blog-excerpt">{post.excerpt}</p>
+							<a href={`/blog/${post.slug}`} class="read-more">
+								Read More →
+							</a>
+						</article>
+					))
+				}
 			</div>
 		</div>
 	</section>
@@ -105,9 +133,17 @@ const posts = [
 	<section class="cta-section">
 		<div class="container">
 			<h2>Need HVAC Service?</h2>
-			<p>Our expert technicians are ready to help with all your heating and cooling needs</p>
+			<p>
+				Our expert technicians are ready to help with all your heating
+				and cooling needs
+			</p>
 			<div class="cta-buttons">
-				<a href="https://book.housecallpro.com/book/String-Prairie-Heating--Air/df82ded280ce43f4a9ee6ee6d36aef76?v2=true" target="_blank" rel="noopener noreferrer" class="btn btn-light">🔖 Book Online</a>
+				<a
+					href="https://book.housecallpro.com/book/String-Prairie-Heating--Air/df82ded280ce43f4a9ee6ee6d36aef76?v2=true"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="btn btn-light">🔖 Book Online</a
+				>
 				<a href="/contact" class="btn btn-outline">Contact Us</a>
 			</div>
 		</div>
@@ -116,23 +152,21 @@ const posts = [
 
 <style>
 	.page-header {
-		background: linear-gradient(135deg, var(--dark-blue) 0%, var(--primary-blue) 100%);
+		background-image:
+			linear-gradient(rgba(10, 30, 60, 0.8), rgba(10, 30, 60, 0.9)),
+			url("/public/images/blog-banner.jpg");
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
 		color: white;
-		padding: 5rem 0;
+		padding: 8rem 0;
 		text-align: center;
 		position: relative;
 		overflow: hidden;
 	}
 
 	.page-header::before {
-		content: '';
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		background: radial-gradient(circle at 30% 50%, rgba(233, 30, 34, 0.1) 0%, transparent 50%);
-		pointer-events: none;
+		content: none;
 	}
 
 	.page-header h1 {
@@ -169,7 +203,7 @@ const posts = [
 		padding: 2.5rem;
 		border-radius: 12px;
 		border-top: 5px solid var(--accent-red);
-		box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 		transition: all 0.3s;
 	}
 
@@ -183,7 +217,7 @@ const posts = [
 	.blog-icon {
 		font-size: 3.5rem;
 		margin-bottom: 1rem;
-		filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+		filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
 	}
 
 	.blog-date {
@@ -236,7 +270,11 @@ const posts = [
 	}
 
 	.cta-section {
-		background: linear-gradient(135deg, var(--accent-red) 0%, var(--dark-red) 100%);
+		background: linear-gradient(
+			135deg,
+			var(--accent-red) 0%,
+			var(--dark-red) 100%
+		);
 		color: white;
 		padding: 5rem 0;
 		text-align: center;
@@ -245,13 +283,17 @@ const posts = [
 	}
 
 	.cta-section::before {
-		content: '';
+		content: "";
 		position: absolute;
 		top: 0;
 		left: 0;
 		right: 0;
 		bottom: 0;
-		background: radial-gradient(circle at 70% 50%, rgba(11, 58, 105, 0.2) 0%, transparent 50%);
+		background: radial-gradient(
+			circle at 70% 50%,
+			rgba(11, 58, 105, 0.2) 0%,
+			transparent 50%
+		);
 		pointer-events: none;
 	}
 
