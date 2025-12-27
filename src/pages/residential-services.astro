@@ -1,0 +1,269 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const breadcrumbs = [
+	{ name: "Home", url: "https://stringprairieheatingandair.com/" },
+	{ name: "Residential Services", url: "https://stringprairieheatingandair.com/residential-services" }
+];
+---
+
+<Layout
+	title="Residential HVAC Services | String Prairie Heating & Air"
+	description="Expert residential heating and air conditioning services in Bastrop County. AC repair, installation, and maintenance for your home."
+	breadcrumbs={breadcrumbs}
+>
+	<section class="page-header">
+		<div class="container">
+			<h1>Residential Services</h1>
+			<p>Keeping your home comfortable all year round</p>
+		</div>
+	</section>
+
+	<section class="service-content">
+		<div class="container">
+			<div class="intro-text">
+				<h2>Home Comfort Solutions</h2>
+				<p>At String Prairie Heating & Air, we understand that your home is your sanctuary. When your HVAC system isn't working correctly, it disrupts your life. Our team of experienced technicians provides fast, reliable residential services to restore your comfort quickly and efficiently.</p>
+			</div>
+
+			<div class="services-grid">
+				<div class="service-card">
+					<div class="icon">❄️</div>
+					<h3>Air Conditioning</h3>
+					<p>From central air to ductless mini-splits, we handle all your home cooling needs. Whether you need a quick repair or a full system replacement, we use top-quality equipment and ensure proficient installation.</p>
+					<ul>
+						<li>AC Repair & Troubleshooting</li>
+						<li>New System Installation</li>
+						<li>Ductless Mini-Splits</li>
+						<li>Seasonal Tune-ups</li>
+					</ul>
+				</div>
+
+				<div class="service-card">
+					<div class="icon">🔥</div>
+					<h3>Heating Services</h3>
+					<p>Don't get left in the cold. We service all makes and models of furnaces and heat pumps. Our technicians ensure your heating system operates safely and efficiently during those chilly Central Texas nights.</p>
+					<ul>
+						<li>Furnace Repair & Installation</li>
+						<li>Heat Pump Services</li>
+						<li>Safety Inspections</li>
+						<li>Energy Efficient Upgrades</li>
+					</ul>
+				</div>
+
+				<div class="service-card">
+					<div class="icon">🛠️</div>
+					<h3>Preventive Maintenance</h3>
+					<p>Regular maintenance is key to extending the life of your HVAC system and preventing costly breakdowns. Our maintenance plans keep your system running at peak performance.</p>
+					<ul>
+						<li>Annual Inspections</li>
+						<li>Filter Replacement</li>
+						<li>Coil Cleaning</li>
+						<li>System Performance Checks</li>
+					</ul>
+				</div>
+
+				<div class="service-card">
+					<div class="icon">💨</div>
+					<h3>Indoor Air Quality</h3>
+					<p>Breathe easier with our indoor air quality solutions. We install air purifiers, dehumidifiers, and advanced filtration systems to reduce allergens and pollutants in your home.</p>
+					<ul>
+						<li>Air Filtration Systems</li>
+						<li>Dehumidifiers</li>
+						<li>Duct Cleaning & Sealing</li>
+						<li>UV Light Purifiers</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="cta-section">
+		<div class="container">
+			<h2>Need Residential Service?</h2>
+			<p>Contact us today for a free estimate or to schedule a service call.</p>
+			<div class="cta-buttons">
+				<a href="https://book.housecallpro.com/book/String-Prairie-Heating--Air/df82ded280ce43f4a9ee6ee6d36aef76?v2=true" target="_blank" rel="noopener noreferrer" class="btn btn-light">🔖 Book Online</a>
+				<a href="tel:5129249744" class="btn btn-outline">Call (512) 924-9744</a>
+			</div>
+		</div>
+	</section>
+</Layout>
+
+<style>
+	.page-header {
+		background: linear-gradient(135deg, var(--dark-blue) 0%, var(--primary-blue) 100%);
+		color: white;
+		padding: 5rem 0;
+		text-align: center;
+		position: relative;
+		overflow: hidden;
+	}
+
+	.page-header h1 {
+		font-size: 3rem;
+		margin-bottom: 1rem;
+		font-weight: 800;
+		text-transform: uppercase;
+		letter-spacing: 0.5px;
+	}
+
+	.page-header p {
+		font-size: 1.35rem;
+		opacity: 0.95;
+		font-weight: 300;
+	}
+
+	.service-content {
+		padding: 5rem 0;
+		background: white;
+	}
+
+	.intro-text {
+		text-align: center;
+		max-width: 800px;
+		margin: 0 auto 4rem;
+	}
+
+	.intro-text h2 {
+		color: var(--dark-blue);
+		font-size: 2.5rem;
+		margin-bottom: 1.5rem;
+		font-weight: 800;
+		text-transform: uppercase;
+	}
+
+	.intro-text p {
+		color: var(--text-dark);
+		font-size: 1.15rem;
+		line-height: 1.8;
+		font-weight: 300;
+	}
+
+	.services-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 2.5rem;
+	}
+
+	.service-card {
+		background: var(--bg-light);
+		padding: 2.5rem;
+		border-radius: 12px;
+		border-top: 5px solid var(--accent-red);
+		box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+		transition: all 0.3s;
+	}
+
+	.service-card:hover {
+		transform: translateY(-5px);
+		box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+	}
+
+	.icon {
+		font-size: 3rem;
+		margin-bottom: 1rem;
+	}
+
+	.service-card h3 {
+		color: var(--primary-blue);
+		margin-bottom: 1rem;
+		font-size: 1.5rem;
+		font-weight: 700;
+	}
+
+	.service-card p {
+		color: var(--text-dark);
+		line-height: 1.6;
+		margin-bottom: 1.5rem;
+	}
+
+	.service-card ul {
+		list-style: none;
+		padding: 0;
+	}
+
+	.service-card li {
+		margin-bottom: 0.5rem;
+		padding-left: 1.5rem;
+		position: relative;
+		color: var(--text-dark);
+	}
+
+	.service-card li::before {
+		content: "✓";
+		position: absolute;
+		left: 0;
+		color: var(--accent-red);
+		font-weight: bold;
+	}
+
+	.cta-section {
+		background: linear-gradient(135deg, var(--accent-red) 0%, var(--dark-red) 100%);
+		color: white;
+		padding: 5rem 0;
+		text-align: center;
+	}
+
+	.cta-section h2 {
+		font-size: 2.5rem;
+		margin-bottom: 1rem;
+		font-weight: 800;
+		text-transform: uppercase;
+	}
+
+	.cta-section p {
+		font-size: 1.35rem;
+		margin-bottom: 2.5rem;
+		font-weight: 300;
+	}
+
+	.cta-buttons {
+		display: flex;
+		gap: 1.5rem;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+
+	.btn {
+		padding: 1.25rem 2.5rem;
+		border-radius: 50px;
+		text-decoration: none;
+		font-weight: 700;
+		transition: all 0.3s;
+		display: inline-block;
+		text-transform: uppercase;
+		letter-spacing: 0.5px;
+	}
+
+	.btn-light {
+		background: white;
+		color: var(--primary-blue);
+	}
+
+	.btn-light:hover {
+		background: rgba(255, 255, 255, 0.95);
+		transform: translateY(-3px);
+	}
+
+	.btn-outline {
+		background: transparent;
+		color: white;
+		border: 2px solid white;
+	}
+
+	.btn-outline:hover {
+		background: white;
+		color: var(--accent-red);
+		transform: translateY(-3px);
+	}
+	
+	@media (max-width: 768px) {
+		.page-header h1 {
+			font-size: 2rem;
+		}
+		.intro-text h2 {
+			font-size: 2rem;
+		}
+	}
+</style>

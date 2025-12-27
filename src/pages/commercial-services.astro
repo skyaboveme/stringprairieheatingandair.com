@@ -1,0 +1,318 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const breadcrumbs = [
+    { name: "Home", url: "https://stringprairieheatingandair.com/" },
+    {
+        name: "Commercial Services",
+        url: "https://stringprairieheatingandair.com/commercial-services",
+    },
+];
+---
+
+<Layout
+    title="Commercial HVAC Services | String Prairie Heating & Air"
+    description="Reliable commercial HVAC services for businesses in Bastrop County. System design, installation, maintenance, and repair."
+    breadcrumbs={breadcrumbs}
+>
+    <section class="page-header">
+        <div class="container">
+            <h1>Commercial Services</h1>
+            <p>Keeping your business running smooth and comfortable</p>
+        </div>
+    </section>
+
+    <section class="service-content">
+        <div class="container">
+            <div class="intro-text">
+                <h2>Business HVAC Solutions</h2>
+                <p>
+                    A comfortable environment is essential for productivity and
+                    customer satisfaction. String Prairie Heating & Air provides
+                    comprehensive commercial HVAC solutions tailored to the
+                    unique needs of your business. From small retail shops to
+                    office buildings, we deliver reliable performance you can
+                    count on.
+                </p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="icon">🏢</div>
+                    <h3>System Installation</h3>
+                    <p>
+                        We design and install efficient heating and cooling
+                        systems for new construction and renovation projects. We
+                        ensure your system is properly sized and configured for
+                        maximum energy efficiency and longevity.
+                    </p>
+                    <ul>
+                        <li>Rooftop Units</li>
+                        <li>Split Systems</li>
+                        <li>Ductwork Design & Fabrication</li>
+                        <li>System Retrofits</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="icon">🔧</div>
+                    <h3>Commercial Repair</h3>
+                    <p>
+                        HVAC downtime can cost you business. Our skilled
+                        technicians are ready to diagnose and resolve issues
+                        quickly to minimize disruption to your operations. We
+                        offer prompt service for all commercial equipment
+                        brands.
+                    </p>
+                    <ul>
+                        <li>Emergency Repairs</li>
+                        <li>Diagnostic Services</li>
+                        <li>Component Replacement</li>
+                        <li>Thermostat & Controls</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="icon">📋</div>
+                    <h3>Maintenance Contracts</h3>
+                    <p>
+                        Protect your investment with our customized maintenance
+                        agreements. Scheduled inspections and tune-ups prevent
+                        unexpected failures and extend the lifespan of your
+                        commercial equipment.
+                    </p>
+                    <ul>
+                        <li>Quarterly/Annual Inspections</li>
+                        <li>Priority Service</li>
+                        <li>Cost Savings</li>
+                        <li>Performance Optimization</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="icon">🌱</div>
+                    <h3>Energy Efficiency</h3>
+                    <p>
+                        Reduce your operating costs with energy-efficient
+                        solutions. We can assess your current system and
+                        recommend upgrades or modifications to lower your energy
+                        bills and improve comfort.
+                    </p>
+                    <ul>
+                        <li>Energy Audits</li>
+                        <li>High-Efficiency Upgrades</li>
+                        <li>Smart Building Controls</li>
+                        <li>Zoning Systems</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2>Partner with String Prairie Heating & Air</h2>
+            <p>
+                Contact us to discuss your commercial HVAC needs and get a
+                custom quote.
+            </p>
+            <div class="cta-buttons">
+                <a
+                    href="https://book.housecallpro.com/book/String-Prairie-Heating--Air/df82ded280ce43f4a9ee6ee6d36aef76?v2=true"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn btn-light">🔖 Book Online</a
+                >
+                <a href="tel:5129249744" class="btn btn-outline"
+                    >Call (512) 924-9744</a
+                >
+            </div>
+        </div>
+    </section>
+</Layout>
+
+<style>
+    .page-header {
+        background: linear-gradient(
+            135deg,
+            var(--dark-blue) 0%,
+            var(--primary-blue) 100%
+        );
+        color: white;
+        padding: 5rem 0;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .page-header h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    .page-header p {
+        font-size: 1.35rem;
+        opacity: 0.95;
+        font-weight: 300;
+    }
+
+    .service-content {
+        padding: 5rem 0;
+        background: white;
+    }
+
+    .intro-text {
+        text-align: center;
+        max-width: 800px;
+        margin: 0 auto 4rem;
+    }
+
+    .intro-text h2 {
+        color: var(--dark-blue);
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+        font-weight: 800;
+        text-transform: uppercase;
+    }
+
+    .intro-text p {
+        color: var(--text-dark);
+        font-size: 1.15rem;
+        line-height: 1.8;
+        font-weight: 300;
+    }
+
+    .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2.5rem;
+    }
+
+    .service-card {
+        background: var(--bg-light);
+        padding: 2.5rem;
+        border-radius: 12px;
+        border-top: 5px solid var(--accent-red);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        transition: all 0.3s;
+    }
+
+    .service-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    }
+
+    .icon {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+    }
+
+    .service-card h3 {
+        color: var(--primary-blue);
+        margin-bottom: 1rem;
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+
+    .service-card p {
+        color: var(--text-dark);
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
+    }
+
+    .service-card ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .service-card li {
+        margin-bottom: 0.5rem;
+        padding-left: 1.5rem;
+        position: relative;
+        color: var(--text-dark);
+    }
+
+    .service-card li::before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        color: var(--accent-red);
+        font-weight: bold;
+    }
+
+    .cta-section {
+        background: linear-gradient(
+            135deg,
+            var(--accent-red) 0%,
+            var(--dark-red) 100%
+        );
+        color: white;
+        padding: 5rem 0;
+        text-align: center;
+    }
+
+    .cta-section h2 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        font-weight: 800;
+        text-transform: uppercase;
+    }
+
+    .cta-section p {
+        font-size: 1.35rem;
+        margin-bottom: 2.5rem;
+        font-weight: 300;
+    }
+
+    .cta-buttons {
+        display: flex;
+        gap: 1.5rem;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .btn {
+        padding: 1.25rem 2.5rem;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: 700;
+        transition: all 0.3s;
+        display: inline-block;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    .btn-light {
+        background: white;
+        color: var(--primary-blue);
+    }
+
+    .btn-light:hover {
+        background: rgba(255, 255, 255, 0.95);
+        transform: translateY(-3px);
+    }
+
+    .btn-outline {
+        background: transparent;
+        color: white;
+        border: 2px solid white;
+    }
+
+    .btn-outline:hover {
+        background: white;
+        color: var(--accent-red);
+        transform: translateY(-3px);
+    }
+
+    @media (max-width: 768px) {
+        .page-header h1 {
+            font-size: 2rem;
+        }
+        .intro-text h2 {
+            font-size: 2rem;
+        }
+    }
+</style>
