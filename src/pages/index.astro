@@ -67,6 +67,49 @@ import Layout from "../layouts/Layout.astro";
 		</div>
 	</section>
 
+	<section class="value-props">
+		<div class="container">
+			<h2>Why Choose String Prairie?</h2>
+			<div class="value-grid">
+				<div class="value-card">
+					<div class="value-icon">⏱️</div>
+					<h3>Same-Day Service</h3>
+					<p>Fast, reliable response when you need it most</p>
+				</div>
+				<div class="value-card">
+					<div class="value-icon">💲</div>
+					<h3>0% Financing Available</h3>
+					<p>Flexible payment options to fit your budget</p>
+				</div>
+				<div class="value-card">
+					<div class="value-icon">👨‍👩‍👧‍👦</div>
+					<h3>Family-Owned & Operated</h3>
+					<p>Personal care from our family to yours</p>
+				</div>
+				<div class="value-card">
+					<div class="value-icon">🤝</div>
+					<h3>Personalized Solutions</h3>
+					<p>Custom HVAC plans tailored to your specific needs</p>
+				</div>
+				<div class="value-card">
+					<div class="value-icon">🏷️</div>
+					<h3>Transparent Pricing</h3>
+					<p>Upfront costs with no hidden fees or surprises</p>
+				</div>
+				<div class="value-card">
+					<div class="value-icon">🛡️</div>
+					<h3>Industry-Leading Warranties</h3>
+					<p>Peace of mind with superior equipment protection</p>
+				</div>
+				<div class="value-card full-width">
+					<div class="value-icon">📍</div>
+					<h3>Serving Bastrop & Surrounding Communities</h3>
+					<p>Proudly local and dedicated to our neighbors</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
 	<section class="services-preview">
 		<div class="container">
 			<h2>Our Services</h2>
@@ -844,6 +887,96 @@ import Layout from "../layouts/Layout.astro";
 		.services-preview h2,
 		.cta-section h2 {
 			font-size: 2rem;
+		}
+	}
+	/* Value Props Section */
+	.value-props {
+		padding: 5rem 0;
+		background: var(--bg-light);
+		position: relative;
+	}
+
+	.value-props h2 {
+		text-align: center;
+		font-size: 2.5rem;
+		margin-bottom: 3rem;
+		color: var(--dark-blue);
+		font-weight: 800;
+		text-transform: uppercase;
+		letter-spacing: 0.5px;
+	}
+
+	.value-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+		gap: 2rem;
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+
+	.value-card {
+		background: white;
+		padding: 2rem;
+		border-radius: 12px;
+		text-align: center;
+		box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+		transition:
+			transform 0.3s ease,
+			box-shadow 0.3s ease;
+		border: 1px solid rgba(0, 0, 0, 0.05);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		height: 100%;
+	}
+
+	.value-card:hover {
+		transform: translateY(-5px);
+		box-shadow: 0 8px 25px rgba(41, 94, 147, 0.15);
+		border-color: rgba(41, 94, 147, 0.2);
+	}
+
+	.value-card.full-width {
+		grid-column: 1 / -1;
+		flex-direction: row;
+		text-align: left;
+		justify-content: center;
+		gap: 2rem;
+	}
+
+	.value-icon {
+		font-size: 3rem;
+		margin-bottom: 1rem;
+		line-height: 1;
+	}
+
+	.value-card.full-width .value-icon {
+		margin-bottom: 0;
+		font-size: 3.5rem;
+	}
+
+	.value-card h3 {
+		color: var(--primary-blue);
+		font-size: 1.25rem;
+		font-weight: 700;
+		margin-bottom: 0.5rem;
+		text-transform: uppercase;
+		letter-spacing: 0.5px;
+	}
+
+	.value-card p {
+		color: var(--text-dark);
+		font-size: 1rem;
+		line-height: 1.5;
+		margin: 0;
+		opacity: 0.8;
+	}
+
+	@media (max-width: 768px) {
+		.value-card.full-width {
+			flex-direction: column;
+			text-align: center;
+			gap: 1rem;
 		}
 	}
 </style>
