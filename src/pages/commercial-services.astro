@@ -133,25 +133,20 @@ const breadcrumbs = [
 
 <style>
     .page-header {
-        background-image: url("/Images/commercial-services-header-bg.png");
+        background-image:
+            linear-gradient(rgba(10, 30, 60, 0.8), rgba(10, 30, 60, 0.9)),
+            url("/public/Images/commercial-banner.png");
         background-size: cover;
         background-position: center;
         color: white;
-        padding: 6rem 0;
+        padding: 8rem 0;
         text-align: center;
         position: relative;
         overflow: hidden;
     }
 
     .page-header::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: rgba(11, 58, 105, 0.85);
-        pointer-events: none;
+        content: none;
     }
 
     .page-header h1 {
