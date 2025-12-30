@@ -17,34 +17,47 @@ const {
 	description = "Quality care, expert service from a local family you can trust. HVAC services in Bastrop, TX.",
 	image = "/Images/og-image.jpg",
 	type = "website",
-	breadcrumbs = []
+	breadcrumbs = [],
 } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const ogImageURL = new URL(image, Astro.site);
 
 // Generate breadcrumb schema if breadcrumbs are provided
-const breadcrumbSchema = breadcrumbs.length > 0 ? {
-	"@context": "https://schema.org",
-	"@type": "BreadcrumbList",
-	"itemListElement": breadcrumbs.map((item, index) => ({
-		"@type": "ListItem",
-		"position": index + 1,
-		"name": item.name,
-		"item": item.url
-	}))
-} : null;
+const breadcrumbSchema =
+	breadcrumbs.length > 0
+		? {
+				"@context": "https://schema.org",
+				"@type": "BreadcrumbList",
+				itemListElement: breadcrumbs.map((item, index) => ({
+					"@type": "ListItem",
+					position: index + 1,
+					name: item.name,
+					item: item.url,
+				})),
+			}
+		: null;
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
 		<!-- Google Tag Manager -->
-		<script is:inline>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-		})(window,document,'script','dataLayer','GTM-MT2TSGVF');</script>
+		<script is:inline>
+			(function (w, d, s, l, i) {
+				w[l] = w[l] || [];
+				w[l].push({
+					"gtm.start": new Date().getTime(),
+					event: "gtm.js",
+				});
+				var f = d.getElementsByTagName(s)[0],
+					j = d.createElement(s),
+					dl = l != "dataLayer" ? "&l=" + l : "";
+				j.async = true;
+				j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+				f.parentNode.insertBefore(j, f);
+			})(window, document, "script", "dataLayer", "GTM-MT2TSGVF");
+		</script>
 		<!-- End Google Tag Manager -->
 		<meta charset="UTF-8" />
 		<meta name="description" content={description} />
@@ -73,206 +86,239 @@ const breadcrumbSchema = breadcrumbs.length > 0 ? {
 
 		<!-- Additional SEO Meta Tags -->
 		<meta name="robots" content="index, follow" />
-		<meta name="googlebot" content="index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1" />
+		<meta
+			name="googlebot"
+			content="index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"
+		/>
 		<meta name="geo.region" content="US-TX" />
 		<meta name="geo.placename" content="Rosanky, Texas" />
 		<meta name="geo.position" content="29.8918229;-97.3320232" />
 		<meta name="ICBM" content="29.8918229, -97.3320232" />
 
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800;900&family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800;900&family=Dancing+Script:wght@400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
 		<title>{title}</title>
 
 		<!-- Google tag (gtag.js) -->
-		<script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-B1E7T0ZLV1"></script>
+		<script
+			is:inline
+			async
+			src="https://www.googletagmanager.com/gtag/js?id=G-B1E7T0ZLV1"
+		></script>
 		<script is:inline>
 			window.dataLayer = window.dataLayer || [];
-			function gtag(){dataLayer.push(arguments);}
-			gtag('js', new Date());
-			gtag('config', 'G-B1E7T0ZLV1');
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag("js", new Date());
+			gtag("config", "G-B1E7T0ZLV1");
 		</script>
 
 		<!-- Google Ads tag -->
-		<script is:inline async src="https://www.googletagmanager.com/gtag/js?id=AW-17782904928"></script>
+		<script
+			is:inline
+			async
+			src="https://www.googletagmanager.com/gtag/js?id=AW-17782904928"
+		></script>
 		<script is:inline>
 			window.dataLayer = window.dataLayer || [];
-			function gtag(){dataLayer.push(arguments);}
-			gtag('js', new Date());
-			gtag('config', 'AW-17782904928');
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag("js", new Date());
+			gtag("config", "AW-17782904928");
 		</script>
 
 		<!-- Schema.org Structured Data -->
 		<script type="application/ld+json" is:inline>
-		{
-			"@context": "https://schema.org",
-			"@type": "HVACBusiness",
-			"name": "String Prairie Heating & Air",
-			"image": "https://stringprairieheatingandair.com/logo.png",
-			"@id": "https://stringprairieheatingandair.com",
-			"url": "https://stringprairieheatingandair.com",
-			"telephone": "(512) 924-9744",
-			"address": {
-				"@type": "PostalAddress",
-				"streetAddress": "Rosanky",
-				"addressLocality": "Rosanky",
-				"addressRegion": "TX",
-				"postalCode": "78953",
-				"addressCountry": "US"
-			},
-			"geo": {
-				"@type": "GeoCoordinates",
-				"latitude": 29.8918229,
-				"longitude": -97.3320232
-			},
-			"openingHoursSpecification": {
-				"@type": "OpeningHoursSpecification",
-				"dayOfWeek": [
-					"Monday",
-					"Tuesday",
-					"Wednesday",
-					"Thursday",
-					"Friday"
+			{
+				"@context": "https://schema.org",
+				"@type": "HVACBusiness",
+				"name": "String Prairie Heating & Air",
+				"image": "https://stringprairieheatingandair.com/logo.png",
+				"@id": "https://stringprairieheatingandair.com",
+				"url": "https://stringprairieheatingandair.com",
+				"telephone": "(512) 924-9744",
+				"address": {
+					"@type": "PostalAddress",
+					"streetAddress": "Rosanky",
+					"addressLocality": "Rosanky",
+					"addressRegion": "TX",
+					"postalCode": "78953",
+					"addressCountry": "US"
+				},
+				"geo": {
+					"@type": "GeoCoordinates",
+					"latitude": 29.8918229,
+					"longitude": -97.3320232
+				},
+				"openingHoursSpecification": {
+					"@type": "OpeningHoursSpecification",
+					"dayOfWeek": [
+						"Monday",
+						"Tuesday",
+						"Wednesday",
+						"Thursday",
+						"Friday"
+					],
+					"opens": "08:00",
+					"closes": "17:00"
+				},
+				"sameAs": [
+					"https://www.google.com/maps/place/String+Prairie+Heating+%26+Air/@29.8918229,-97.3320232",
+					"https://www.facebook.com/profile.php?id=100082664987868"
 				],
-				"opens": "08:00",
-				"closes": "17:00"
-			},
-			"sameAs": [
-				"https://www.google.com/maps/place/String+Prairie+Heating+%26+Air/@29.8918229,-97.3320232",
-				"https://www.facebook.com/profile.php?id=100082664987868"
-			],
-			"priceRange": "$$",
-			"aggregateRating": {
-				"@type": "AggregateRating",
-				"ratingValue": "5",
-				"reviewCount": "15",
-				"bestRating": "5",
-				"worstRating": "1"
-			},
-			"review": [
-				{
-					"@type": "Review",
-					"reviewRating": {
-						"@type": "Rating",
-						"ratingValue": "5",
-						"bestRating": "5"
-					},
-					"author": {
-						"@type": "Person",
-						"name": "John D."
-					},
-					"reviewBody": "Excellent service! They were prompt, professional, and fixed our AC issue quickly. Highly recommend String Prairie for any HVAC needs."
+				"priceRange": "$$",
+				"aggregateRating": {
+					"@type": "AggregateRating",
+					"ratingValue": "5",
+					"reviewCount": "15",
+					"bestRating": "5",
+					"worstRating": "1"
 				},
-				{
-					"@type": "Review",
-					"reviewRating": {
-						"@type": "Rating",
-						"ratingValue": "5",
-						"bestRating": "5"
-					},
-					"author": {
-						"@type": "Person",
-						"name": "Sarah M."
-					},
-					"reviewBody": "Great family-owned business! They installed our new heating system and did an amazing job. Fair pricing and quality work."
-				},
-				{
-					"@type": "Review",
-					"reviewRating": {
-						"@type": "Rating",
-						"ratingValue": "5",
-						"bestRating": "5"
-					},
-					"author": {
-						"@type": "Person",
-						"name": "Mike R."
-					},
-					"reviewBody": "Very knowledgeable and courteous. They explained everything clearly and got our air conditioning working perfectly. Will definitely call them again!"
-				}
-			],
-			"areaServed": [
-				{
-					"@type": "City",
-					"name": "Bastrop",
-					"@id": "https://en.wikipedia.org/wiki/Bastrop,_Texas"
-				},
-				{
-					"@type": "City",
-					"name": "Rosanky"
-				},
-				{
-					"@type": "City",
-					"name": "Smithville"
-				},
-				{
-					"@type": "City",
-					"name": "Paige"
-				}
-			],
-			"hasOfferCatalog": {
-				"@type": "OfferCatalog",
-				"name": "HVAC Services",
-				"itemListElement": [
+				"review": [
 					{
-						"@type": "Offer",
-						"itemOffered": {
-							"@type": "Service",
-							"name": "AC Installation",
-							"description": "Professional air conditioning installation services"
-						}
+						"@type": "Review",
+						"reviewRating": {
+							"@type": "Rating",
+							"ratingValue": "5",
+							"bestRating": "5"
+						},
+						"author": {
+							"@type": "Person",
+							"name": "John D."
+						},
+						"reviewBody": "Excellent service! They were prompt, professional, and fixed our AC issue quickly. Highly recommend String Prairie for any HVAC needs."
 					},
 					{
-						"@type": "Offer",
-						"itemOffered": {
-							"@type": "Service",
-							"name": "AC Repair",
-							"description": "Expert air conditioning repair services"
-						}
+						"@type": "Review",
+						"reviewRating": {
+							"@type": "Rating",
+							"ratingValue": "5",
+							"bestRating": "5"
+						},
+						"author": {
+							"@type": "Person",
+							"name": "Sarah M."
+						},
+						"reviewBody": "Great family-owned business! They installed our new heating system and did an amazing job. Fair pricing and quality work."
 					},
 					{
-						"@type": "Offer",
-						"itemOffered": {
-							"@type": "Service",
-							"name": "Heating Installation",
-							"description": "Professional heating system installation"
-						}
-					},
-					{
-						"@type": "Offer",
-						"itemOffered": {
-							"@type": "Service",
-							"name": "Heating Repair",
-							"description": "Expert heating system repair services"
-						}
-					},
-					{
-						"@type": "Offer",
-						"itemOffered": {
-							"@type": "Service",
-							"name": "HVAC Maintenance",
-							"description": "Regular maintenance and tune-ups for HVAC systems"
-						}
+						"@type": "Review",
+						"reviewRating": {
+							"@type": "Rating",
+							"ratingValue": "5",
+							"bestRating": "5"
+						},
+						"author": {
+							"@type": "Person",
+							"name": "Mike R."
+						},
+						"reviewBody": "Very knowledgeable and courteous. They explained everything clearly and got our air conditioning working perfectly. Will definitely call them again!"
 					}
-				]
+				],
+				"areaServed": [
+					{
+						"@type": "City",
+						"name": "Bastrop",
+						"@id": "https://en.wikipedia.org/wiki/Bastrop,_Texas"
+					},
+					{
+						"@type": "City",
+						"name": "Rosanky"
+					},
+					{
+						"@type": "City",
+						"name": "Smithville"
+					},
+					{
+						"@type": "City",
+						"name": "Paige"
+					}
+				],
+				"hasOfferCatalog": {
+					"@type": "OfferCatalog",
+					"name": "HVAC Services",
+					"itemListElement": [
+						{
+							"@type": "Offer",
+							"itemOffered": {
+								"@type": "Service",
+								"name": "AC Installation",
+								"description": "Professional air conditioning installation services"
+							}
+						},
+						{
+							"@type": "Offer",
+							"itemOffered": {
+								"@type": "Service",
+								"name": "AC Repair",
+								"description": "Expert air conditioning repair services"
+							}
+						},
+						{
+							"@type": "Offer",
+							"itemOffered": {
+								"@type": "Service",
+								"name": "Heating Installation",
+								"description": "Professional heating system installation"
+							}
+						},
+						{
+							"@type": "Offer",
+							"itemOffered": {
+								"@type": "Service",
+								"name": "Heating Repair",
+								"description": "Expert heating system repair services"
+							}
+						},
+						{
+							"@type": "Offer",
+							"itemOffered": {
+								"@type": "Service",
+								"name": "HVAC Maintenance",
+								"description": "Regular maintenance and tune-ups for HVAC systems"
+							}
+						}
+					]
+				}
 			}
-		}
 		</script>
 
 		<!-- BreadcrumbList Schema (if breadcrumbs provided) -->
-		{breadcrumbSchema && (
-			<script is:inline type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
-		)}
+		{
+			breadcrumbSchema && (
+				<script
+					is:inline
+					type="application/ld+json"
+					set:html={JSON.stringify(breadcrumbSchema)}
+				/>
+			)
+		}
 	</head>
 	<body>
 		<!-- Google Tag Manager (noscript) -->
-		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MT2TSGVF"
-		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		<noscript
+			><iframe
+				src="https://www.googletagmanager.com/ns.html?id=GTM-MT2TSGVF"
+				height="0"
+				width="0"
+				style="display:none;visibility:hidden"></iframe></noscript
+		>
 		<!-- End Google Tag Manager (noscript) -->
 		<nav class="navbar">
 			<div class="container">
-			<a href="/" class="logo">
-				<img src="/SPLogo.svg" alt="String Prairie Heating & Air" class="logo-img" />
-			</a>
+				<a href="/" class="logo">
+					<img
+						src="/SPLogo.svg"
+						alt="String Prairie Heating & Air"
+						class="logo-img"
+					/>
+				</a>
 				<button class="mobile-menu-toggle" aria-label="Toggle menu">
 					<span></span>
 					<span></span>
@@ -284,10 +330,20 @@ const breadcrumbSchema = breadcrumbs.length > 0 ? {
 						<a href="/services">Services</a>
 						<ul class="dropdown">
 							<li><a href="/services">All Services</a></li>
+							<li><a href="/financing">Financing</a></li>
 							<li><a href="/services/ac-repair">AC Repair</a></li>
-							<li><a href="/services/ac-installation">AC Installation</a></li>
-							<li><a href="/services/heating-repair">Heating / Furnace Repair</a></li>
-							<li><a href="/services/maintenance">Maintenance / Tune-Ups</a></li>
+							<li>
+								<a href="/services/ac-installation"
+									>AC Installation</a>
+							</li>
+							<li>
+								<a href="/services/heating-repair"
+									>Heating / Furnace Repair</a>
+							</li>
+							<li>
+								<a href="/services/maintenance"
+									>Maintenance / Tune-Ups</a>
+							</li>
 						</ul>
 					</li>
 					<li class="has-dropdown">
@@ -305,7 +361,13 @@ const breadcrumbSchema = breadcrumbs.length > 0 ? {
 		</nav>
 
 		<!-- Sticky Book Now Button -->
-		<a href="https://book.housecallpro.com/book/String-Prairie-Heating--Air/df82ded280ce43f4a9ee6ee6d36aef76?v2=true" target="_blank" rel="noopener noreferrer" class="sticky-book-btn" aria-label="Book online">
+		<a
+			href="https://book.housecallpro.com/book/String-Prairie-Heating--Air/df82ded280ce43f4a9ee6ee6d36aef76?v2=true"
+			target="_blank"
+			rel="noopener noreferrer"
+			class="sticky-book-btn"
+			aria-label="Book online"
+		>
 			📅 Book Now
 		</a>
 
@@ -318,15 +380,24 @@ const breadcrumbSchema = breadcrumbs.length > 0 ? {
 				<div class="footer-content">
 					<div class="footer-section">
 						<a href="/" class="footer-logo">
-							<img src="/StringPrairieLogo.svg" alt="String Prairie Heating & Air Logo" class="footer-logo-img" />
+							<img
+								src="/StringPrairieLogo.svg"
+								alt="String Prairie Heating & Air Logo"
+								class="footer-logo-img"
+							/>
 						</a>
 						<h3>String Prairie Heating & Air</h3>
-						<p>Family-owned HVAC mechanical contractor specializing in residential and commercial services.</p>
+						<p>
+							Family-owned HVAC mechanical contractor specializing
+							in residential and commercial services.
+						</p>
 					</div>
 					<div class="footer-section">
 						<h4>Contact</h4>
 						<p>Rosanky, TX 78953</p>
-						<p>Phone: <a href="tel:5129249744">(512) 924-9744</a></p>
+						<p>
+							Phone: <a href="tel:5129249744">(512) 924-9744</a>
+						</p>
 					</div>
 					<div class="footer-section">
 						<h4>Service Area</h4>
@@ -335,15 +406,34 @@ const breadcrumbSchema = breadcrumbs.length > 0 ? {
 					<div class="footer-section">
 						<h4>Follow Us</h4>
 						<div class="social-links">
-							<a href="https://www.facebook.com/profile.php?id=100082664987868" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+							<a
+								href="https://www.facebook.com/profile.php?id=100082664987868"
+								target="_blank"
+								rel="noopener noreferrer"
+								aria-label="Facebook"
+							>
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									width="24"
+									height="24"
+									viewBox="0 0 24 24"
+									fill="currentColor"
+									><path
+										d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+									></path></svg
+								>
 							</a>
 						</div>
 					</div>
 				</div>
 				<div class="footer-bottom">
-					<p>&copy; {new Date().getFullYear()} String Prairie Heating & Air. All rights reserved.</p>
-					<p class="footer-links"><a href="/privacy">Privacy Policy</a></p>
+					<p>
+						&copy; {new Date().getFullYear()} String Prairie Heating &
+						Air. All rights reserved.
+					</p>
+					<p class="footer-links">
+						<a href="/privacy">Privacy Policy</a>
+					</p>
 				</div>
 			</div>
 		</footer>
@@ -369,7 +459,16 @@ const breadcrumbSchema = breadcrumbs.length > 0 ? {
 	}
 
 	body {
-		font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+		font-family:
+			"Outfit",
+			-apple-system,
+			BlinkMacSystemFont,
+			"Segoe UI",
+			Roboto,
+			Oxygen,
+			Ubuntu,
+			Cantarell,
+			sans-serif;
 		line-height: 1.6;
 		color: var(--text-dark);
 		font-weight: 300;
@@ -384,7 +483,7 @@ const breadcrumbSchema = breadcrumbs.length > 0 ? {
 
 	.navbar {
 		background: var(--white);
-		box-shadow: 0 4px 4px rgba(0,0,0,0.1);
+		box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
 		position: sticky;
 		top: 0;
 		z-index: 100;
@@ -427,7 +526,7 @@ const breadcrumbSchema = breadcrumbs.length > 0 ? {
 	}
 
 	.nav-links a::after {
-		content: '';
+		content: "";
 		position: absolute;
 		bottom: 0;
 		left: 0;
@@ -453,7 +552,7 @@ const breadcrumbSchema = breadcrumbs.length > 0 ? {
 	}
 
 	.has-dropdown > a::after {
-		content: ' ▼';
+		content: " ▼";
 		font-size: 0.6rem;
 		position: static;
 		background: none;
@@ -469,7 +568,7 @@ const breadcrumbSchema = breadcrumbs.length > 0 ? {
 		left: 0;
 		background: var(--white);
 		min-width: 160px;
-		box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 		border-radius: 8px;
 		padding: 0.5rem 0;
 		z-index: 1000;
@@ -501,7 +600,11 @@ const breadcrumbSchema = breadcrumbs.length > 0 ? {
 	}
 
 	.cta-button {
-		background: linear-gradient(107deg, var(--primary-blue) -70.76%, var(--dark-blue) 87.63%);
+		background: linear-gradient(
+			107deg,
+			var(--primary-blue) -70.76%,
+			var(--dark-blue) 87.63%
+		);
 		color: var(--white);
 		padding: 0.75rem 1.25rem;
 		border-radius: 50px;
@@ -526,7 +629,11 @@ const breadcrumbSchema = breadcrumbs.length > 0 ? {
 	}
 
 	footer {
-		background: linear-gradient(135deg, var(--dark-blue) 0%, var(--primary-blue) 100%);
+		background: linear-gradient(
+			135deg,
+			var(--dark-blue) 0%,
+			var(--primary-blue) 100%
+		);
 		color: var(--white);
 		padding: 4rem 0 2rem;
 		margin-top: 0;
@@ -550,7 +657,7 @@ const breadcrumbSchema = breadcrumbs.length > 0 ? {
 	}
 
 	.footer-section h3 {
-		font-family: 'Brush Script MT', cursive;
+		font-family: "Brush Script MT", cursive;
 		margin-bottom: 1rem;
 		color: var(--white);
 		font-weight: 400;
@@ -666,7 +773,11 @@ const breadcrumbSchema = breadcrumbs.length > 0 ? {
 		position: fixed;
 		bottom: 20px;
 		right: 20px;
-		background: radial-gradient(circle, var(--accent-red) 0%, var(--dark-red) 100%);
+		background: radial-gradient(
+			circle,
+			var(--accent-red) 0%,
+			var(--dark-red) 100%
+		);
 		color: white;
 		padding: 1rem 1.75rem;
 		border-radius: 50px;
@@ -702,7 +813,7 @@ const breadcrumbSchema = breadcrumbs.length > 0 ? {
 			background: var(--white);
 			flex-direction: column;
 			padding: 6rem 2rem 2rem;
-			box-shadow: -4px 0 20px rgba(0,0,0,0.1);
+			box-shadow: -4px 0 20px rgba(0, 0, 0, 0.1);
 			transition: right 0.3s ease;
 			z-index: 100;
 			gap: 0;
@@ -723,7 +834,7 @@ const breadcrumbSchema = breadcrumbs.length > 0 ? {
 		}
 
 		.has-dropdown > a::after {
-			content: '';
+			content: "";
 		}
 
 		.dropdown {
@@ -759,29 +870,29 @@ const breadcrumbSchema = breadcrumbs.length > 0 ? {
 
 <script>
 	// Mobile menu toggle
-	const mobileToggle = document.querySelector('.mobile-menu-toggle');
-	const navLinks = document.querySelector('.nav-links');
+	const mobileToggle = document.querySelector(".mobile-menu-toggle");
+	const navLinks = document.querySelector(".nav-links");
 
 	if (mobileToggle && navLinks) {
-		mobileToggle.addEventListener('click', () => {
-			mobileToggle.classList.toggle('active');
-			navLinks.classList.toggle('active');
+		mobileToggle.addEventListener("click", () => {
+			mobileToggle.classList.toggle("active");
+			navLinks.classList.toggle("active");
 		});
 
 		// Close menu when clicking nav links
-		navLinks.querySelectorAll('a').forEach(link => {
-			link.addEventListener('click', () => {
-				mobileToggle.classList.remove('active');
-				navLinks.classList.remove('active');
+		navLinks.querySelectorAll("a").forEach((link) => {
+			link.addEventListener("click", () => {
+				mobileToggle.classList.remove("active");
+				navLinks.classList.remove("active");
 			});
 		});
 
 		// Close menu when clicking outside
-		document.addEventListener('click', (e) => {
+		document.addEventListener("click", (e) => {
 			const target = e.target as Node;
 			if (!navLinks.contains(target) && !mobileToggle.contains(target)) {
-				mobileToggle.classList.remove('active');
-				navLinks.classList.remove('active');
+				mobileToggle.classList.remove("active");
+				navLinks.classList.remove("active");
 			}
 		});
 	}

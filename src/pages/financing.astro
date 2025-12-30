@@ -1,0 +1,315 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const breadcrumbs = [
+    { name: "Home", url: "https://stringprairieheatingandair.com/" },
+    {
+        name: "Financing",
+        url: "https://stringprairieheatingandair.com/financing",
+    },
+];
+---
+
+<Layout
+    title="Financing Options | String Prairie Heating & Air - Bastrop County HVAC"
+    description="Flexible financing options for your HVAC needs. String Prairie Heating & Air offers budget-friendly payment plans for heating and cooling system installations."
+    breadcrumbs={breadcrumbs}
+>
+    <section class="page-header">
+        <div class="container">
+            <h1>Financing Options</h1>
+            <p>Comfort solutions that fit your budget</p>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="container">
+            <div class="intro">
+                <h2>Flexible Payment Plans</h2>
+                <p>
+                    At String Prairie Heating & Air, we believe that everyone
+                    deserves a comfortable home. We understand that a new
+                    heating or cooling system is a significant investment, which
+                    is why we offer flexible financing options to help you get
+                    the system you need without breaking the bank.
+                </p>
+            </div>
+
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">💲</div>
+                    <h3>Budget-Friendly</h3>
+                    <p>
+                        Monthly payments that fit your household budget,
+                        allowing you to upgrade your comfort today.
+                    </p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🚀</div>
+                    <h3>Easy Application</h3>
+                    <p>
+                        Simple and quick application process with fast credit
+                        decisions.
+                    </p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🛡️</div>
+                    <h3>Invest in Quality</h3>
+                    <p>
+                        Don't compromise on quality/efficiency. Financing lets
+                        you install the best system for your home.
+                    </p>
+                </div>
+            </div>
+
+            <div class="partnership-info">
+                <h3>Our Financing Partners</h3>
+                <p>
+                    We partner with trusted financial institutions to provide
+                    you with secure and competitive financing for your HVAC
+                    projects. Contact us today to learn more about the current
+                    plans available to you.
+                </p>
+                <div class="cta-wrapper">
+                    <a href="tel:5129249744" class="btn btn-primary"
+                        >Call for Details: (512) 924-9744</a
+                    >
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Upgrade?</h2>
+            <p>
+                Contact us to discuss your heating and cooling needs and
+                financing options.
+            </p>
+            <div class="cta-buttons">
+                <a
+                    href="https://book.housecallpro.com/book/String-Prairie-Heating--Air/df82ded280ce43f4a9ee6ee6d36aef76?v2=true"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn btn-light">🔖 Book Online</a
+                >
+                <a href="tel:5129249744" class="btn btn-outline"
+                    >Call Us Today</a
+                >
+            </div>
+        </div>
+    </section>
+</Layout>
+
+<style>
+    .page-header {
+        background: linear-gradient(
+            135deg,
+            var(--dark-blue) 0%,
+            var(--primary-blue) 100%
+        );
+        color: white;
+        padding: 5rem 0;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .page-header h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    .page-header p {
+        font-size: 1.35rem;
+        opacity: 0.95;
+        font-weight: 300;
+    }
+
+    .content-section {
+        padding: 5rem 0;
+        background: white;
+    }
+
+    .intro {
+        text-align: center;
+        max-width: 800px;
+        margin: 0 auto 4rem;
+    }
+
+    .intro h2 {
+        color: var(--dark-blue);
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+        font-weight: 800;
+        text-transform: uppercase;
+    }
+
+    .intro p {
+        color: var(--text-dark);
+        font-size: 1.2rem;
+        line-height: 1.8;
+        font-weight: 300;
+    }
+
+    .benefits-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-bottom: 5rem;
+    }
+
+    .benefit-card {
+        background: var(--bg-light);
+        padding: 2.5rem;
+        border-radius: 12px;
+        text-align: center;
+        transition: transform 0.3s;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        border: 1px solid rgba(41, 94, 147, 0.1);
+    }
+
+    .benefit-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+        border-color: var(--primary-blue);
+    }
+
+    .benefit-icon {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+    }
+
+    .benefit-card h3 {
+        color: var(--primary-blue);
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        font-weight: 700;
+    }
+
+    .benefit-card p {
+        color: var(--text-light);
+        line-height: 1.6;
+    }
+
+    .partnership-info {
+        background: var(--bg-light);
+        border-radius: 12px;
+        padding: 4rem;
+        text-align: center;
+        border-top: 5px solid var(--accent-red);
+    }
+
+    .partnership-info h3 {
+        color: var(--dark-blue);
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+        font-weight: 800;
+        text-transform: uppercase;
+    }
+
+    .partnership-info p {
+        color: var(--text-dark);
+        font-size: 1.15rem;
+        max-width: 700px;
+        margin: 0 auto 2.5rem;
+        font-weight: 300;
+        line-height: 1.8;
+    }
+
+    .cta-wrapper {
+        margin-top: 2rem;
+    }
+
+    .cta-section {
+        background: linear-gradient(
+            135deg,
+            var(--accent-red) 0%,
+            var(--dark-red) 100%
+        );
+        color: white;
+        padding: 5rem 0;
+        text-align: center;
+    }
+
+    .cta-section h2 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        font-weight: 800;
+        text-transform: uppercase;
+    }
+
+    .cta-section p {
+        font-size: 1.35rem;
+        margin-bottom: 2.5rem;
+        font-weight: 300;
+    }
+
+    .cta-buttons {
+        display: flex;
+        gap: 1.5rem;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .btn {
+        padding: 1.25rem 2.5rem;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: 700;
+        transition: all 0.3s;
+        display: inline-block;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    .btn-primary {
+        background: radial-gradient(
+            circle,
+            var(--accent-red) 0%,
+            var(--dark-red) 100%
+        );
+        color: white;
+        box-shadow: 0 4px 12px rgba(233, 30, 34, 0.3);
+    }
+
+    .btn-primary:hover {
+        box-shadow: 0 6px 16px rgba(233, 30, 34, 0.4);
+        transform: translateY(-3px);
+    }
+
+    .btn-light {
+        background: white;
+        color: var(--primary-blue);
+    }
+
+    .btn-light:hover {
+        background: rgba(255, 255, 255, 0.95);
+        transform: translateY(-3px);
+    }
+
+    .btn-outline {
+        background: transparent;
+        color: white;
+        border: 2px solid white;
+    }
+
+    .btn-outline:hover {
+        background: white;
+        color: var(--accent-red);
+        transform: translateY(-3px);
+    }
+
+    @media (max-width: 768px) {
+        .page-header h1 {
+            font-size: 2rem;
+        }
+        .intro h2,
+        .partnership-info h3 {
+            font-size: 2rem;
+        }
+    }
+</style>
