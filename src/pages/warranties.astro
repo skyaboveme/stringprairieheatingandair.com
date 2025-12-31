@@ -1,0 +1,250 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const breadcrumbs = [
+    { name: "Home", url: "/" },
+    { name: "Warranties", url: "/warranties" },
+];
+---
+
+<Layout
+    title="Industry-Leading Warranties | String Prairie Heating & Air"
+    description="We stand behind our work with robust equipment warranties and labor guarantees. Peace of mind for your HVAC installation and repairs."
+    breadcrumbs={breadcrumbs}
+>
+    <section class="page-header">
+        <div class="container">
+            <h1>Industry-Leading Warranties</h1>
+            <p>Protection You Can Count On, Long After the Install</p>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="container">
+            <div class="intro">
+                <h2>We Stand Behind Our Work</h2>
+                <p>
+                    Your peace of mind matters. That's why we partner with top
+                    manufacturers to offer superior equipment warranties and
+                    back every installation with our own workmanship guarantee.
+                </p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-box">
+                    <h3>🛡️ Equipment Protection</h3>
+                    <p>
+                        We install brands known for reliability, offering robust
+                        manufacturer warranties ranging from 10 years to
+                        lifetime coverage on key components.
+                    </p>
+                </div>
+                <div class="feature-box">
+                    <h3>🔧 Labor Warranty</h3>
+                    <p>
+                        We are confident in our craftsmanship. Our installations
+                        come with labor warranties to protect you from
+                        unexpected repair costs.
+                    </p>
+                </div>
+                <div class="feature-box">
+                    <h3>🤝 Satisfaction Guarantee</h3>
+                    <p>
+                        Our job isn't done until you're comfortable. If
+                        something isn't right, we'll come back and make it
+                        right—guaranteed.
+                    </p>
+                </div>
+                <div class="feature-box">
+                    <h3>📅 Extended Protection</h3>
+                    <p>
+                        Looking for even more security? Ask about our extended
+                        warranty plans and annual maintenance memberships for
+                        complete system coverage.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2>Invest with Confidence</h2>
+            <p>
+                Choose the local team that guarantees quality and reliability.
+            </p>
+            <div class="cta-buttons">
+                <a
+                    href="https://book.housecallpro.com/book/String-Prairie-Heating--Air/df82ded280ce43f4a9ee6ee6d36aef76?v2=true"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn btn-light">🔖 Book Online</a
+                >
+                <a href="tel:5129249744" class="btn btn-outline"
+                    >Call (512) 924-9744</a
+                >
+            </div>
+        </div>
+    </section>
+</Layout>
+
+<style>
+    .page-header {
+        background: linear-gradient(
+            135deg,
+            var(--dark-blue) 0%,
+            var(--primary-blue) 100%
+        );
+        color: white;
+        padding: 5rem 0;
+        text-align: center;
+    }
+
+    .page-header h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    .page-header p {
+        font-size: 1.35rem;
+        opacity: 0.95;
+        font-weight: 300;
+    }
+
+    .content-section {
+        padding: 5rem 0;
+        background: white;
+    }
+
+    .intro {
+        text-align: center;
+        max-width: 800px;
+        margin: 0 auto 4rem;
+    }
+
+    .intro h2 {
+        color: var(--dark-blue);
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+        font-weight: 800;
+        text-transform: uppercase;
+    }
+
+    .intro p {
+        color: var(--text-dark);
+        font-size: 1.2rem;
+        line-height: 1.8;
+        font-weight: 300;
+    }
+
+    .features-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem;
+        margin-bottom: 3rem;
+    }
+
+    .feature-box {
+        background: var(--bg-light);
+        padding: 2.5rem;
+        border-radius: 12px;
+        text-align: center;
+        transition:
+            transform 0.3s,
+            box-shadow 0.3s;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+
+    .feature-box:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    }
+
+    .feature-box h3 {
+        color: var(--primary-blue);
+        font-size: 1.35rem;
+        margin-bottom: 1rem;
+        font-weight: 700;
+    }
+
+    .feature-box p {
+        color: var(--text-light);
+        line-height: 1.6;
+    }
+
+    .cta-section {
+        background: linear-gradient(
+            135deg,
+            var(--accent-red) 0%,
+            var(--dark-red) 100%
+        );
+        color: white;
+        padding: 5rem 0;
+        text-align: center;
+    }
+
+    .cta-section h2 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        font-weight: 800;
+        text-transform: uppercase;
+    }
+
+    .cta-section p {
+        font-size: 1.35rem;
+        margin-bottom: 2.5rem;
+        font-weight: 300;
+    }
+
+    .cta-buttons {
+        display: flex;
+        gap: 1.5rem;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .btn {
+        padding: 1.25rem 2.5rem;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: 700;
+        transition: all 0.3s;
+        display: inline-block;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    .btn-light {
+        background: white;
+        color: var(--primary-blue);
+    }
+
+    .btn-light:hover {
+        background: rgba(255, 255, 255, 0.95);
+        transform: translateY(-3px);
+    }
+
+    .btn-outline {
+        background: transparent;
+        color: white;
+        border: 2px solid white;
+    }
+
+    .btn-outline:hover {
+        background: white;
+        color: var(--accent-red);
+        transform: translateY(-3px);
+    }
+
+    @media (max-width: 768px) {
+        .page-header h1 {
+            font-size: 2rem;
+        }
+        .intro h2 {
+            font-size: 2rem;
+        }
+    }
+</style>

@@ -1,0 +1,250 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const breadcrumbs = [
+    { name: "Home", url: "/" },
+    { name: "Transparent Pricing", url: "/transparent-pricing" },
+];
+---
+
+<Layout
+    title="Transparent Pricing | String Prairie Heating & Air"
+    description="Honest, upfront pricing for HVAC services in Bastrop County. No hidden fees or surprises—just clear quotes and fair rates."
+    breadcrumbs={breadcrumbs}
+>
+    <section class="page-header">
+        <div class="container">
+            <h1>Transparent Pricing</h1>
+            <p>Honesty in Every Quote, Confidence in Every Job</p>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="container">
+            <div class="intro">
+                <h2>No Hidden Fees. No Surprise Costs.</h2>
+                <p>
+                    We believe that trust is earned through honesty. That's why
+                    we provide clear, detailed quotes before any work begins.
+                    You'll know exactly what you're paying for and why.
+                </p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-box">
+                    <h3>📝 Upfront Quotes</h3>
+                    <p>
+                        Receive a comprehensive estimate before we start. We
+                        explain every line item so you can make informed
+                        decisions without pressure.
+                    </p>
+                </div>
+                <div class="feature-box">
+                    <h3>🚫 No Hidden Fees</h3>
+                    <p>
+                        The price we quote is the price you pay. We don't
+                        believe in last-minute add-ons or "gotcha" charges.
+                    </p>
+                </div>
+                <div class="feature-box">
+                    <h3>⚖️ Competitive Rates</h3>
+                    <p>
+                        Get premium service at fair, local prices. We keep our
+                        overhead low to pass the savings directly to our
+                        neighbors.
+                    </p>
+                </div>
+                <div class="feature-box">
+                    <h3>💳 Flexible Financing</h3>
+                    <p>
+                        We offer financing options to help make essential
+                        repairs and replacements affordable for your monthly
+                        budget.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2>Get an Honest Quote Today</h2>
+            <p>
+                Experience the difference of working with a transparent local
+                contractor.
+            </p>
+            <div class="cta-buttons">
+                <a
+                    href="https://book.housecallpro.com/book/String-Prairie-Heating--Air/df82ded280ce43f4a9ee6ee6d36aef76?v2=true"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn btn-light">🔖 Book Online</a
+                >
+                <a href="tel:5129249744" class="btn btn-outline"
+                    >Call (512) 924-9744</a
+                >
+            </div>
+        </div>
+    </section>
+</Layout>
+
+<style>
+    .page-header {
+        background: linear-gradient(
+            135deg,
+            var(--dark-blue) 0%,
+            var(--primary-blue) 100%
+        );
+        color: white;
+        padding: 5rem 0;
+        text-align: center;
+    }
+
+    .page-header h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    .page-header p {
+        font-size: 1.35rem;
+        opacity: 0.95;
+        font-weight: 300;
+    }
+
+    .content-section {
+        padding: 5rem 0;
+        background: white;
+    }
+
+    .intro {
+        text-align: center;
+        max-width: 800px;
+        margin: 0 auto 4rem;
+    }
+
+    .intro h2 {
+        color: var(--dark-blue);
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+        font-weight: 800;
+        text-transform: uppercase;
+    }
+
+    .intro p {
+        color: var(--text-dark);
+        font-size: 1.2rem;
+        line-height: 1.8;
+        font-weight: 300;
+    }
+
+    .features-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem;
+        margin-bottom: 3rem;
+    }
+
+    .feature-box {
+        background: var(--bg-light);
+        padding: 2.5rem;
+        border-radius: 12px;
+        text-align: center;
+        transition:
+            transform 0.3s,
+            box-shadow 0.3s;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+
+    .feature-box:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    }
+
+    .feature-box h3 {
+        color: var(--primary-blue);
+        font-size: 1.35rem;
+        margin-bottom: 1rem;
+        font-weight: 700;
+    }
+
+    .feature-box p {
+        color: var(--text-light);
+        line-height: 1.6;
+    }
+
+    .cta-section {
+        background: linear-gradient(
+            135deg,
+            var(--accent-red) 0%,
+            var(--dark-red) 100%
+        );
+        color: white;
+        padding: 5rem 0;
+        text-align: center;
+    }
+
+    .cta-section h2 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        font-weight: 800;
+        text-transform: uppercase;
+    }
+
+    .cta-section p {
+        font-size: 1.35rem;
+        margin-bottom: 2.5rem;
+        font-weight: 300;
+    }
+
+    .cta-buttons {
+        display: flex;
+        gap: 1.5rem;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .btn {
+        padding: 1.25rem 2.5rem;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: 700;
+        transition: all 0.3s;
+        display: inline-block;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    .btn-light {
+        background: white;
+        color: var(--primary-blue);
+    }
+
+    .btn-light:hover {
+        background: rgba(255, 255, 255, 0.95);
+        transform: translateY(-3px);
+    }
+
+    .btn-outline {
+        background: transparent;
+        color: white;
+        border: 2px solid white;
+    }
+
+    .btn-outline:hover {
+        background: white;
+        color: var(--accent-red);
+        transform: translateY(-3px);
+    }
+
+    @media (max-width: 768px) {
+        .page-header h1 {
+            font-size: 2rem;
+        }
+        .intro h2 {
+            font-size: 2rem;
+        }
+    }
+</style>
