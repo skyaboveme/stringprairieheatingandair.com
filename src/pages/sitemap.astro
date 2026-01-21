@@ -1,0 +1,273 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+// Specific pages to exclude (like 404, or this page itself if you want)
+const EXCLUDED_PAGES = ["404", "sitemap"];
+
+// Map directories/files to human-readable section titles
+const SECTION_TITLES: { [key: string]: string } = {
+    main: "Main Pages",
+    services: "Our Services",
+    "service-areas": "Service Areas",
+    blog: "Blog & Articles",
+    other: "Other Resources",
+};
+
+// Priority order for sections
+const SECTION_ORDER = [
+    "Main Pages",
+    "Our Services",
+    "Service Areas",
+    "Blog & Articles",
+    "Other Resources",
+];
+
+// Helper to format page titles from filenames
+function formatTitle(slug: string): string {
+    // Handle index pages
+    if (slug === "" || slug === "index") return "Home";
+
+    // Get the last part of the path
+    const parts = slug.split("/");
+    let name = parts[parts.length - 1];
+
+    // Remove file extension if present (though Astro.glob keys usually have it, we'll process slugs)
+    name = name.replace(/\.(astro|md|mdx)$/, "");
+
+    // Specific overrides
+    if (name === "faq") return "Frequently Asked Questions";
+    if (name === "ac-repair") return "AC Repair";
+    if (name === "ac-installation") return "AC Installation";
+    if (name === "hvac-repair-costs-bastrop-2026")
+        return "HVAC Repair Costs 2026";
+
+    // Default formatting: kebab-case to Title Case
+    return name
+        .split("-")
+        .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+        .join(" ");
+}
+
+// Get all pages using import.meta.glob
+const pages = import.meta.glob("./**/*.{astro,md,mdx}");
+
+interface PageLink {
+    title: string;
+    url: string;
+    section: string;
+}
+
+const links: PageLink[] = [];
+
+for (const path in pages) {
+    // Clean up the path to get the URL slug
+    // ./index.astro -> /
+    // ./about.astro -> /about
+    // ./services/ac-repair.astro -> /services/ac-repair
+
+    let url = path
+        .replace(/^\./, "") // Remove leading dot
+        .replace(/\.(astro|md|mdx)$/, ""); // Remove extension
+
+    const fileName =
+        path
+            .split("/")
+            .pop()
+            ?.replace(/\.(astro|md|mdx)$/, "") || "";
+
+    // Skip exclusions
+    if (EXCLUDED_PAGES.includes(fileName)) continue;
+
+    // Handle index routes
+    if (url.endsWith("/index")) {
+        url = url.replace(/\/index$/, "") || "/";
+    }
+
+    // Determine section based on folder structure
+    let section = "other";
+    if (path.includes("/services/")) {
+        section = "services";
+    } else if (path.includes("/service-areas/")) {
+        section = "service-areas";
+    } else if (path.includes("/blog/")) {
+        section = "blog";
+    } else if (!path.includes("/", 2)) {
+        // Root level files: ./about.astro has 2 slashes if full path, but here relative is ./about
+        // Actually path is like ./contact.astro
+        // ./services/foo.astro has 2 slashes excluding the dot?
+        // Let's count slashes in the clean URL
+        const depth = (url.match(/\//g) || []).length;
+        if (depth <= 1) section = "main";
+    }
+
+    links.push({
+        title: formatTitle(url === "/" ? "Home" : url),
+        url: url,
+        section: SECTION_TITLES[section] || SECTION_TITLES["other"],
+    });
+}
+
+// Sort links: Main first, then alphabetically within sections
+links.sort((a, b) => a.title.localeCompare(b.title));
+
+// Group by section
+const groupedLinks = links.reduce(
+    (acc, link) => {
+        if (!acc[link.section]) acc[link.section] = [];
+        acc[link.section].push(link);
+        return acc;
+    },
+    {} as { [key: string]: PageLink[] },
+);
+---
+
+<Layout
+    title="Sitemap | String Prairie Heating & Air"
+    description="Navigate all pages on String Prairie Heating & Air website. Find services, service areas, blog posts, and more."
+>
+    <div class="sitemap-page">
+        <div class="header-section">
+            <div class="container">
+                <h1>Sitemap</h1>
+                <p>Overview of all pages on our website.</p>
+            </div>
+        </div>
+
+        <div class="container content-container">
+            <div class="sitemap-grid">
+                {
+                    SECTION_ORDER.map((sectionName) => {
+                        if (!groupedLinks[sectionName]) return null;
+                        return (
+                            <div class="sitemap-section">
+                                <h2>{sectionName}</h2>
+                                <ul>
+                                    {groupedLinks[sectionName].map((link) => (
+                                        <li>
+                                            <a href={link.url}>{link.title}</a>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                        );
+                    })
+                }
+            </div>
+        </div>
+    </div>
+</Layout>
+
+<style>
+    .sitemap-page {
+        padding-bottom: 5rem;
+    }
+
+    .header-section {
+        background:
+            linear-gradient(rgba(11, 58, 105, 0.9), rgba(11, 58, 105, 0.8)),
+            url("/Images/ACoutsidework.jpg");
+        background-size: cover;
+        background-position: center;
+        color: var(--white);
+        padding: 4rem 0;
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+
+    .header-section h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        font-family: "Outfit", sans-serif;
+        font-weight: 700;
+    }
+
+    .header-section p {
+        font-size: 1.25rem;
+        opacity: 0.9;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .sitemap-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 3rem;
+    }
+
+    .sitemap-section {
+        background: var(--white);
+        padding: 2rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        border: 1px solid #e5e7eb;
+        transition: transform 0.2s ease;
+    }
+
+    .sitemap-section:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .sitemap-section h2 {
+        color: var(--primary-blue);
+        margin-bottom: 1.5rem;
+        padding-bottom: 0.75rem;
+        border-bottom: 2px solid #f3f4f6;
+        font-size: 1.5rem;
+    }
+
+    .sitemap-section ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .sitemap-section li {
+        margin-bottom: 0.75rem;
+    }
+
+    .sitemap-section a {
+        color: var(--text-dark);
+        text-decoration: none;
+        display: block;
+        padding: 0.5rem;
+        border-radius: 6px;
+        transition: all 0.2s;
+        display: flex;
+        align-items: center;
+    }
+
+    .sitemap-section a::before {
+        content: "→";
+        color: var(--accent-red);
+        margin-right: 8px;
+        font-weight: bold;
+        opacity: 0;
+        transform: translateX(-5px);
+        transition: all 0.2s;
+    }
+
+    .sitemap-section a:hover {
+        background-color: #f0f9ff;
+        color: var(--primary-blue);
+        padding-left: 1rem;
+    }
+
+    .sitemap-section a:hover::before {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    @media (max-width: 768px) {
+        .header-section {
+            padding: 3rem 0;
+        }
+
+        .header-section h1 {
+            font-size: 2.25rem;
+        }
+
+        .sitemap-grid {
+            gap: 2rem;
+        }
+    }
+</style>
