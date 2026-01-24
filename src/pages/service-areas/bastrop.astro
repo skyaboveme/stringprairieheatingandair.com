@@ -1,5 +1,5 @@
 ---
-import Layout from '../../layouts/Layout.astro';
+import Layout from "../../layouts/Layout.astro";
 ---
 
 <Layout
@@ -18,10 +18,17 @@ import Layout from '../../layouts/Layout.astro';
 			<div class="area-intro">
 				<h2>Serving Bastrop with Quality HVAC Services</h2>
 				<p class="lead">
-					As a family-owned HVAC company based in the Bastrop County area, we understand the unique climate challenges that Bastrop residents face. From scorching summer heat to occasional winter freezes, your HVAC system works hard year-round to keep your home comfortable.
+					As a family-owned HVAC company based in the Bastrop County
+					area, we understand the unique climate challenges that
+					Bastrop residents face. From scorching summer heat to
+					occasional winter freezes, your HVAC system works hard
+					year-round to keep your home comfortable.
 				</p>
 				<p class="lead">
-					String Prairie Heating & Air is proud to serve Bastrop with professional, courteous HVAC services. We're your neighbors, and we're committed to providing the reliable heating and cooling solutions you deserve.
+					String Prairie Heating & Air is proud to serve Bastrop with
+					professional, courteous HVAC services. We're your neighbors,
+					and we're committed to providing the reliable heating and
+					cooling solutions you deserve.
 				</p>
 			</div>
 
@@ -68,27 +75,49 @@ import Layout from '../../layouts/Layout.astro';
 				<div class="benefits-grid">
 					<div class="benefit-item">
 						<h3>🏡 Local & Family-Owned</h3>
-						<p>We're part of the Bastrop County community, not a faceless national chain. You'll always get personalized, friendly service.</p>
+						<p>
+							We're part of the Bastrop County community, not a
+							faceless national chain. You'll always get
+							personalized, friendly service.
+						</p>
 					</div>
 					<div class="benefit-item">
 						<h3>⚡ Fast Response Times</h3>
-						<p>Being local means we can respond quickly to your HVAC emergencies. No waiting days for service from an out-of-town company.</p>
+						<p>
+							Being local means we can respond quickly to your
+							HVAC emergencies. No waiting days for service from
+							an out-of-town company.
+						</p>
 					</div>
 					<div class="benefit-item">
 						<h3>🌡️ Climate Expertise</h3>
-						<p>We know Bastrop's climate intimately. Our technicians understand exactly what your HVAC system faces in Central Texas.</p>
+						<p>
+							We know Bastrop's climate intimately. Our
+							technicians understand exactly what your HVAC system
+							faces in Central Texas.
+						</p>
 					</div>
 					<div class="benefit-item">
 						<h3>💰 Honest Pricing</h3>
-						<p>No hidden fees or surprise charges. We provide transparent estimates and fair pricing for all our Bastrop customers.</p>
+						<p>
+							No hidden fees or surprise charges. We provide
+							transparent estimates and fair pricing for all our
+							Bastrop customers.
+						</p>
 					</div>
 					<div class="benefit-item">
 						<h3>✅ Licensed & Insured</h3>
-						<p>Fully licensed HVAC contractors with comprehensive insurance for your peace of mind.</p>
+						<p>
+							Fully licensed HVAC contractors with comprehensive
+							insurance for your peace of mind.
+						</p>
 					</div>
 					<div class="benefit-item">
 						<h3>🛡️ Quality Guaranteed</h3>
-						<p>We stand behind our work with solid warranties and a commitment to customer satisfaction.</p>
+						<p>
+							We stand behind our work with solid warranties and a
+							commitment to customer satisfaction.
+						</p>
 					</div>
 				</div>
 			</div>
@@ -96,20 +125,89 @@ import Layout from '../../layouts/Layout.astro';
 			<div class="bastrop-info">
 				<h2>About Bastrop, Texas</h2>
 				<p>
-					Bastrop, the county seat of Bastrop County, is a vibrant community with a rich history dating back to 1832. Known for the beautiful "Lost Pines" forest, historic downtown Main Street, and the scenic Colorado River, Bastrop combines small-town Texas charm with modern amenities. The city has grown significantly in recent years, attracting families and businesses looking for a high quality of life just 30 miles from Austin.
+					Bastrop, the county seat of Bastrop County, is a vibrant
+					community with a rich history dating back to 1832. Known for
+					the beautiful "Lost Pines" forest, historic downtown Main
+					Street, and the scenic Colorado River, Bastrop combines
+					small-town Texas charm with modern amenities. The city has
+					grown significantly in recent years, attracting families and
+					businesses looking for a high quality of life just 30 miles
+					from Austin.
 				</p>
 				<p>
-					With hot, humid summers where temperatures regularly exceed 100°F and occasional winter cold snaps, reliable HVAC service is essential for Bastrop homeowners and businesses. String Prairie Heating & Air is here to ensure your comfort year-round.
+					With hot, humid summers where temperatures regularly exceed
+					100°F and occasional winter cold snaps, reliable HVAC
+					service is essential for Bastrop homeowners and businesses.
+					String Prairie Heating & Air is here to ensure your comfort
+					year-round.
 				</p>
 				<h3>Areas We Serve in Bastrop</h3>
 				<p>
-					We provide HVAC services throughout Bastrop including homes near Bastrop State Park, properties along Highway 71, the neighborhoods around Fisherman's Park, historic homes near the Colorado River, new construction in Tahitian Village and Riverside Grove, and businesses on Main Street. Whether you're in the heart of downtown or out near Pine Forest Golf Club, we've got you covered.
+					We provide HVAC services throughout Bastrop including homes
+					near Bastrop State Park, properties along Highway 71, the
+					neighborhoods around Fisherman's Park, historic homes near
+					the Colorado River, new construction in Tahitian Village and
+					Riverside Grove, and businesses on Main Street. Whether
+					you're in the heart of downtown or out near Pine Forest Golf
+					Club, we've got you covered.
 				</p>
+
+				<div class="neighborhood-links">
+					<h4>Featured Neighborhoods:</h4>
+					<ul>
+						<li>
+							<a href="/service-areas/tahitian-village"
+								>Tahitian Village</a>
+						</li>
+						<li>
+							<a href="/service-areas/the-colony">The Colony</a>
+						</li>
+						<li><a href="/service-areas/circle-d">Circle D</a></li>
+					</ul>
+				</div>
 			</div>
+
+			<style>
+				.neighborhood-links {
+					margin-top: 2rem;
+					background: var(--bg-light);
+					padding: 1.5rem;
+					border-radius: 8px;
+				}
+
+				.neighborhood-links h4 {
+					color: var(--primary-blue);
+					margin-bottom: 1rem;
+					font-size: 1.1rem;
+				}
+
+				.neighborhood-links ul {
+					list-style: none;
+					display: flex;
+					flex-wrap: wrap;
+					gap: 1rem;
+					padding: 0;
+				}
+
+				.neighborhood-links a {
+					color: var(--text-dark);
+					text-decoration: none;
+					font-weight: 600;
+					border-bottom: 2px solid var(--accent-red);
+					transition: all 0.2s;
+				}
+
+				.neighborhood-links a:hover {
+					color: var(--primary-blue);
+					border-bottom-color: var(--primary-blue);
+				}
+			</style>
 
 			<div class="map-section">
 				<h2>Find Us on the Map</h2>
-				<p class="map-subtitle">Serving Bastrop and the surrounding Bastrop County area</p>
+				<p class="map-subtitle">
+					Serving Bastrop and the surrounding Bastrop County area
+				</p>
 				<div class="map-container">
 					<iframe
 						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d110374.73!2d-97.31!3d30.11!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8644e3ab746eb2c5%3A0x7651a4f3f5d4e4ed!2sBastrop%2C%20TX!5e0!3m2!1sen!2sus!4v1234567890"
@@ -118,42 +216,76 @@ import Layout from '../../layouts/Layout.astro';
 						style="border:0; border-radius: 12px;"
 						allowfullscreen=""
 						loading="lazy"
-						referrerpolicy="no-referrer-when-downgrade">
+						referrerpolicy="no-referrer-when-downgrade"
+					>
 					</iframe>
 				</div>
 			</div>
 
 			<div class="testimonials-section">
 				<h2>What Bastrop Customers Say</h2>
-				<p class="testimonials-subtitle">Hear from your neighbors about their experience with String Prairie Heating & Air</p>
+				<p class="testimonials-subtitle">
+					Hear from your neighbors about their experience with String
+					Prairie Heating & Air
+				</p>
 				<div class="testimonials-grid">
 					<div class="testimonial-card">
 						<div class="stars">⭐⭐⭐⭐⭐</div>
-						<p class="testimonial-text">"Outstanding service! They came out the same day when our AC broke during a heat wave. Professional, honest pricing, and got us up and running quickly. Highly recommend to anyone in Bastrop!"</p>
+						<p class="testimonial-text">
+							"Outstanding service! They came out the same day
+							when our AC broke during a heat wave. Professional,
+							honest pricing, and got us up and running quickly.
+							Highly recommend to anyone in Bastrop!"
+						</p>
 						<p class="testimonial-author">— Sarah M., Bastrop</p>
 					</div>
 					<div class="testimonial-card">
 						<div class="stars">⭐⭐⭐⭐⭐</div>
-						<p class="testimonial-text">"Ron and his team installed a new HVAC system in our home. They were punctual, respectful, and cleaned up everything when done. Our energy bills have already dropped. Great local company!"</p>
+						<p class="testimonial-text">
+							"Ron and his team installed a new HVAC system in our
+							home. They were punctual, respectful, and cleaned up
+							everything when done. Our energy bills have already
+							dropped. Great local company!"
+						</p>
 						<p class="testimonial-author">— Mike T., Bastrop</p>
 					</div>
 					<div class="testimonial-card">
 						<div class="stars">⭐⭐⭐⭐⭐</div>
-						<p class="testimonial-text">"We've used String Prairie for years for our seasonal tune-ups. They're always on time, thorough, and fair with their pricing. It's nice to support a local family business that truly cares."</p>
+						<p class="testimonial-text">
+							"We've used String Prairie for years for our
+							seasonal tune-ups. They're always on time, thorough,
+							and fair with their pricing. It's nice to support a
+							local family business that truly cares."
+						</p>
 						<p class="testimonial-author">— Jennifer L., Bastrop</p>
 					</div>
 				</div>
 				<div class="review-cta">
-					<a href="https://www.google.com/maps/place/String+Prairie+Heating+%26+Air/@29.8918229,-97.3320232" target="_blank" rel="noopener noreferrer" class="review-link">Leave us a Google Review</a>
+					<a
+						href="https://www.google.com/maps/place/String+Prairie+Heating+%26+Air/@29.8918229,-97.3320232"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="review-link">Leave us a Google Review</a
+					>
 				</div>
 			</div>
 
 			<div class="cta-section-local">
 				<h2>Schedule Your HVAC Service in Bastrop Today</h2>
-				<p>Don't let a broken AC or furnace disrupt your comfort. Our local technicians are ready to help.</p>
+				<p>
+					Don't let a broken AC or furnace disrupt your comfort. Our
+					local technicians are ready to help.
+				</p>
 				<div class="cta-buttons">
-					<a href="https://book.housecallpro.com/book/String-Prairie-Heating--Air/df82ded280ce43f4a9ee6ee6d36aef76?v2=true" target="_blank" rel="noopener noreferrer" class="btn btn-primary">🔖 Book Online</a>
-					<a href="tel:5129249744" class="btn btn-secondary">Call (512) 924-9744</a>
+					<a
+						href="https://book.housecallpro.com/book/String-Prairie-Heating--Air/df82ded280ce43f4a9ee6ee6d36aef76?v2=true"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="btn btn-primary">🔖 Book Online</a
+					>
+					<a href="tel:5129249744" class="btn btn-secondary"
+						>Call (512) 924-9744</a
+					>
 				</div>
 			</div>
 		</div>
@@ -162,7 +294,11 @@ import Layout from '../../layouts/Layout.astro';
 
 <style>
 	.page-header {
-		background: linear-gradient(135deg, var(--dark-blue) 0%, var(--primary-blue) 100%);
+		background: linear-gradient(
+			135deg,
+			var(--dark-blue) 0%,
+			var(--primary-blue) 100%
+		);
 		color: white;
 		padding: 5rem 0;
 		text-align: center;
@@ -171,13 +307,17 @@ import Layout from '../../layouts/Layout.astro';
 	}
 
 	.page-header::before {
-		content: '';
+		content: "";
 		position: absolute;
 		top: 0;
 		left: 0;
 		right: 0;
 		bottom: 0;
-		background: radial-gradient(circle at 30% 50%, rgba(233, 30, 34, 0.1) 0%, transparent 50%);
+		background: radial-gradient(
+			circle at 30% 50%,
+			rgba(233, 30, 34, 0.1) 0%,
+			transparent 50%
+		);
 		pointer-events: none;
 	}
 
@@ -240,7 +380,7 @@ import Layout from '../../layouts/Layout.astro';
 		border-radius: 12px;
 		border-left: 5px solid var(--accent-red);
 		transition: all 0.3s;
-		box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 	}
 
 	.service-card:hover {
@@ -252,7 +392,7 @@ import Layout from '../../layouts/Layout.astro';
 	.service-icon {
 		font-size: 3.5rem;
 		margin-bottom: 1rem;
-		filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+		filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
 	}
 
 	.service-card h3 {
@@ -375,7 +515,7 @@ import Layout from '../../layouts/Layout.astro';
 	.map-container {
 		max-width: 1000px;
 		margin: 0 auto;
-		box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+		box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
 		border-radius: 12px;
 		overflow: hidden;
 	}
@@ -413,7 +553,7 @@ import Layout from '../../layouts/Layout.astro';
 		background: white;
 		padding: 2.5rem;
 		border-radius: 12px;
-		box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 		border-left: 5px solid var(--accent-red);
 		transition: all 0.3s;
 	}
@@ -454,7 +594,11 @@ import Layout from '../../layouts/Layout.astro';
 	.review-link {
 		display: inline-block;
 		padding: 1rem 2.5rem;
-		background: linear-gradient(135deg, var(--primary-blue) 0%, var(--dark-blue) 100%);
+		background: linear-gradient(
+			135deg,
+			var(--primary-blue) 0%,
+			var(--dark-blue) 100%
+		);
 		color: white;
 		text-decoration: none;
 		border-radius: 50px;
@@ -473,7 +617,11 @@ import Layout from '../../layouts/Layout.astro';
 
 	.cta-section-local {
 		text-align: center;
-		background: linear-gradient(135deg, var(--accent-red) 0%, var(--dark-red) 100%);
+		background: linear-gradient(
+			135deg,
+			var(--accent-red) 0%,
+			var(--dark-red) 100%
+		);
 		color: white;
 		padding: 4rem 3rem;
 		border-radius: 12px;

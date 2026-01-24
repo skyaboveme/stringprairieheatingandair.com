@@ -45,33 +45,162 @@ import Layout from "../layouts/Layout.astro";
 		<div class="container">
 			<div class="feature-grid">
 				<a href="/residential-services" class="feature-card">
-					<div class="feature-icon">🏠</div>
-					<h3>Residential Services</h3>
-					<p>
-						Expert HVAC solutions for your home comfort and
-						efficiency
-					</p>
+					<div class="card-image-wrapper">
+						<img
+							src="/Images/residential-card.png"
+							alt="Residential HVAC Services"
+							class="card-bg-image"
+						/>
+						<div class="card-overlay"></div>
+					</div>
+					<div class="card-content">
+						<h3>Residential Services</h3>
+						<p>
+							Expert HVAC solutions for your home comfort and
+							efficiency
+						</p>
+					</div>
 				</a>
 				<a href="/commercial-services" class="feature-card">
-					<div class="feature-icon">🏢</div>
-					<h3>Commercial Services</h3>
-					<p>
-						Reliable heating and cooling systems for your business
-					</p>
+					<div class="card-image-wrapper">
+						<img
+							src="/Images/commercial-card.png"
+							alt="Commercial HVAC Services"
+							class="card-bg-image"
+						/>
+						<div class="card-overlay"></div>
+					</div>
+					<div class="card-content">
+						<h3>Commercial Services</h3>
+						<p>
+							Reliable heating and cooling systems for your
+							business
+						</p>
+					</div>
 				</a>
 				<a href="/family-owned" class="feature-card">
-					<div class="feature-icon">👨‍👩‍👧‍👦</div>
-					<h3>Family-Owned</h3>
-					<p>Personal service and attention to every customer</p>
+					<div class="card-image-wrapper">
+						<img
+							src="/34761b_3f7f333425354739b252151655d852f0~mv2.avif"
+							alt="Family Owned Business"
+							class="card-bg-image"
+						/>
+						<div class="card-overlay"></div>
+					</div>
+					<div class="card-content">
+						<h3>Family-Owned</h3>
+						<p>Personal service and attention to every customer</p>
+					</div>
 				</a>
 				<a href="/fast-response" class="feature-card">
-					<div class="feature-icon">⚡</div>
-					<h3>Fast Response</h3>
-					<p>Quick and efficient service when you need it most</p>
+					<div class="card-image-wrapper">
+						<img
+							src="/Images/service-van-full.jpg"
+							alt="Fast Response Service Truck"
+							class="card-bg-image"
+						/>
+						<div class="card-overlay"></div>
+					</div>
+					<div class="card-content">
+						<h3>Fast Response</h3>
+						<p>Quick and efficient service when you need it most</p>
+					</div>
 				</a>
 			</div>
 		</div>
 	</section>
+
+	<style>
+		.features {
+			padding: 5rem 0;
+			background: white;
+			margin-top: -8rem;
+			position: relative;
+			z-index: 10;
+		}
+
+		.feature-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+			gap: 2rem;
+		}
+
+		.feature-card {
+			background: white;
+			border-radius: 12px;
+			box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+			transition: all 0.3s;
+			display: block;
+			text-decoration: none;
+			color: inherit;
+			height: 100%;
+			overflow: hidden;
+			position: relative;
+			border: none;
+			display: flex;
+			flex-direction: column;
+		}
+
+		.feature-card:hover {
+			transform: translateY(-8px);
+			box-shadow: 0 12px 30px rgba(41, 94, 147, 0.2);
+		}
+
+		.card-image-wrapper {
+			position: relative;
+			height: 200px;
+			overflow: hidden;
+		}
+
+		.card-bg-image {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			transition: transform 0.5s;
+		}
+
+		.feature-card:hover .card-bg-image {
+			transform: scale(1.05);
+		}
+
+		.card-overlay {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background: linear-gradient(
+				to bottom,
+				transparent 0%,
+				rgba(0, 0, 0, 0.2) 100%
+			);
+		}
+
+		.card-content {
+			padding: 2rem;
+			flex-grow: 1;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			text-align: center;
+		}
+
+		.feature-card h3 {
+			margin-bottom: 0.75rem;
+			color: var(--primary-blue);
+			font-weight: 800;
+			font-size: 1.35rem;
+			text-transform: uppercase;
+			letter-spacing: 0.5px;
+		}
+
+		.feature-card p {
+			font-weight: 300;
+			line-height: 1.6;
+			color: var(--text-light);
+			font-size: 1.05rem;
+		}
+	</style>
 
 	<section class="value-props">
 		<div class="container">
@@ -449,61 +578,6 @@ import Layout from "../layouts/Layout.astro";
 	.btn-light:hover {
 		background: rgba(255, 255, 255, 0.95);
 		transform: translateY(-3px);
-	}
-
-	.features {
-		padding: 5rem 0;
-		background: white;
-		margin-top: -8rem;
-		position: relative;
-		z-index: 10;
-	}
-
-	.feature-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-		gap: 2rem;
-	}
-
-	.feature-card {
-		background: white;
-		padding: 2.5rem 2rem;
-		border-radius: 12px;
-		text-align: center;
-		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-		transition: all 0.3s;
-		border: 1px solid rgba(41, 94, 147, 0.1);
-		display: block;
-		text-decoration: none;
-		color: inherit;
-		height: 100%;
-	}
-
-	.feature-card:hover {
-		transform: translateY(-8px);
-		box-shadow: 0 8px 30px rgba(41, 94, 147, 0.15);
-		border-color: var(--primary-blue);
-	}
-
-	.feature-icon {
-		font-size: 3.5rem;
-		margin-bottom: 1.25rem;
-		filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
-	}
-
-	.feature-card h3 {
-		margin-bottom: 0.75rem;
-		color: var(--primary-blue);
-		font-weight: 700;
-		font-size: 1.25rem;
-		text-transform: uppercase;
-		letter-spacing: 0.5px;
-	}
-
-	.feature-card p {
-		font-weight: 300;
-		line-height: 1.7;
-		color: var(--text-light);
 	}
 
 	.services-preview {
