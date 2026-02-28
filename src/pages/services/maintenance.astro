@@ -6,6 +6,28 @@ import Layout from "../../layouts/Layout.astro";
 	title="HVAC Maintenance & Tune-Ups in Bastrop, TX | String Prairie Heating & Air"
 	description="Professional HVAC maintenance and tune-up services in Bastrop, Rosanky, Smithville, and Paige. Prevent breakdowns and extend system life. Call your local Bastrop County HVAC experts at (512) 924-9744."
 >
+	<script is:inline type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "Service",
+			"serviceType": "HVAC Maintenance",
+			"name": "HVAC Maintenance & Tune-Up Services in Bastrop County",
+			"description": "Comprehensive preventive HVAC maintenance including spring AC tune-ups, fall heating inspections, filter replacement, coil cleaning, refrigerant checks, and safety testing throughout Bastrop County, TX.",
+			"provider": {
+				"@type": "HVACBusiness",
+				"name": "String Prairie Heating & Air",
+				"telephone": "(512) 924-9744",
+				"url": "https://stringprairieheatingandair.com"
+			},
+			"areaServed": [
+				{ "@type": "City", "name": "Bastrop" },
+				{ "@type": "City", "name": "Rosanky" },
+				{ "@type": "City", "name": "Smithville" },
+				{ "@type": "City", "name": "Paige" }
+			],
+			"url": "https://stringprairieheatingandair.com/services/maintenance"
+		}
+	</script>
 	<section class="page-header">
 		<div class="container">
 			<h1>Maintenance & Tune-Ups</h1>
@@ -165,20 +187,24 @@ import Layout from "../../layouts/Layout.astro";
 						<ul>
 							<li>
 								<a href="/service-areas/bastrop"
-									>Bastrop & Lost Pines</a>
+									>Bastrop & Lost Pines</a
+								>
 							</li>
 							<li>
 								<a href="/service-areas/rosanky"
-									>Rosanky & String Prairie</a>
+									>Rosanky & String Prairie</a
+								>
 							</li>
 							<li>
 								<a href="/service-areas/smithville"
-									>Smithville & Buescher</a>
+									>Smithville & Buescher</a
+								>
 							</li>
 							<li><a href="/service-areas/mcdade">McDade</a></li>
 							<li>
 								<a href="/service-areas/paige"
-									>Paige & Lincoln</a>
+									>Paige & Lincoln</a
+								>
 							</li>
 						</ul>
 					</div>

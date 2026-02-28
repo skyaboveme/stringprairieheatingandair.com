@@ -1,0 +1,437 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const breadcrumbs = [
+    { name: "Home", url: "https://stringprairieheatingandair.com/" },
+    { name: "Reviews", url: "https://stringprairieheatingandair.com/reviews" },
+];
+
+const reviews = [
+    {
+        name: "John D.",
+        location: "Bastrop",
+        rating: 5,
+        text: "Excellent service! They were prompt, professional, and fixed our AC issue quickly. Highly recommend String Prairie for any HVAC needs.",
+        date: "2024-08-15",
+    },
+    {
+        name: "Sarah M.",
+        location: "Bastrop",
+        rating: 5,
+        text: "Great family-owned business! They installed our new heating system and did an amazing job. Fair pricing and quality work.",
+        date: "2024-07-20",
+    },
+    {
+        name: "Mike R.",
+        location: "Rosanky",
+        rating: 5,
+        text: "Very knowledgeable and courteous. They explained everything clearly and got our air conditioning working perfectly. Will definitely call them again!",
+        date: "2024-06-10",
+    },
+    {
+        name: "David K.",
+        location: "Rosanky",
+        rating: 5,
+        text: "Being a local Rosanky company, String Prairie was our first choice. They know our area and responded quickly. Ron is honest and his crew is professional. We won't use anyone else!",
+        date: "2024-09-05",
+    },
+    {
+        name: "Lisa R.",
+        location: "Rosanky",
+        rating: 5,
+        text: "Excellent work on our new AC unit! They arrived on time, completed the job efficiently, and explained everything. Prices were fair and the quality is top-notch.",
+        date: "2024-05-12",
+    },
+    {
+        name: "Tom H.",
+        location: "Rosanky",
+        rating: 5,
+        text: "We've been using String Prairie for maintenance for 3 years now. Always professional, always on time, and they catch problems before they become expensive. Great local business!",
+        date: "2024-04-18",
+    },
+    {
+        name: "Mike T.",
+        location: "Bastrop",
+        rating: 5,
+        text: "Ron and his team installed a new HVAC system in our home. They were punctual, respectful, and cleaned up everything when done. Our energy bills have already dropped. Great local company!",
+        date: "2024-03-22",
+    },
+    {
+        name: "Jennifer L.",
+        location: "Bastrop",
+        rating: 5,
+        text: "We've used String Prairie for years for our seasonal tune-ups. They're always on time, thorough, and fair with their pricing. It's nice to support a local family business that truly cares.",
+        date: "2024-02-14",
+    },
+    {
+        name: "Carlos G.",
+        location: "Smithville",
+        rating: 5,
+        text: "Our AC stopped working in the middle of July. String Prairie came out the same day, diagnosed the issue, and had it fixed within an hour. Lifesavers in the Texas heat!",
+        date: "2024-07-15",
+    },
+    {
+        name: "Amanda W.",
+        location: "Paige",
+        rating: 5,
+        text: "We live out in Paige and were worried about finding a good HVAC company nearby. String Prairie exceeded all expectations — fast, fair, and friendly. Highly recommended for rural Bastrop County!",
+        date: "2024-06-28",
+    },
+];
+
+const reviewSchema = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://stringprairieheatingandair.com",
+    name: "String Prairie Heating & Air",
+    telephone: "(512) 924-9744",
+    url: "https://stringprairieheatingandair.com",
+    aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: "5",
+        reviewCount: String(reviews.length),
+        bestRating: "5",
+        worstRating: "1",
+    },
+    review: reviews.map((r) => ({
+        "@type": "Review",
+        reviewRating: {
+            "@type": "Rating",
+            ratingValue: String(r.rating),
+            bestRating: "5",
+        },
+        author: {
+            "@type": "Person",
+            name: r.name,
+        },
+        datePublished: r.date,
+        reviewBody: r.text,
+    })),
+};
+---
+
+<Layout
+    title="Customer Reviews | String Prairie Heating & Air"
+    description="Read what Bastrop County homeowners say about String Prairie Heating & Air. 5-star rated HVAC service in Bastrop, Rosanky, Smithville, and Paige."
+    breadcrumbs={breadcrumbs}
+>
+    <script
+        is:inline
+        type="application/ld+json"
+        set:html={JSON.stringify(reviewSchema)}
+    />
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Customer Reviews</h1>
+            <p>
+                Hear what your neighbors say about String Prairie Heating & Air
+            </p>
+        </div>
+    </section>
+
+    <section class="reviews-content">
+        <div class="container">
+            <div class="reviews-summary">
+                <div class="rating-badge">
+                    <span class="rating-number">5.0</span>
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p>{reviews.length} Reviews</p>
+                </div>
+                <p class="summary-text">
+                    We're proud of our 5-star reputation across Bastrop County.
+                    Every job, big or small, gets the same level of care and
+                    professionalism. Here's what our customers have to say.
+                </p>
+            </div>
+
+            <div class="reviews-grid">
+                {
+                    reviews.map((review) => (
+                        <div class="review-card">
+                            <div class="review-header">
+                                <div class="stars">⭐⭐⭐⭐⭐</div>
+                                <span class="review-date">
+                                    {new Date(review.date).toLocaleDateString(
+                                        "en-US",
+                                        {
+                                            year: "numeric",
+                                            month: "long",
+                                            day: "numeric",
+                                        },
+                                    )}
+                                </span>
+                            </div>
+                            <p class="review-text">"{review.text}"</p>
+                            <p class="review-author">
+                                — {review.name}, {review.location}
+                            </p>
+                        </div>
+                    ))
+                }
+            </div>
+
+            <div class="review-cta">
+                <h2>Had a Great Experience?</h2>
+                <p>
+                    We'd love to hear about it! Leave us a review and help other
+                    Bastrop County homeowners find trustworthy HVAC service.
+                </p>
+                <div class="cta-buttons">
+                    <a
+                        href="https://g.page/r/CeONyk8DcHYfEBM/review"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="btn btn-primary"
+                    >
+                        Leave a Google Review
+                    </a>
+                    <a href="/contact" class="btn btn-secondary">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</Layout>
+
+<style>
+    .page-header {
+        background: linear-gradient(
+            135deg,
+            var(--dark-blue) 0%,
+            var(--primary-blue) 100%
+        );
+        color: white;
+        padding: 5rem 0;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .page-header::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: radial-gradient(
+            circle at 30% 50%,
+            rgba(34, 197, 94, 0.1) 0%,
+            transparent 50%
+        );
+        pointer-events: none;
+    }
+
+    .page-header h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        position: relative;
+        z-index: 1;
+    }
+
+    .page-header p {
+        font-size: 1.35rem;
+        opacity: 0.95;
+        font-weight: 300;
+        position: relative;
+        z-index: 1;
+    }
+
+    .reviews-content {
+        padding: 5rem 0;
+        background: white;
+    }
+
+    .reviews-summary {
+        text-align: center;
+        max-width: 700px;
+        margin: 0 auto 4rem;
+    }
+
+    .rating-badge {
+        display: inline-block;
+        background: var(--bg-light);
+        padding: 2rem 3rem;
+        border-radius: 12px;
+        margin-bottom: 2rem;
+        border-bottom: 4px solid var(--accent-red);
+    }
+
+    .rating-number {
+        font-size: 3.5rem;
+        font-weight: 800;
+        color: var(--dark-blue);
+        display: block;
+    }
+
+    .rating-badge .stars {
+        font-size: 1.5rem;
+        letter-spacing: 4px;
+        margin: 0.5rem 0;
+    }
+
+    .rating-badge p {
+        color: var(--text-light);
+        font-weight: 600;
+        font-size: 1rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    .summary-text {
+        font-size: 1.15rem;
+        color: var(--text-dark);
+        line-height: 1.8;
+        font-weight: 300;
+    }
+
+    .reviews-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 2rem;
+        margin-bottom: 4rem;
+    }
+
+    .review-card {
+        background: var(--bg-light);
+        padding: 2rem;
+        border-radius: 12px;
+        border-left: 5px solid var(--accent-red);
+        transition: all 0.3s;
+    }
+
+    .review-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(41, 94, 147, 0.12);
+        border-left-color: var(--primary-blue);
+    }
+
+    .review-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1rem;
+    }
+
+    .review-header .stars {
+        font-size: 1.1rem;
+        letter-spacing: 2px;
+    }
+
+    .review-date {
+        color: var(--text-light);
+        font-size: 0.85rem;
+        font-weight: 300;
+    }
+
+    .review-text {
+        color: var(--text-dark);
+        line-height: 1.8;
+        font-weight: 300;
+        font-size: 1.05rem;
+        font-style: italic;
+        margin-bottom: 1rem;
+    }
+
+    .review-author {
+        color: var(--primary-blue);
+        font-weight: 700;
+        font-size: 0.95rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    .review-cta {
+        text-align: center;
+        background: linear-gradient(
+            135deg,
+            var(--accent-red) 0%,
+            var(--dark-red) 100%
+        );
+        color: white;
+        padding: 4rem 3rem;
+        border-radius: 12px;
+    }
+
+    .review-cta h2 {
+        font-size: 2.25rem;
+        margin-bottom: 1rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    .review-cta p {
+        font-size: 1.15rem;
+        margin-bottom: 2rem;
+        opacity: 0.95;
+        font-weight: 300;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 2rem;
+    }
+
+    .cta-buttons {
+        display: flex;
+        gap: 1.5rem;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .btn {
+        padding: 1.25rem 2.5rem;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: 700;
+        transition: all 0.3s;
+        display: inline-block;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        font-size: 1rem;
+    }
+
+    .btn-primary {
+        background: white;
+        color: var(--accent-red);
+        box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
+    }
+
+    .btn-primary:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 16px rgba(255, 255, 255, 0.4);
+    }
+
+    .btn-secondary {
+        background: transparent;
+        color: white;
+        border: 2px solid white;
+    }
+
+    .btn-secondary:hover {
+        background: white;
+        color: var(--accent-red);
+        transform: translateY(-3px);
+    }
+
+    @media (max-width: 768px) {
+        .page-header h1 {
+            font-size: 2rem;
+        }
+
+        .reviews-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .review-cta h2 {
+            font-size: 1.75rem;
+        }
+
+        .cta-buttons {
+            flex-direction: column;
+        }
+    }
+</style>

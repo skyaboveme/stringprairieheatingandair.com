@@ -6,6 +6,35 @@ import Layout from '../../layouts/Layout.astro';
 	title="HVAC Services in Paige, TX | String Prairie Heating & Air"
 	description="Local HVAC services in Paige, Texas. Family-owned heating and air conditioning company serving Paige with installation, repair, and maintenance."
 >
+<!-- Local HVACBusiness Schema for Paige -->
+<script is:inline type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@type": "HVACBusiness",
+"name": "String Prairie Heating & Air - Paige",
+"telephone": "(512) 924-9744",
+"url": "https://stringprairieheatingandair.com/service-areas/paige",
+"address": {
+"@type": "PostalAddress",
+"addressLocality": "Paige",
+"addressRegion": "TX",
+"addressCountry": "US"
+},
+"areaServed": {
+"@type": "City",
+"name": "Paige"
+},
+"parentOrganization": {
+"@type": "HVACBusiness",
+"name": "String Prairie Heating & Air",
+"url": "https://stringprairieheatingandair.com"
+},
+"sameAs": [
+"https://www.google.com/maps/place/String+Prairie+Heating+%26+Air/@29.8918229,-97.3320232",
+"https://www.facebook.com/profile.php?id=100082664987868"
+]
+}
+</script>
 	<section class="page-header">
 		<div class="container">
 			<h1>HVAC Services in Paige, TX</h1>

@@ -6,6 +6,28 @@ import Layout from "../../layouts/Layout.astro";
 	title="Heating & Furnace Repair in Bastrop, TX | String Prairie Heating & Air"
 	description="Professional heating and furnace repair in Bastrop, Rosanky, Smithville, and Paige. Fast, reliable heater repair from your local Bastrop County HVAC experts. Call (512) 924-9744."
 >
+	<script is:inline type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "Service",
+			"serviceType": "Heating Repair",
+			"name": "Heating & Furnace Repair Services in Bastrop County",
+			"description": "Professional heating and furnace repair services including gas furnace repair, heat pump service, emergency heating repair, and safety inspections throughout Bastrop County, TX.",
+			"provider": {
+				"@type": "HVACBusiness",
+				"name": "String Prairie Heating & Air",
+				"telephone": "(512) 924-9744",
+				"url": "https://stringprairieheatingandair.com"
+			},
+			"areaServed": [
+				{ "@type": "City", "name": "Bastrop" },
+				{ "@type": "City", "name": "Rosanky" },
+				{ "@type": "City", "name": "Smithville" },
+				{ "@type": "City", "name": "Paige" }
+			],
+			"url": "https://stringprairieheatingandair.com/services/heating-repair"
+		}
+	</script>
 	<section class="page-header">
 		<div class="container">
 			<h1>Heating & Furnace Repair</h1>
@@ -192,20 +214,24 @@ import Layout from "../../layouts/Layout.astro";
 						<ul>
 							<li>
 								<a href="/service-areas/bastrop"
-									>Bastrop & Lost Pines</a>
+									>Bastrop & Lost Pines</a
+								>
 							</li>
 							<li>
 								<a href="/service-areas/rosanky"
-									>Rosanky & String Prairie</a>
+									>Rosanky & String Prairie</a
+								>
 							</li>
 							<li>
 								<a href="/service-areas/smithville"
-									>Smithville & Buescher</a>
+									>Smithville & Buescher</a
+								>
 							</li>
 							<li><a href="/service-areas/mcdade">McDade</a></li>
 							<li>
 								<a href="/service-areas/paige"
-									>Paige & Lincoln</a>
+									>Paige & Lincoln</a
+								>
 							</li>
 						</ul>
 					</div>
