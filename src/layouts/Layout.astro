@@ -20,7 +20,11 @@ const {
 	breadcrumbs = [],
 } = Astro.props;
 
-const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+let pathname = Astro.url.pathname;
+if (pathname !== "/" && pathname.endsWith("/")) {
+	pathname = pathname.slice(0, -1);
+}
+const canonicalURL = new URL(pathname, Astro.site);
 const ogImageURL = new URL(image, Astro.site);
 
 // Generate breadcrumb schema if breadcrumbs are provided
@@ -67,6 +71,7 @@ const breadcrumbSchema =
 
 		<!-- Canonical URL -->
 		<link rel="canonical" href={canonicalURL} />
+		<link rel="sitemap" href="/sitemap-index.xml" />
 
 		<!-- Open Graph / Facebook -->
 		<meta property="og:type" content={type} />
@@ -428,7 +433,6 @@ const breadcrumbSchema =
 								>
 							</li>
 							<li><a href="/financing">Financing</a></li>
-							<li><a href="/specials">Specials</a></li>
 							<li><a href="/reviews">Reviews</a></li>
 							<li><a href="/about">About</a></li>
 							<li><a href="/blog">Blog</a></li>
