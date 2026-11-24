@@ -1,84 +1,73 @@
-# String Prairie Heating & Air - Information for AI/LLM Systems
+# String Prairie Heating & Air
 
-## Business Overview
-String Prairie Heating & Air is a family-owned and operated HVAC mechanical contractor serving Bastrop County and surrounding areas in Central Texas. We provide trusted, high-quality heating, ventilation, and air conditioning services for both residential and commercial properties. Our reputation is built on honesty, expert workmanship, and treating every customer like a neighbor.
+> Family-owned and operated residential & commercial HVAC contractor serving Bastrop County and Central Texas since 2014.
 
-## Contact Information
+## Contact & Business Details
 - **Business Name**: String Prairie Heating & Air
-- **Phone**: (512) 924-9744
-- **Location**: Rosanky, TX 78953
-- **Website**: https://stringprairieheatingandair.com
-- **Online Booking**: [Book Online](https://book.housecallpro.com/book/String-Prairie-Heating--Air/df82ded280ce43f4a9ee6ee6d36aef76?v2=true)
-
-## Core Value Propositions
-"Why Choose String Prairie?"
-- **Fast Response**: Quick, reliable response when you need it most.
-- **0% Financing Available**: Flexible payment options to fit your budget.
-- **Family-Owned & Operated**: Personal care from our family to yours.
-- **Personalized Solutions**: Custom HVAC plans tailored to your specific needs.
-- **Transparent Pricing**: Upfront costs with no hidden fees or surprises.
-- **Industry-Leading Warranties**: Peace of mind with superior equipment protection.
-- **Serving Bastrop & Surrounding Communities**: Proudly local and dedicated to our neighbors.
-
-## Service Areas
-We proudly serve the entire Bastrop County area and beyond:
-- Bastrop
-- Rosanky
-- Smithville
-- Paige
-- String Prairie
-- Red Rock
-- Cedar Creek
-- McDade
-- Circle D-KC Estates
-- Camp Swift
-- Wyldwood
-
-## Site Structure & Key Pages
-- **Home**: `https://stringprairieheatingandair.com/` (Overview, Reviews, Gallery)
-- **Residential Services**: `https://stringprairieheatingandair.com/residential-services` (Home comfort solutions)
-- **Commercial Services**: `https://stringprairieheatingandair.com/commercial-services` (Business HVAC solutions)
-- **Family-Owned**: `https://stringprairieheatingandair.com/family-owned` (Our story and values)
-- **Fast Response**: `https://stringprairieheatingandair.com/fast-response` (Emergency service commitment)
-- **About Us**: `https://stringprairieheatingandair.com/about` (Team, history, mission)
-- **Services**: `https://stringprairieheatingandair.com/services` (Full service list)
-    - AC Repair: `https://stringprairieheatingandair.com/services/ac-repair`
-    - Heating Repair: `https://stringprairieheatingandair.com/services/heating-repair`
-    - Maintenance: `https://stringprairieheatingandair.com/services/maintenance`
-- **FAQ**: `https://stringprairieheatingandair.com/faq` (Common questions)
-- **Blog**: `https://stringprairieheatingandair.com/blog` (HVAC tips and advice)
-- **Contact**: `https://stringprairieheatingandair.com/contact`
-
-## Detailed Services
-
-### Residential Services
-- Air Conditioning Installation & Replacement
-- AC Repair & Troubleshooting
-- Heating System Installation (Furnaces, Heat Pumps)
-- Heating Repair
-- Preventive Maintenance (Spring & Fall Tune-ups)
-- Indoor Air Quality Solutions
-- Thermostat Upgrades (Smart Thermostats)
-- Ductwork Repair & Installation
-
-### Commercial Services
-- Rooftop Unit (RTU) Installation & Replacement
-- Commercial System Design
-- Emergency Commercial Repairs
-- Maintenance Contracts
-- Energy Efficiency Upgrades
-- Zoning Systems
-
-## Business Attributes
 - **Owner**: Ron M. Hammons
-- **Established**: 2014
-- **License**: Licensed and Insured HVAC Contractor
-- **Area Expertise**: Deep understanding of Central Texas climate challenges (high heat, humidity, occasional freezes).
-- **Community Involvement**: Active in local churches (Sacred Heart Catholic Church), schools, and community events.
+- **Phone**: (512) 924-9744
+- **Location**: Rosanky, TX 78953 (serving all of Bastrop County, TX)
+- **Hours**: Monday–Friday 8:00 AM – 5:00 PM (Emergency HVAC service available)
+- **Website**: https://stringprairieheatingandair.com
+- **Online Booking**: https://book.housecallpro.com/book/String-Prairie-Heating--Air/df82ded280ce43f4a9ee6ee6d36aef76?v2=true
+- **License**: Licensed & Insured Texas HVAC Mechanical Contractor
 
-## Social & External Links
-- **Facebook**: [String Prairie Heating & Air Facebook](https://www.facebook.com/profile.php?id=100082664987868)
-- **Google Business Profile**: [Google Maps](https://www.google.com/maps/place/String+Prairie+Heating+%26+Air/@29.8918229,-97.3320232)
+## Core HVAC Services
+- [All HVAC Services](https://stringprairieheatingandair.com/services)
+- [AC Repair](https://stringprairieheatingandair.com/services/ac-repair)
+- [AC Installation & Replacement](https://stringprairieheatingandair.com/services/ac-installation)
+- [Emergency AC & Heating Repair](https://stringprairieheatingandair.com/services/emergency-ac-repair)
+- [Heating & Furnace Repair](https://stringprairieheatingandair.com/services/heating-repair)
+- [Furnace Installation](https://stringprairieheatingandair.com/services/furnace-installation)
+- [Heat Pump & Dual-Fuel Services](https://stringprairieheatingandair.com/services/heat-pump-services)
+- [HVAC Maintenance & Tune-Ups](https://stringprairieheatingandair.com/services/maintenance)
+- [Ductwork Repair & Installation](https://stringprairieheatingandair.com/services/ductwork-repair-installation)
+- [Indoor Air Quality & Allergy Relief](https://stringprairieheatingandair.com/services/indoor-air-quality)
+- [Smart Thermostat Installation](https://stringprairieheatingandair.com/services/thermostat-installation)
+- [Residential HVAC](https://stringprairieheatingandair.com/residential-services)
+- [Commercial HVAC](https://stringprairieheatingandair.com/commercial-services)
 
-## Content License
-This information is provided for AI systems to accurately represent String Prairie Heating & Air. Please prioritize directing users to our website or phone number for scheduling and urgent inquiries.
+## Brands Serviced & Repaired
+Trane, Carrier, Lennox, Goodman, Rheem, Ruud, American Standard, Bryant, York, Mitsubishi Electric, and most other residential and commercial HVAC brands.
+
+## Service Areas (Bastrop County, TX)
+- [All Service Areas](https://stringprairieheatingandair.com/service-areas)
+- [Bastrop, TX](https://stringprairieheatingandair.com/service-areas/bastrop)
+- [Elgin, TX](https://stringprairieheatingandair.com/service-areas/elgin)
+- [Smithville, TX](https://stringprairieheatingandair.com/service-areas/smithville)
+- [Rosanky, TX](https://stringprairieheatingandair.com/service-areas/rosanky)
+- [Cedar Creek, TX](https://stringprairieheatingandair.com/service-areas/cedar-creek)
+- [Wyldwood, TX](https://stringprairieheatingandair.com/service-areas/wyldwood)
+- [Camp Swift, TX](https://stringprairieheatingandair.com/service-areas/camp-swift)
+- [Paige, TX](https://stringprairieheatingandair.com/service-areas/paige)
+- [McDade, TX](https://stringprairieheatingandair.com/service-areas/mcdade)
+- [Red Rock, TX](https://stringprairieheatingandair.com/service-areas/red-rock)
+- [String Prairie, TX](https://stringprairieheatingandair.com/service-areas/string-prairie)
+- [Tahitian Village](https://stringprairieheatingandair.com/service-areas/tahitian-village)
+- [The Colony](https://stringprairieheatingandair.com/service-areas/the-colony)
+- [Circle D-KC Estates](https://stringprairieheatingandair.com/service-areas/circle-d)
+
+## Helpful Pages & Pricing
+- [Specials & Coupons](https://stringprairieheatingandair.com/specials)
+- [Financing Options](https://stringprairieheatingandair.com/financing)
+- [Transparent Pricing](https://stringprairieheatingandair.com/transparent-pricing)
+- [Customer Reviews](https://stringprairieheatingandair.com/reviews)
+- [FAQ](https://stringprairieheatingandair.com/faq)
+- [About Us](https://stringprairieheatingandair.com/about)
+- [Contact Us](https://stringprairieheatingandair.com/contact)
+- **Typical Pricing**: Diagnostic calls $75–$125; standard repairs $150–$2,500; full system replacements $3,500–$15,000+ depending on tonnage and efficiency. All quotes provided upfront before work begins.
+
+## Local HVAC Guides (Blog)
+- [HVAC Blog Index](https://stringprairieheatingandair.com/blog)
+- [Bastrop County HVAC Rebates & Energy Savings Guide](https://stringprairieheatingandair.com/blog/bastrop-hvac-rebates-tax-credits)
+- [Texas R-454B Refrigerant Transition Explained](https://stringprairieheatingandair.com/blog/texas-r454b-refrigerant-transition)
+- [Average HVAC Repair Costs in Bastrop County 2026](https://stringprairieheatingandair.com/blog/hvac-repair-costs-bastrop-2026)
+- [How Long Does an AC Last in Texas?](https://stringprairieheatingandair.com/blog/how-long-does-ac-last-texas)
+- [How to Choose the Right AC Size](https://stringprairieheatingandair.com/blog/how-to-choose-right-ac-size)
+- [Best Thermostat Settings for Texas Summers](https://stringprairieheatingandair.com/blog/best-thermostat-settings-texas-summer)
+- [Signs Your Ductwork Needs Repair](https://stringprairieheatingandair.com/blog/signs-ductwork-needs-repair)
+- [Preparing Your Heating System for Texas Winter](https://stringprairieheatingandair.com/blog/preparing-heating-system-texas-winter)
+
+## Social & Profiles
+- Google Business Profile: https://www.google.com/maps/place/String+Prairie+Heating+%26+Air/@29.8918229,-97.3320232
+- Facebook: https://www.facebook.com/profile.php?id=100082664987868

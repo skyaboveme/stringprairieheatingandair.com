@@ -1,0 +1,233 @@
+---
+import Layout from "../../layouts/Layout.astro";
+
+const breadcrumbs = [
+	{ name: "Home", url: "https://stringprairieheatingandair.com/" },
+	{ name: "Services", url: "https://stringprairieheatingandair.com/services" },
+	{
+		name: "Smart Thermostat Installation",
+		url: "https://stringprairieheatingandair.com/services/thermostat-installation",
+	},
+];
+
+const serviceSchema = {
+	"@context": "https://schema.org",
+	"@type": "Service",
+	serviceType: "Smart Thermostat Installation",
+	name: "Smart Thermostat Installation in Bastrop County, TX",
+	description:
+		"Professional installation and wiring of Ecobee, Google Nest, Honeywell, and programmable thermostats in Bastrop County, TX, including C-wire setup and heat pump configuration.",
+	provider: {
+		"@type": "HVACBusiness",
+		"@id": "https://stringprairieheatingandair.com/#business",
+		name: "String Prairie Heating & Air",
+		telephone: "+1-512-924-9744",
+		url: "https://stringprairieheatingandair.com",
+	},
+	url: "https://stringprairieheatingandair.com/services/thermostat-installation",
+};
+---
+
+<Layout
+	title="Smart Thermostat Installation in Bastrop, TX | String Prairie"
+	description="Save 10–30% on Texas electric bills with professional smart thermostat installation in Bastrop County. Ecobee, Nest & Honeywell wiring, C-wire & setup."
+	breadcrumbs={breadcrumbs}
+>
+	<script is:inline type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
+
+	<section class="page-header">
+		<div class="container">
+			<h1>Smart Thermostat Installation</h1>
+			<p>Smarter comfort and lower electric bills for Bastrop County homes</p>
+		</div>
+	</section>
+
+	<section class="service-content">
+		<div class="container">
+			<div class="service-intro">
+				<h2>Properly Wired & Configured for Your HVAC System</h2>
+				<p class="lead">
+					A smart thermostat can cut heating and cooling costs by 10–30%, control humidity, and let you adjust temperatures from your phone—but only when it's wired and programmed properly for your specific equipment. Improper DIY wiring on heat pumps or multi-stage systems can blow control boards or lock your system into expensive auxiliary heat. Let our technicians install and set up your thermostat cleanly the first time.
+				</p>
+			</div>
+
+			<div class="service-grid">
+				<div class="service-main">
+					<h3>What We Handle</h3>
+					<ul class="service-list">
+						<li>
+							<strong>Smart & Wi-Fi Thermostats (Ecobee, Nest, Honeywell & More)</strong>
+							<p>Whether you supply your own thermostat or want us to bring a pro-grade model with a 5-year warranty, we install and configure it cleanly.</p>
+						</li>
+						<li>
+							<strong>C-Wire Installation & Older Home Wiring</strong>
+							<p>Many older Bastrop and Smithville homes lack a dedicated 24V common wire. We wire C-wires properly so your thermostat never loses power or short-cycles your unit.</p>
+						</li>
+						<li>
+							<strong>Heat Pump, Dual-Fuel & Multi-Stage Setup</strong>
+							<p>Exact reversing-valve (O/B), staging, and outdoor lockout programming so your system runs at peak efficiency.</p>
+						</li>
+						<li>
+							<strong>Remote Room Sensors & Zoning Controls</strong>
+							<p>Balance temperatures between sunny living rooms and back bedrooms using remote sensors or multi-zone dampers.</p>
+						</li>
+					</ul>
+
+					<h3>Helpful Resources</h3>
+					<div class="related-links">
+						<a href="/blog/best-thermostat-settings-texas-summer">Best Thermostat Settings for Texas Summers</a>
+						<a href="/services/heat-pump-services">Heat Pump Services</a>
+						<a href="/services/maintenance">HVAC Maintenance</a>
+					</div>
+				</div>
+
+				<aside class="service-sidebar">
+					<div class="cta-box">
+						<h3>Upgrade Your Thermostat</h3>
+						<p>Fast installation—can even be added right onto your spring or fall tune-up visit.</p>
+						<a
+							href="https://book.housecallpro.com/book/String-Prairie-Heating--Air/df82ded280ce43f4a9ee6ee6d36aef76?v2=true"
+							target="_blank"
+							rel="noopener noreferrer"
+							class="btn btn-primary">🔖 Book Online</a
+						>
+						<a href="tel:5129249744" class="btn btn-secondary">Call (512) 924-9744</a>
+					</div>
+				</aside>
+			</div>
+		</div>
+	</section>
+</Layout>
+
+<style>
+	.page-header {
+		background-image:
+			linear-gradient(rgba(10, 30, 60, 0.8), rgba(10, 30, 60, 0.9)),
+			url("/Images/services-header-bg.webp");
+		background-size: cover;
+		background-position: center;
+		color: white;
+		padding: 7rem 0;
+		text-align: center;
+	}
+	.page-header h1 {
+		font-size: 3rem;
+		margin-bottom: 1rem;
+		font-weight: 800;
+		text-transform: uppercase;
+	}
+	.page-header p {
+		font-size: 1.3rem;
+		opacity: 0.95;
+	}
+	.service-content {
+		padding: 5rem 0;
+		background: white;
+	}
+	.service-intro {
+		max-width: 900px;
+		margin: 0 auto 4rem;
+		text-align: center;
+	}
+	.service-intro h2 {
+		color: var(--dark-blue);
+		font-size: 2.3rem;
+		margin-bottom: 1.25rem;
+		font-weight: 800;
+		text-transform: uppercase;
+	}
+	.lead {
+		font-size: 1.15rem;
+		line-height: 1.8;
+	}
+	.service-grid {
+		display: grid;
+		grid-template-columns: 2fr 1fr;
+		gap: 3rem;
+	}
+	.service-main h3 {
+		color: var(--primary-blue);
+		font-size: 1.6rem;
+		margin: 2rem 0 1.25rem;
+		font-weight: 800;
+		text-transform: uppercase;
+	}
+	.service-main h3:first-child {
+		margin-top: 0;
+	}
+	.service-list {
+		list-style: none;
+		padding: 0;
+	}
+	.service-list li {
+		background: var(--bg-light);
+		padding: 1.5rem;
+		margin-bottom: 1rem;
+		border-radius: 10px;
+		border-left: 4px solid var(--accent-red);
+	}
+	.service-list strong {
+		display: block;
+		color: var(--dark-blue);
+		font-size: 1.15rem;
+		margin-bottom: 0.4rem;
+	}
+	.related-links {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.75rem;
+	}
+	.related-links a {
+		background: #eff6ff;
+		color: var(--primary-blue);
+		padding: 0.6rem 1.1rem;
+		border-radius: 50px;
+		text-decoration: none;
+		font-weight: 600;
+	}
+	.related-links a:hover {
+		background: var(--primary-blue);
+		color: white;
+	}
+	.cta-box {
+		background: linear-gradient(135deg, var(--dark-blue), var(--primary-blue));
+		color: white;
+		padding: 2.25rem;
+		border-radius: 12px;
+		text-align: center;
+	}
+	.cta-box h3 {
+		font-size: 1.5rem;
+		margin-bottom: 0.75rem;
+		text-transform: uppercase;
+	}
+	.cta-box p {
+		margin-bottom: 1.5rem;
+	}
+	.btn {
+		display: block;
+		width: 100%;
+		padding: 1rem 1.5rem;
+		border-radius: 50px;
+		text-decoration: none;
+		font-weight: 700;
+		text-transform: uppercase;
+		margin-bottom: 0.75rem;
+	}
+	.btn-primary {
+		background: linear-gradient(135deg, var(--accent-red), var(--dark-red));
+		color: white;
+	}
+	.btn-secondary {
+		background: white;
+		color: var(--primary-blue);
+	}
+	@media (max-width: 900px) {
+		.service-grid {
+			grid-template-columns: 1fr;
+		}
+		.page-header h1 {
+			font-size: 2.1rem;
+		}
+	}
+</style>

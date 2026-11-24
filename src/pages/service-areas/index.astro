@@ -1,0 +1,337 @@
+---
+import Layout from "../../layouts/Layout.astro";
+
+const breadcrumbs = [
+	{ name: "Home", url: "https://stringprairieheatingandair.com/" },
+	{
+		name: "Service Areas",
+		url: "https://stringprairieheatingandair.com/service-areas",
+	},
+];
+
+const cities = [
+	{
+		name: "Bastrop",
+		slug: "bastrop",
+		desc: "Downtown Bastrop, Hwy 71, Lake Bastrop & surrounding neighborhoods",
+	},
+	{
+		name: "Elgin",
+		slug: "elgin",
+		desc: "Hwy 290 corridor, downtown Elgin & growing residential communities",
+	},
+	{
+		name: "Smithville",
+		slug: "smithville",
+		desc: "Historic Smithville, Hwy 71 East & Buescher State Park area",
+	},
+	{
+		name: "Rosanky",
+		slug: "rosanky",
+		desc: "Our home base — fast service along FM 535, Hwy 304 & rural acreages",
+	},
+	{
+		name: "Cedar Creek",
+		slug: "cedar-creek",
+		desc: "West Bastrop County, FM 535, Hwy 71 & Lost Pines resort corridor",
+	},
+	{
+		name: "Wyldwood",
+		slug: "wyldwood",
+		desc: "Hwy 71 residential neighborhoods between Bastrop and Austin",
+	},
+	{
+		name: "Camp Swift",
+		slug: "camp-swift",
+		desc: "Hwy 95 corridor between Bastrop and Elgin, near Lake Bastrop",
+	},
+	{
+		name: "Paige",
+		slug: "paige",
+		desc: "Hwy 290 East rural homes, farms, and ranches",
+	},
+	{
+		name: "McDade",
+		slug: "mcdade",
+		desc: "Hwy 290 community and surrounding rural properties",
+	},
+	{
+		name: "Red Rock",
+		slug: "red-rock",
+		desc: "FM 20, FM 812 & southern Bastrop County ranches",
+	},
+	{
+		name: "String Prairie",
+		slug: "string-prairie",
+		desc: "Our namesake community in southern Bastrop County",
+	},
+];
+
+const neighborhoods = [
+	{
+		name: "Tahitian Village",
+		slug: "tahitian-village",
+		desc: "Pine Forest Golf Club & wooded Lost Pines terrain",
+	},
+	{
+		name: "The Colony",
+		slug: "the-colony",
+		desc: "Master-planned homes off FM 969 near the Colorado River",
+	},
+	{
+		name: "Circle D-KC Estates",
+		slug: "circle-d",
+		desc: "Wooded acreage homes off Hwy 21 East",
+	},
+];
+---
+
+<Layout
+	title="HVAC Service Areas in Bastrop County, TX | String Prairie Heating & Air"
+	description="String Prairie Heating & Air provides local AC repair, heating service, and HVAC installations across Bastrop, Elgin, Smithville, Rosanky, Cedar Creek, Wyldwood & more."
+	breadcrumbs={breadcrumbs}
+>
+	<section class="page-header">
+		<div class="container">
+			<h1>Bastrop County HVAC Service Areas</h1>
+			<p>
+				Family-owned heating & air conditioning service across Bastrop County and surrounding Central Texas communities
+			</p>
+		</div>
+	</section>
+
+	<section class="areas-content">
+		<div class="container">
+			<div class="intro">
+				<h2>Your Local Neighbors — Not an Out-of-Town Chain</h2>
+				<p class="lead">
+					Based right here in Rosanky, String Prairie Heating & Air dispatches stocked service vans daily throughout Bastrop County. Whether you live in historic downtown Bastrop, a new subdivision in Elgin or The Colony, or a rural ranch off FM 20 or Highway 304, we provide fast response and honest upfront pricing.
+				</p>
+			</div>
+
+			<h2 class="section-heading">Cities & Towns We Serve</h2>
+			<div class="areas-grid">
+				{
+					cities.map((city) => (
+						<a href={`/service-areas/${city.slug}`} class="area-card">
+							<h3>{city.name}, TX</h3>
+							<p>{city.desc}</p>
+							<span class="card-link">View {city.name} HVAC Services →</span>
+						</a>
+					))
+				}
+			</div>
+
+			<h2 class="section-heading">Bastrop Neighborhoods & Subdivisions</h2>
+			<div class="areas-grid">
+				{
+					neighborhoods.map((area) => (
+						<a href={`/service-areas/${area.slug}`} class="area-card">
+							<h3>{area.name}</h3>
+							<p>{area.desc}</p>
+							<span class="card-link">View {area.name} Services →</span>
+						</a>
+					))
+				}
+			</div>
+
+			<div class="services-strip">
+				<h2>Full HVAC Services Available in Every Community</h2>
+				<div class="service-pills">
+					<a href="/services/ac-repair">AC Repair</a>
+					<a href="/services/ac-installation">AC Installation</a>
+					<a href="/services/emergency-ac-repair">Emergency AC Repair</a>
+					<a href="/services/heating-repair">Heating & Furnace Repair</a>
+					<a href="/services/furnace-installation">Furnace Installation</a>
+					<a href="/services/heat-pump-services">Heat Pump Services</a>
+					<a href="/services/maintenance">Seasonal Tune-Ups</a>
+					<a href="/services/ductwork-repair-installation">Ductwork Repair</a>
+					<a href="/services/indoor-air-quality">Indoor Air Quality</a>
+					<a href="/services/thermostat-installation">Smart Thermostats</a>
+					<a href="/commercial-services">Commercial HVAC</a>
+				</div>
+			</div>
+
+			<div class="cta-banner">
+				<h2>Don't See Your Road Listed?</h2>
+				<p>
+					If you're in or near Bastrop County, give us a quick call at (512) 924-9744—chances are we already have a van nearby!
+				</p>
+				<div class="cta-buttons">
+					<a
+						href="https://book.housecallpro.com/book/String-Prairie-Heating--Air/df82ded280ce43f4a9ee6ee6d36aef76?v2=true"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="btn btn-primary">🔖 Book Online</a
+					>
+					<a href="tel:5129249744" class="btn btn-secondary">Call (512) 924-9744</a>
+				</div>
+			</div>
+		</div>
+	</section>
+</Layout>
+
+<style>
+	.page-header {
+		background: linear-gradient(135deg, var(--dark-blue), var(--primary-blue));
+		color: white;
+		padding: 6rem 0;
+		text-align: center;
+	}
+	.page-header h1 {
+		font-size: 3rem;
+		font-weight: 800;
+		text-transform: uppercase;
+		margin-bottom: 1rem;
+	}
+	.page-header p {
+		font-size: 1.25rem;
+		max-width: 780px;
+		margin: 0 auto;
+		opacity: 0.95;
+	}
+	.areas-content {
+		padding: 5rem 0;
+		background: white;
+	}
+	.intro {
+		max-width: 850px;
+		margin: 0 auto 3.5rem;
+		text-align: center;
+	}
+	.intro h2 {
+		color: var(--dark-blue);
+		font-size: 2.2rem;
+		font-weight: 800;
+		text-transform: uppercase;
+		margin-bottom: 1rem;
+	}
+	.lead {
+		font-size: 1.15rem;
+		line-height: 1.8;
+	}
+	.section-heading {
+		color: var(--primary-blue);
+		font-size: 1.8rem;
+		font-weight: 800;
+		text-transform: uppercase;
+		margin: 3rem 0 1.5rem;
+		text-align: center;
+	}
+	.areas-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+		gap: 1.5rem;
+	}
+	.area-card {
+		background: var(--bg-light);
+		padding: 1.75rem;
+		border-radius: 12px;
+		border-left: 5px solid var(--accent-red);
+		text-decoration: none;
+		color: inherit;
+		display: flex;
+		flex-direction: column;
+		transition: all 0.25s;
+		box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+	}
+	.area-card:hover {
+		transform: translateY(-4px);
+		border-left-color: var(--primary-blue);
+		box-shadow: 0 8px 24px rgba(41, 94, 147, 0.14);
+	}
+	.area-card h3 {
+		color: var(--dark-blue);
+		font-size: 1.35rem;
+		font-weight: 800;
+		margin-bottom: 0.5rem;
+	}
+	.area-card p {
+		color: var(--text-light);
+		flex-grow: 1;
+		margin-bottom: 1rem;
+	}
+	.card-link {
+		color: var(--primary-blue);
+		font-weight: 700;
+		font-size: 0.95rem;
+	}
+	.services-strip {
+		margin: 4rem 0;
+		padding: 2.5rem;
+		background: var(--bg-light);
+		border-radius: 12px;
+		text-align: center;
+	}
+	.services-strip h2 {
+		color: var(--dark-blue);
+		font-size: 1.65rem;
+		font-weight: 800;
+		text-transform: uppercase;
+		margin-bottom: 1.5rem;
+	}
+	.service-pills {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.75rem;
+		justify-content: center;
+	}
+	.service-pills a {
+		background: white;
+		color: var(--primary-blue);
+		border: 1px solid rgba(41, 94, 147, 0.25);
+		padding: 0.65rem 1.2rem;
+		border-radius: 50px;
+		text-decoration: none;
+		font-weight: 600;
+		transition: all 0.2s;
+	}
+	.service-pills a:hover {
+		background: var(--primary-blue);
+		color: white;
+	}
+	.cta-banner {
+		background: linear-gradient(135deg, var(--dark-blue), var(--primary-blue));
+		color: white;
+		padding: 3.5rem 2rem;
+		border-radius: 14px;
+		text-align: center;
+	}
+	.cta-banner h2 {
+		font-size: 2rem;
+		font-weight: 800;
+		text-transform: uppercase;
+		margin-bottom: 0.75rem;
+	}
+	.cta-banner p {
+		font-size: 1.15rem;
+		margin-bottom: 2rem;
+		opacity: 0.95;
+	}
+	.cta-buttons {
+		display: flex;
+		gap: 1rem;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+	.btn {
+		padding: 1rem 2rem;
+		border-radius: 50px;
+		text-decoration: none;
+		font-weight: 700;
+		text-transform: uppercase;
+	}
+	.btn-primary {
+		background: linear-gradient(135deg, var(--accent-red), var(--dark-red));
+		color: white;
+	}
+	.btn-secondary {
+		background: white;
+		color: var(--primary-blue);
+	}
+	@media (max-width: 768px) {
+		.page-header h1 {
+			font-size: 2.1rem;
+		}
+	}
+</style>

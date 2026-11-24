@@ -27,13 +27,67 @@ if (pathname !== "/" && pathname.endsWith("/")) {
 const canonicalURL = new URL(pathname, Astro.site);
 const ogImageURL = new URL(image, Astro.site);
 
-// Generate breadcrumb schema if breadcrumbs are provided
-const breadcrumbSchema =
+// Build BreadcrumbList schema: normalize URLs to absolute, or auto-generate for subpages
+const LABEL_MAP: Record<string, string> = {
+	services: "Services",
+	"service-areas": "Service Areas",
+	blog: "Blog",
+	faq: "FAQ",
+	"ac-repair": "AC Repair",
+	"ac-installation": "AC Installation",
+	"heating-repair": "Heating & Furnace Repair",
+	"furnace-installation": "Furnace Installation",
+	"heat-pump-services": "Heat Pump Services",
+	"emergency-ac-repair": "Emergency AC Repair",
+	"ductwork-repair-installation": "Ductwork Repair & Installation",
+	"indoor-air-quality": "Indoor Air Quality",
+	"thermostat-installation": "Smart Thermostat Installation",
+	maintenance: "Maintenance & Tune-Ups",
+	"circle-d": "Circle D-KC Estates",
+	"tahitian-village": "Tahitian Village",
+	"the-colony": "The Colony",
+	"string-prairie": "String Prairie",
+	"cedar-creek": "Cedar Creek",
+	"red-rock": "Red Rock",
+	"camp-swift": "Camp Swift",
+};
+
+function formatSegment(seg: string): string {
+	if (LABEL_MAP[seg]) return LABEL_MAP[seg];
+	return seg
+		.split("-")
+		.map((w) => w.charAt(0).toUpperCase() + w.slice(1))
+		.join(" ");
+}
+
+const resolvedBreadcrumbs: BreadcrumbItem[] =
 	breadcrumbs.length > 0
+		? breadcrumbs.map((item) => ({
+				name: item.name,
+				url: new URL(item.url, Astro.site).toString(),
+			}))
+		: pathname !== "/" && pathname !== "/404"
+			? [
+					{ name: "Home", url: new URL("/", Astro.site).toString() },
+					...pathname
+						.split("/")
+						.filter(Boolean)
+						.map((seg, idx, arr) => ({
+							name: formatSegment(seg),
+							url: new URL(
+								"/" + arr.slice(0, idx + 1).join("/"),
+								Astro.site,
+							).toString(),
+						})),
+				]
+			: [];
+
+const breadcrumbSchema =
+	resolvedBreadcrumbs.length > 0
 		? {
 				"@context": "https://schema.org",
 				"@type": "BreadcrumbList",
-				itemListElement: breadcrumbs.map((item, index) => ({
+				itemListElement: resolvedBreadcrumbs.map((item, index) => ({
 					"@type": "ListItem",
 					position: index + 1,
 					name: item.name,
@@ -120,7 +174,7 @@ const breadcrumbSchema =
 			href="/rss.xml"
 		/>
 
-		<!-- Google tag (gtag.js) -->
+		<!-- Google tag (gtag.js) - GA4 & Google Ads consolidated -->
 		<script
 			is:inline
 			async
@@ -133,20 +187,6 @@ const breadcrumbSchema =
 			}
 			gtag("js", new Date());
 			gtag("config", "G-B1E7T0ZLV1");
-		</script>
-
-		<!-- Google Ads tag -->
-		<script
-			is:inline
-			async
-			src="https://www.googletagmanager.com/gtag/js?id=AW-17782904928"
-		></script>
-		<script is:inline>
-			window.dataLayer = window.dataLayer || [];
-			function gtag() {
-				dataLayer.push(arguments);
-			}
-			gtag("js", new Date());
 			gtag("config", "AW-17782904928");
 			gtag("config", "AW-17782904928/DTxLCI3vguwbEOCwxp9C", {
 				phone_conversion_number: "512-924-9744",
@@ -159,13 +199,18 @@ const breadcrumbSchema =
 				"@context": "https://schema.org",
 				"@type": "HVACBusiness",
 				"name": "String Prairie Heating & Air",
-				"image": "https://stringprairieheatingandair.com/logo.png",
-				"@id": "https://stringprairieheatingandair.com",
+				"image": "https://stringprairieheatingandair.com/Images/og-image.jpg",
+				"logo": "https://stringprairieheatingandair.com/SPLogo.svg",
+				"@id": "https://stringprairieheatingandair.com/#business",
 				"url": "https://stringprairieheatingandair.com",
-				"telephone": "(512) 924-9744",
+				"telephone": "+1-512-924-9744",
+				"foundingDate": "2014",
+				"founder": {
+					"@type": "Person",
+					"name": "Ron M. Hammons"
+				},
 				"address": {
 					"@type": "PostalAddress",
-					"streetAddress": "Rosanky",
 					"addressLocality": "Rosanky",
 					"addressRegion": "TX",
 					"postalCode": "78953",
@@ -194,72 +239,29 @@ const breadcrumbSchema =
 					"https://book.housecallpro.com/book/String-Prairie-Heating--Air/df82ded280ce43f4a9ee6ee6d36aef76"
 				],
 				"priceRange": "$$",
-				"aggregateRating": {
-					"@type": "AggregateRating",
-					"ratingValue": "5",
-					"reviewCount": "15",
-					"bestRating": "5",
-					"worstRating": "1"
-				},
-				"review": [
-					{
-						"@type": "Review",
-						"reviewRating": {
-							"@type": "Rating",
-							"ratingValue": "5",
-							"bestRating": "5"
-						},
-						"author": {
-							"@type": "Person",
-							"name": "John D."
-						},
-						"reviewBody": "Excellent service! They were prompt, professional, and fixed our AC issue quickly. Highly recommend String Prairie for any HVAC needs."
-					},
-					{
-						"@type": "Review",
-						"reviewRating": {
-							"@type": "Rating",
-							"ratingValue": "5",
-							"bestRating": "5"
-						},
-						"author": {
-							"@type": "Person",
-							"name": "Sarah M."
-						},
-						"reviewBody": "Great family-owned business! They installed our new heating system and did an amazing job. Fair pricing and quality work."
-					},
-					{
-						"@type": "Review",
-						"reviewRating": {
-							"@type": "Rating",
-							"ratingValue": "5",
-							"bestRating": "5"
-						},
-						"author": {
-							"@type": "Person",
-							"name": "Mike R."
-						},
-						"reviewBody": "Very knowledgeable and courteous. They explained everything clearly and got our air conditioning working perfectly. Will definitely call them again!"
-					}
-				],
 				"areaServed": [
+					{
+						"@type": "AdministrativeArea",
+						"name": "Bastrop County, TX"
+					},
 					{
 						"@type": "City",
 						"name": "Bastrop",
 						"@id": "https://en.wikipedia.org/wiki/Bastrop,_Texas"
 					},
-					{
-						"@type": "City",
-						"name": "Rosanky"
-					},
-					{
-						"@type": "City",
-						"name": "Smithville"
-					},
-					{
-						"@type": "City",
-						"name": "Paige"
-					}
+					{ "@type": "City", "name": "Elgin" },
+					{ "@type": "City", "name": "Rosanky" },
+					{ "@type": "City", "name": "Smithville" },
+					{ "@type": "City", "name": "Paige" },
+					{ "@type": "City", "name": "Cedar Creek" },
+					{ "@type": "City", "name": "McDade" },
+					{ "@type": "City", "name": "Red Rock" },
+					{ "@type": "City", "name": "String Prairie" },
+					{ "@type": "City", "name": "Wyldwood" },
+					{ "@type": "City", "name": "Camp Swift" },
+					{ "@type": "Place", "name": "Tahitian Village, Bastrop, TX" },
+					{ "@type": "Place", "name": "The Colony, Bastrop, TX" },
+					{ "@type": "Place", "name": "Circle D-KC Estates, Bastrop, TX" }
 				],
 				"hasOfferCatalog": {
 					"@type": "OfferCatalog",
@@ -269,40 +271,99 @@ const breadcrumbSchema =
 							"@type": "Offer",
 							"itemOffered": {
 								"@type": "Service",
-								"name": "AC Installation",
-								"description": "Professional air conditioning installation services"
-							}
-						},
-						{
-							"@type": "Offer",
-							"itemOffered": {
-								"@type": "Service",
 								"name": "AC Repair",
-								"description": "Expert air conditioning repair services"
+								"url": "https://stringprairieheatingandair.com/services/ac-repair",
+								"description": "Fast, reliable air conditioning repair services in Bastrop County, TX"
 							}
 						},
 						{
 							"@type": "Offer",
 							"itemOffered": {
 								"@type": "Service",
-								"name": "Heating Installation",
-								"description": "Professional heating system installation"
+								"name": "AC Installation",
+								"url": "https://stringprairieheatingandair.com/services/ac-installation",
+								"description": "High-efficiency air conditioning installation and replacement"
 							}
 						},
 						{
 							"@type": "Offer",
 							"itemOffered": {
 								"@type": "Service",
-								"name": "Heating Repair",
-								"description": "Expert heating system repair services"
+								"name": "Emergency AC Repair",
+								"url": "https://stringprairieheatingandair.com/services/emergency-ac-repair",
+								"description": "Urgent same-day air conditioning and heating repair"
 							}
 						},
 						{
 							"@type": "Offer",
 							"itemOffered": {
 								"@type": "Service",
-								"name": "HVAC Maintenance",
-								"description": "Regular maintenance and tune-ups for HVAC systems"
+								"name": "Heating & Furnace Repair",
+								"url": "https://stringprairieheatingandair.com/services/heating-repair",
+								"description": "Expert gas furnace and electric heating repair services"
+							}
+						},
+						{
+							"@type": "Offer",
+							"itemOffered": {
+								"@type": "Service",
+								"name": "Furnace Installation",
+								"url": "https://stringprairieheatingandair.com/services/furnace-installation",
+								"description": "Professional gas and electric furnace installation"
+							}
+						},
+						{
+							"@type": "Offer",
+							"itemOffered": {
+								"@type": "Service",
+								"name": "Heat Pump Services",
+								"url": "https://stringprairieheatingandair.com/services/heat-pump-services",
+								"description": "Heat pump repair, maintenance, and dual-fuel installation for Central Texas"
+							}
+						},
+						{
+							"@type": "Offer",
+							"itemOffered": {
+								"@type": "Service",
+								"name": "HVAC Maintenance & Tune-Ups",
+								"url": "https://stringprairieheatingandair.com/services/maintenance",
+								"description": "Spring AC and fall heating tune-ups and preventive maintenance"
+							}
+						},
+						{
+							"@type": "Offer",
+							"itemOffered": {
+								"@type": "Service",
+								"name": "Ductwork Repair & Installation",
+								"url": "https://stringprairieheatingandair.com/services/ductwork-repair-installation",
+								"description": "Air duct sealing, repair, insulation, and replacement"
+							}
+						},
+						{
+							"@type": "Offer",
+							"itemOffered": {
+								"@type": "Service",
+								"name": "Indoor Air Quality",
+								"url": "https://stringprairieheatingandair.com/services/indoor-air-quality",
+								"description": "Whole-home air filtration, UV lights, and dehumidifiers for Texas allergies"
+							}
+						},
+						{
+							"@type": "Offer",
+							"itemOffered": {
+								"@type": "Service",
+								"name": "Smart Thermostat Installation",
+								"url": "https://stringprairieheatingandair.com/services/thermostat-installation",
+								"description": "Smart and programmable thermostat installation and setup"
+							}
+						},
+						{
+							"@type": "Offer",
+							"itemOffered": {
+								"@type": "Service",
+								"name": "Commercial HVAC Services",
+								"url": "https://stringprairieheatingandair.com/commercial-services",
+								"description": "Commercial rooftop units, maintenance agreements, and repairs"
 							}
 						}
 					]
@@ -351,34 +412,46 @@ const breadcrumbSchema =
 						<a href="/services">Services</a>
 						<ul class="dropdown">
 							<li><a href="/services">All Services</a></li>
-
 							<li><a href="/services/ac-repair">AC Repair</a></li>
-							<li>
-								<a href="/services/ac-installation"
-									>AC Installation</a
-								>
-							</li>
-							<li>
-								<a href="/services/heating-repair"
-									>Heating / Furnace Repair</a
-								>
-							</li>
-							<li>
-								<a href="/services/maintenance"
-									>Maintenance / Tune-Ups</a
-								>
-							</li>
+							<li><a href="/services/ac-installation">AC Installation</a></li>
+							<li><a href="/services/emergency-ac-repair">Emergency AC Repair</a></li>
+							<li><a href="/services/heating-repair">Heating / Furnace Repair</a></li>
+							<li><a href="/services/furnace-installation">Furnace Installation</a></li>
+							<li><a href="/services/heat-pump-services">Heat Pump Services</a></li>
+							<li><a href="/services/maintenance">Maintenance / Tune-Ups</a></li>
+							<li><a href="/services/ductwork-repair-installation">Ductwork Repair</a></li>
+							<li><a href="/services/indoor-air-quality">Indoor Air Quality</a></li>
+							<li><a href="/services/thermostat-installation">Smart Thermostats</a></li>
+							<li><a href="/commercial-services">Commercial HVAC</a></li>
 						</ul>
 					</li>
+					<li class="has-dropdown">
+						<a href="/service-areas">Service Areas</a>
+						<ul class="dropdown">
+							<li><a href="/service-areas">All Service Areas</a></li>
+							<li><a href="/service-areas/bastrop">Bastrop</a></li>
+							<li><a href="/service-areas/elgin">Elgin</a></li>
+							<li><a href="/service-areas/smithville">Smithville</a></li>
+							<li><a href="/service-areas/rosanky">Rosanky</a></li>
+							<li><a href="/service-areas/cedar-creek">Cedar Creek</a></li>
+							<li><a href="/service-areas/tahitian-village">Tahitian Village</a></li>
+							<li><a href="/service-areas/the-colony">The Colony</a></li>
+							<li><a href="/service-areas/circle-d">Circle D-KC Estates</a></li>
+							<li><a href="/service-areas/wyldwood">Wyldwood</a></li>
+							<li><a href="/service-areas/paige">Paige</a></li>
+						</ul>
+					</li>
+					<li><a href="/specials">Specials</a></li>
 					<li><a href="/financing">Financing</a></li>
 					<li class="has-dropdown">
 						<a href="/about">About</a>
 						<ul class="dropdown">
 							<li><a href="/about">About Us</a></li>
+							<li><a href="/reviews">Customer Reviews</a></li>
+							<li><a href="/blog">HVAC Blog</a></li>
 							<li><a href="/faq">FAQ</a></li>
 						</ul>
 					</li>
-
 					<li><a href="/contact">Contact</a></li>
 				</ul>
 				<div class="nav-buttons">
@@ -419,7 +492,10 @@ const breadcrumbSchema =
 						<h3>String Prairie Heating & Air</h3>
 						<p>
 							Family-owned HVAC mechanical contractor specializing
-							in residential and commercial services.
+							in residential and commercial services across Bastrop County since 2014.
+						</p>
+						<p class="footer-license">
+							Licensed & Insured Texas HVAC Contractor
 						</p>
 					</div>
 					<div class="footer-section">
@@ -427,16 +503,28 @@ const breadcrumbSchema =
 						<ul class="footer-links">
 							<li><a href="/">Home</a></li>
 							<li><a href="/services">Services</a></li>
-							<li>
-								<a href="/commercial-services"
-									>Commercial Services</a
-								>
-							</li>
+							<li><a href="/specials">Specials & Coupons</a></li>
+							<li><a href="/commercial-services">Commercial Services</a></li>
 							<li><a href="/financing">Financing</a></li>
 							<li><a href="/reviews">Reviews</a></li>
 							<li><a href="/about">About</a></li>
 							<li><a href="/blog">Blog</a></li>
+							<li><a href="/faq">FAQ</a></li>
 							<li><a href="/contact">Contact</a></li>
+						</ul>
+					</div>
+					<div class="footer-section">
+						<h4>Service Areas</h4>
+						<ul class="footer-links">
+							<li><a href="/service-areas">All Bastrop County Areas</a></li>
+							<li><a href="/service-areas/bastrop">Bastrop</a></li>
+							<li><a href="/service-areas/elgin">Elgin</a></li>
+							<li><a href="/service-areas/smithville">Smithville</a></li>
+							<li><a href="/service-areas/rosanky">Rosanky</a></li>
+							<li><a href="/service-areas/cedar-creek">Cedar Creek</a></li>
+							<li><a href="/service-areas/tahitian-village">Tahitian Village</a></li>
+							<li><a href="/service-areas/the-colony">The Colony</a></li>
+							<li><a href="/service-areas/wyldwood">Wyldwood</a></li>
 						</ul>
 					</div>
 					<div class="footer-section">
@@ -445,10 +533,8 @@ const breadcrumbSchema =
 						<p>
 							Phone: <a href="tel:5129249744">(512) 924-9744</a>
 						</p>
-					</div>
-					<div class="footer-section">
-						<h4>Service Area</h4>
-						<p>Bastrop County & Surrounding Areas</p>
+						<p>Mon–Fri: 8:00 AM – 5:00 PM</p>
+						<p>Emergency Service Available</p>
 					</div>
 					<div class="footer-section">
 						<h4>Follow Us</h4>
@@ -481,7 +567,7 @@ const breadcrumbSchema =
 					<p class="footer-links">
 						<a href="/privacy">Privacy Policy</a> | <a
 							href="/sitemap">Sitemap</a
-						> | <a href="/llm.txt">LLM.txt</a>
+						> | <a href="/llms.txt">LLMs.txt</a>
 					</p>
 				</div>
 			</div>
@@ -559,19 +645,20 @@ const breadcrumbSchema =
 	.nav-links {
 		display: flex;
 		list-style: none;
-		gap: 2.5rem;
+		gap: 1.5rem;
 	}
 
 	.nav-links a {
 		text-decoration: none;
 		color: var(--text-dark);
 		font-weight: 600;
-		font-size: 1rem;
+		font-size: 0.92rem;
 		text-transform: uppercase;
 		letter-spacing: 0.5px;
 		transition: color 0.3s;
 		position: relative;
 		padding-bottom: 4px;
+		white-space: nowrap;
 	}
 
 	.nav-links a::after {
@@ -980,4 +1067,26 @@ const breadcrumbSchema =
 			}
 		});
 	}
+
+	// Track lead conversion clicks (tel: and online booking) in GA4
+	document.addEventListener("click", (e) => {
+		const target = e.target as HTMLElement | null;
+		const link = target?.closest("a");
+		if (!link) return;
+		const href = link.getAttribute("href") || "";
+		const gtagFn = (window as unknown as { gtag?: (...args: unknown[]) => void }).gtag;
+		if (typeof gtagFn !== "function") return;
+
+		if (href.startsWith("tel:")) {
+			gtagFn("event", "phone_click", {
+				event_category: "lead",
+				event_label: window.location.pathname,
+			});
+		} else if (href.includes("housecallpro.com")) {
+			gtagFn("event", "book_online_click", {
+				event_category: "lead",
+				event_label: window.location.pathname,
+			});
+		}
+	});
 </script>

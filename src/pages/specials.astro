@@ -1,0 +1,183 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const breadcrumbs = [
+	{ name: "Home", url: "https://stringprairieheatingandair.com/" },
+	{ name: "Specials & Offers", url: "https://stringprairieheatingandair.com/specials" },
+];
+---
+
+<Layout
+	title="HVAC Specials & Coupons in Bastrop, TX | String Prairie Heating & Air"
+	description="Save on AC repair, seasonal HVAC tune-ups, and new system installations in Bastrop County. View current specials, free estimates, and financing from String Prairie."
+	breadcrumbs={breadcrumbs}
+>
+	<section class="page-header">
+		<div class="container">
+			<h1>HVAC Specials & Local Offers</h1>
+			<p>Honest savings for our Bastrop County neighbors—no gimmicks or hidden fees</p>
+		</div>
+	</section>
+
+	<section class="specials-section">
+		<div class="container">
+			<div class="specials-grid">
+				<div class="coupon-card">
+					<span class="badge">Most Popular</span>
+					<h2>Seasonal AC / Heating Tune-Up</h2>
+					<div class="offer-highlight">Multi-Point Inspection</div>
+					<p>
+						Keep your system running smoothly through Texas summers and winter cold snaps. Includes coil inspection, electrical checks, condensate drain check, and airflow verification.
+					</p>
+					<a
+						href="https://book.housecallpro.com/book/String-Prairie-Heating--Air/df82ded280ce43f4a9ee6ee6d36aef76?v2=true"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="btn btn-primary">Book Tune-Up Online</a
+					>
+				</div>
+
+				<div class="coupon-card">
+					<span class="badge">New Systems</span>
+					<h2>Free Second Opinion & Replacement Quote</h2>
+					<div class="offer-highlight">$0 Estimate</div>
+					<p>
+						Told you need a new AC or furnace? Get an honest, no-pressure second opinion and Manual J sizing quote from a local family-owned Bastrop County contractor.
+					</p>
+					<a href="/contact" class="btn btn-primary">Request Free Quote</a>
+				</div>
+
+				<div class="coupon-card">
+					<span class="badge">Budget Friendly</span>
+					<h2>Flexible HVAC Financing</h2>
+					<div class="offer-highlight">Low Monthly Payments</div>
+					<p>
+						Upgrade to a high-efficiency AC, heat pump, or furnace today without draining your savings. Quick approval options available on qualifying installations.
+					</p>
+					<a href="/financing" class="btn btn-primary">Explore Financing</a>
+				</div>
+
+				<div class="coupon-card">
+					<span class="badge">Energy Savings</span>
+					<h2>Utility Rebates & Tax Credit Guidance</h2>
+					<div class="offer-highlight">Stack Your Savings</div>
+					<p>
+						We help Bastrop County homeowners pick high-efficiency SEER2 equipment that qualifies for federal energy efficiency tax credits and local electric co-op rebates.
+					</p>
+					<a href="/blog/bastrop-hvac-rebates-tax-credits" class="btn btn-primary">See Rebates Guide</a>
+				</div>
+			</div>
+
+			<div class="note-box">
+				<h3>Prefer to Call About Current Seasonal Deals?</h3>
+				<p>
+					Mention our website specials when you call <a href="tel:5129249744">(512) 924-9744</a>. We always provide clear, upfront pricing before any work begins.
+				</p>
+			</div>
+		</div>
+	</section>
+</Layout>
+
+<style>
+	.page-header {
+		background: linear-gradient(135deg, var(--dark-blue), var(--primary-blue));
+		color: white;
+		padding: 6rem 0;
+		text-align: center;
+	}
+	.page-header h1 {
+		font-size: 3rem;
+		font-weight: 800;
+		text-transform: uppercase;
+		margin-bottom: 1rem;
+	}
+	.page-header p {
+		font-size: 1.3rem;
+		opacity: 0.95;
+	}
+	.specials-section {
+		padding: 5rem 0;
+		background: var(--bg-light);
+	}
+	.specials-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+		gap: 2rem;
+		margin-bottom: 3rem;
+	}
+	.coupon-card {
+		background: white;
+		border: 2px dashed var(--primary-blue);
+		border-radius: 14px;
+		padding: 2.25rem;
+		display: flex;
+		flex-direction: column;
+		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+	}
+	.badge {
+		display: inline-block;
+		align-self: flex-start;
+		background: #dcfce7;
+		color: #166534;
+		font-weight: 700;
+		font-size: 0.8rem;
+		text-transform: uppercase;
+		padding: 0.3rem 0.8rem;
+		border-radius: 50px;
+		margin-bottom: 1rem;
+	}
+	.coupon-card h2 {
+		color: var(--dark-blue);
+		font-size: 1.45rem;
+		font-weight: 800;
+		margin-bottom: 0.75rem;
+	}
+	.offer-highlight {
+		font-size: 1.75rem;
+		font-weight: 900;
+		color: var(--dark-red);
+		margin-bottom: 1rem;
+	}
+	.coupon-card p {
+		color: var(--text-dark);
+		line-height: 1.7;
+		flex-grow: 1;
+		margin-bottom: 1.5rem;
+	}
+	.btn {
+		display: block;
+		text-align: center;
+		padding: 0.95rem 1.5rem;
+		border-radius: 50px;
+		text-decoration: none;
+		font-weight: 700;
+		text-transform: uppercase;
+	}
+	.btn-primary {
+		background: linear-gradient(135deg, var(--accent-red), var(--dark-red));
+		color: white;
+	}
+	.note-box {
+		background: white;
+		padding: 2.5rem;
+		border-radius: 12px;
+		text-align: center;
+		border-left: 5px solid var(--accent-red);
+		box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+	}
+	.note-box h3 {
+		color: var(--dark-blue);
+		margin-bottom: 0.75rem;
+		font-weight: 800;
+	}
+	.note-box a {
+		color: var(--primary-blue);
+		font-weight: 700;
+		text-decoration: none;
+	}
+	@media (max-width: 768px) {
+		.page-header h1 {
+			font-size: 2.1rem;
+		}
+	}
+</style>

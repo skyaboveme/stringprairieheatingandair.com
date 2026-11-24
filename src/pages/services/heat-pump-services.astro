@@ -1,0 +1,383 @@
+---
+import Layout from "../../layouts/Layout.astro";
+
+const breadcrumbs = [
+	{ name: "Home", url: "https://stringprairieheatingandair.com/" },
+	{ name: "Services", url: "https://stringprairieheatingandair.com/services" },
+	{
+		name: "Heat Pump Services",
+		url: "https://stringprairieheatingandair.com/services/heat-pump-services",
+	},
+];
+
+const serviceSchema = {
+	"@context": "https://schema.org",
+	"@type": "Service",
+	serviceType: "Heat Pump Repair and Installation",
+	name: "Heat Pump Services in Bastrop County, TX",
+	description:
+		"Expert heat pump repair, installation, replacement, and dual-fuel HVAC upgrades in Bastrop, Elgin, Smithville, Rosanky, and Cedar Creek, TX.",
+	provider: {
+		"@type": "HVACBusiness",
+		"@id": "https://stringprairieheatingandair.com/#business",
+		name: "String Prairie Heating & Air",
+		telephone: "+1-512-924-9744",
+		url: "https://stringprairieheatingandair.com",
+	},
+	areaServed: [
+		{ "@type": "City", name: "Bastrop" },
+		{ "@type": "City", name: "Elgin" },
+		{ "@type": "City", name: "Rosanky" },
+		{ "@type": "City", name: "Smithville" },
+		{ "@type": "City", name: "Cedar Creek" },
+		{ "@type": "City", name: "Paige" },
+	],
+	url: "https://stringprairieheatingandair.com/services/heat-pump-services",
+};
+
+const faqSchema = {
+	"@context": "https://schema.org",
+	"@type": "FAQPage",
+	mainEntity: [
+		{
+			"@type": "Question",
+			name: "Are heat pumps a good choice for Bastrop County's climate?",
+			acceptedAnswer: {
+				"@type": "Answer",
+				text: "Yes. Central Texas has long cooling seasons and mostly mild winters, which makes modern high-efficiency heat pumps ideal for year-round comfort and lower electric bills.",
+			},
+		},
+		{
+			"@type": "Question",
+			name: "What is a dual-fuel HVAC system?",
+			acceptedAnswer: {
+				"@type": "Answer",
+				text: "A dual-fuel system pairs an electric heat pump with a gas or propane furnace backup. The heat pump runs efficiently during mild Texas cold fronts, and the furnace kicks in automatically during hard freezes.",
+			},
+		},
+		{
+			"@type": "Question",
+			name: "Do heat pumps qualify for energy rebates or tax credits?",
+			acceptedAnswer: {
+				"@type": "Answer",
+				text: "Many high-efficiency SEER2 heat pumps qualify for federal energy efficiency tax credits and local utility rebates. Ask our team during your estimate for qualifying models.",
+			},
+		},
+	],
+};
+---
+
+<Layout
+	title="Heat Pump Repair & Installation in Bastrop, TX | String Prairie"
+	description="Trusted heat pump repair, replacement, and dual-fuel installation in Bastrop County, TX. High-efficiency heating & cooling from your local family-owned HVAC team."
+	breadcrumbs={breadcrumbs}
+>
+	<script is:inline type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
+	<script is:inline type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+	<section class="page-header">
+		<div class="container">
+			<h1>Heat Pump Repair & Installation</h1>
+			<p>Energy-efficient year-round heating and cooling built for Central Texas</p>
+		</div>
+	</section>
+
+	<section class="service-content">
+		<div class="container">
+			<div class="service-intro">
+				<h2>Bastrop County's Local Heat Pump Specialists</h2>
+				<p class="lead">
+					In Central Texas, where 100°F summers meet unpredictable winter cold snaps, a properly sized heat pump is one of the smartest ways to keep your home comfortable while lowering monthly utility bills. String Prairie Heating & Air repairs, maintains, and installs high-efficiency heat pumps and dual-fuel systems across Bastrop, Elgin, Rosanky, Smithville, Cedar Creek, and rural Bastrop County.
+				</p>
+			</div>
+
+			<div class="service-grid">
+				<div class="service-main">
+					<h3>Our Heat Pump Services</h3>
+					<ul class="service-list">
+						<li>
+							<strong>Heat Pump Repair & Diagnostics</strong>
+							<p>Fast troubleshooting for reversing valve failures, defrost board issues, frozen outdoor coils, auxiliary heat problems, and refrigerant leaks.</p>
+						</li>
+						<li>
+							<strong>New Heat Pump Installation & Replacement</strong>
+							<p>Manual J load calculations so your new system isn't oversized or undersized—delivering quiet operation, superior humidity removal, and maximum efficiency.</p>
+						</li>
+						<li>
+							<strong>Dual-Fuel / Hybrid Systems</strong>
+							<p>Ideal for rural Bastrop County homes with propane or natural gas—run an ultra-efficient electric heat pump most of the year with gas furnace backup for freezing nights.</p>
+						</li>
+						<li>
+							<strong>Bi-Annual Heat Pump Tune-Ups</strong>
+							<p>Because heat pumps work 12 months a year, spring and fall maintenance prevents compressor wear and keeps warranties valid.</p>
+						</li>
+					</ul>
+
+					<h3>Why Central Texas Homeowners Upgrade to Heat Pumps</h3>
+					<div class="benefits-grid">
+						<div class="benefit-card">
+							<h4>Year-Round Efficiency</h4>
+							<p>Heat pumps transfer heat rather than creating it, using up to 50% less electricity than traditional electric resistance strip heat.</p>
+						</div>
+						<div class="benefit-card">
+							<h4>Better Humidity Control</h4>
+							<p>Variable-speed heat pumps run longer, gentler cycles that pull muggy Bastrop County humidity out of your home.</p>
+						</div>
+						<div class="benefit-card">
+							<h4>Rebates & Tax Credits</h4>
+							<p>Qualifying SEER2 heat pumps may be eligible for utility rebates and tax incentives. <a href="/blog/bastrop-hvac-rebates-tax-credits">See our rebates guide →</a></p>
+						</div>
+						<div class="benefit-card">
+							<h4>Flexible Financing</h4>
+							<p>Spread your upgrade over affordable monthly payments with our <a href="/financing">HVAC financing options</a>.</p>
+						</div>
+					</div>
+
+					<h3>Related Services & Resources</h3>
+					<div class="related-links">
+						<a href="/services/ac-installation">AC Installation</a>
+						<a href="/services/heating-repair">Heating & Furnace Repair</a>
+						<a href="/services/maintenance">Preventive Maintenance</a>
+						<a href="/blog/bastrop-hvac-rebates-tax-credits">Bastrop Rebates & Tax Credits</a>
+						<a href="/blog/how-to-choose-right-ac-size">HVAC Sizing Guide</a>
+					</div>
+				</div>
+
+				<aside class="service-sidebar">
+					<div class="cta-box">
+						<h3>Need Heat Pump Service?</h3>
+						<p>Schedule a diagnostic repair or free replacement estimate with Ron and our local team.</p>
+						<a
+							href="https://book.housecallpro.com/book/String-Prairie-Heating--Air/df82ded280ce43f4a9ee6ee6d36aef76?v2=true"
+							target="_blank"
+							rel="noopener noreferrer"
+							class="btn btn-primary">🔖 Book Online</a
+						>
+						<a href="tel:5129249744" class="btn btn-secondary">Call (512) 924-9744</a>
+					</div>
+
+					<div class="info-box">
+						<h4>Common Signs Your Heat Pump Needs Repair</h4>
+						<ul>
+							<li>Stuck in heating or cooling mode</li>
+							<li>Outdoor unit iced over in winter</li>
+							<li>"Aux Heat" / "Emergency Heat" running constantly</li>
+							<li>Sudden spike in Bluebonnet Electric bills</li>
+							<li>Grinding, buzzing, or rattling noises</li>
+						</ul>
+					</div>
+
+					<div class="info-box">
+						<h4>Areas We Serve</h4>
+						<ul>
+							<li><a href="/service-areas/bastrop">Bastrop</a></li>
+							<li><a href="/service-areas/elgin">Elgin</a></li>
+							<li><a href="/service-areas/smithville">Smithville</a></li>
+							<li><a href="/service-areas/rosanky">Rosanky</a></li>
+							<li><a href="/service-areas/cedar-creek">Cedar Creek</a></li>
+							<li><a href="/service-areas/tahitian-village">Tahitian Village</a></li>
+							<li><a href="/service-areas">View All Service Areas →</a></li>
+						</ul>
+					</div>
+				</aside>
+			</div>
+		</div>
+	</section>
+</Layout>
+
+<style>
+	.page-header {
+		background-image:
+			linear-gradient(rgba(10, 30, 60, 0.8), rgba(10, 30, 60, 0.9)),
+			url("/Images/heating-repair-header-bg.webp");
+		background-size: cover;
+		background-position: center;
+		color: white;
+		padding: 7rem 0;
+		text-align: center;
+	}
+	.page-header h1 {
+		font-size: 3rem;
+		margin-bottom: 1rem;
+		font-weight: 800;
+		text-transform: uppercase;
+	}
+	.page-header p {
+		font-size: 1.3rem;
+		opacity: 0.95;
+		font-weight: 300;
+	}
+	.service-content {
+		padding: 5rem 0;
+		background: white;
+	}
+	.service-intro {
+		max-width: 900px;
+		margin: 0 auto 4rem;
+		text-align: center;
+	}
+	.service-intro h2 {
+		color: var(--dark-blue);
+		font-size: 2.3rem;
+		margin-bottom: 1.5rem;
+		font-weight: 800;
+		text-transform: uppercase;
+	}
+	.lead {
+		font-size: 1.15rem;
+		line-height: 1.8;
+		color: var(--text-dark);
+	}
+	.service-grid {
+		display: grid;
+		grid-template-columns: 2fr 1fr;
+		gap: 3rem;
+	}
+	.service-main h3 {
+		color: var(--primary-blue);
+		font-size: 1.65rem;
+		margin: 2.25rem 0 1.25rem;
+		font-weight: 800;
+		text-transform: uppercase;
+	}
+	.service-main h3:first-child {
+		margin-top: 0;
+	}
+	.service-list {
+		list-style: none;
+		padding: 0;
+	}
+	.service-list li {
+		background: var(--bg-light);
+		padding: 1.5rem;
+		margin-bottom: 1rem;
+		border-radius: 10px;
+		border-left: 4px solid var(--accent-red);
+	}
+	.service-list strong {
+		display: block;
+		color: var(--dark-blue);
+		font-size: 1.15rem;
+		margin-bottom: 0.4rem;
+	}
+	.service-list p {
+		color: var(--text-dark);
+		margin: 0;
+	}
+	.benefits-grid {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 1.25rem;
+	}
+	.benefit-card {
+		background: var(--bg-light);
+		padding: 1.5rem;
+		border-radius: 10px;
+		border-top: 4px solid var(--primary-blue);
+	}
+	.benefit-card h4 {
+		color: var(--dark-blue);
+		margin-bottom: 0.5rem;
+		font-weight: 700;
+	}
+	.benefit-card a {
+		color: var(--primary-blue);
+		font-weight: 600;
+	}
+	.related-links {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.75rem;
+	}
+	.related-links a {
+		background: #eff6ff;
+		color: var(--primary-blue);
+		padding: 0.6rem 1.1rem;
+		border-radius: 50px;
+		text-decoration: none;
+		font-weight: 600;
+		font-size: 0.95rem;
+		transition: all 0.2s;
+	}
+	.related-links a:hover {
+		background: var(--primary-blue);
+		color: white;
+	}
+	.cta-box {
+		background: linear-gradient(135deg, var(--dark-blue), var(--primary-blue));
+		color: white;
+		padding: 2.25rem;
+		border-radius: 12px;
+		text-align: center;
+		margin-bottom: 2rem;
+	}
+	.cta-box h3 {
+		font-size: 1.5rem;
+		margin-bottom: 0.75rem;
+		text-transform: uppercase;
+	}
+	.cta-box p {
+		margin-bottom: 1.5rem;
+		opacity: 0.95;
+	}
+	.btn {
+		display: block;
+		width: 100%;
+		padding: 1rem 1.5rem;
+		border-radius: 50px;
+		text-decoration: none;
+		font-weight: 700;
+		text-transform: uppercase;
+		margin-bottom: 0.75rem;
+		transition: transform 0.2s;
+	}
+	.btn:hover {
+		transform: translateY(-2px);
+	}
+	.btn-primary {
+		background: linear-gradient(135deg, var(--accent-red), var(--dark-red));
+		color: white;
+	}
+	.btn-secondary {
+		background: white;
+		color: var(--primary-blue);
+	}
+	.info-box {
+		background: var(--bg-light);
+		padding: 1.75rem;
+		border-radius: 12px;
+		margin-bottom: 1.5rem;
+		border-left: 4px solid var(--primary-blue);
+	}
+	.info-box h4 {
+		color: var(--dark-blue);
+		margin-bottom: 1rem;
+		text-transform: uppercase;
+		font-weight: 700;
+	}
+	.info-box ul {
+		list-style: none;
+		padding: 0;
+	}
+	.info-box li {
+		padding: 0.4rem 0;
+		color: var(--text-dark);
+	}
+	.info-box a {
+		color: var(--primary-blue);
+		text-decoration: none;
+		font-weight: 600;
+	}
+	.info-box a:hover {
+		text-decoration: underline;
+	}
+	@media (max-width: 900px) {
+		.service-grid,
+		.benefits-grid {
+			grid-template-columns: 1fr;
+		}
+		.page-header h1 {
+			font-size: 2.2rem;
+		}
+	}
+</style>

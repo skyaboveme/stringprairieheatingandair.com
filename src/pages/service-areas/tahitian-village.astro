@@ -203,8 +203,12 @@ const breadcrumbs = [
         left: 0;
         right: 0;
         bottom: 0;
-        background: url("/Images/pine-texture-overlay.png") repeat; /* Optional conceptual placeholder or just gradient */
-        opacity: 0.1;
+        background: radial-gradient(
+            circle at 30% 50%,
+            rgba(255, 255, 255, 0.08) 0%,
+            transparent 60%
+        );
+        opacity: 1;
         pointer-events: none;
     }
 

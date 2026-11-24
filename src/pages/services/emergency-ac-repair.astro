@@ -1,0 +1,350 @@
+---
+import Layout from "../../layouts/Layout.astro";
+
+const breadcrumbs = [
+	{ name: "Home", url: "https://stringprairieheatingandair.com/" },
+	{ name: "Services", url: "https://stringprairieheatingandair.com/services" },
+	{
+		name: "Emergency AC Repair",
+		url: "https://stringprairieheatingandair.com/services/emergency-ac-repair",
+	},
+];
+
+const serviceSchema = {
+	"@context": "https://schema.org",
+	"@type": "Service",
+	serviceType: "Emergency AC and HVAC Repair",
+	name: "Emergency AC Repair in Bastrop County, TX",
+	description:
+		"Fast emergency air conditioning and heating repair in Bastrop, Rosanky, Smithville, Elgin, Cedar Creek, and Paige, TX. Local technicians stocked with common parts.",
+	provider: {
+		"@type": "HVACBusiness",
+		"@id": "https://stringprairieheatingandair.com/#business",
+		name: "String Prairie Heating & Air",
+		telephone: "+1-512-924-9744",
+		url: "https://stringprairieheatingandair.com",
+	},
+	areaServed: [
+		{ "@type": "City", name: "Bastrop" },
+		{ "@type": "City", name: "Elgin" },
+		{ "@type": "City", name: "Rosanky" },
+		{ "@type": "City", name: "Smithville" },
+		{ "@type": "City", name: "Cedar Creek" },
+		{ "@type": "City", name: "Paige" },
+	],
+	url: "https://stringprairieheatingandair.com/services/emergency-ac-repair",
+};
+
+const faqSchema = {
+	"@context": "https://schema.org",
+	"@type": "FAQPage",
+	mainEntity: [
+		{
+			"@type": "Question",
+			name: "What counts as an HVAC emergency in Central Texas?",
+			acceptedAnswer: {
+				"@type": "Answer",
+				text: "Total AC failure during 95°F+ Texas heat, no heat during a winter freeze, burning electrical smells, refrigerant leaks, or water actively leaking from an attic air handler are urgent situations that need immediate service.",
+			},
+		},
+		{
+			"@type": "Question",
+			name: "What should I check before calling for emergency AC repair?",
+			acceptedAnswer: {
+				"@type": "Answer",
+				text: "Check that your thermostat has fresh batteries and is set to Cool, inspect your breaker panel for a tripped AC breaker, and check if your air filter is severely clogged or your condensate float switch tripped.",
+			},
+		},
+	],
+};
+---
+
+<Layout
+	title="Emergency AC Repair in Bastrop, TX | Fast Local HVAC Dispatch"
+	description="AC stopped cooling in 100° Texas heat? Call String Prairie Heating & Air at (512) 924-9744 for fast emergency AC & heating repair across Bastrop County."
+	breadcrumbs={breadcrumbs}
+>
+	<script is:inline type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
+	<script is:inline type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+	<section class="page-header">
+		<div class="container">
+			<h1>Emergency AC & Heating Repair</h1>
+			<p>Fast local response across Bastrop County when your comfort can't wait</p>
+			<div class="header-cta">
+				<a href="tel:5129249744" class="btn-urgent">📞 Call Now: (512) 924-9744</a>
+				<a
+					href="https://book.housecallpro.com/book/String-Prairie-Heating--Air/df82ded280ce43f4a9ee6ee6d36aef76?v2=true"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="btn-outline">🔖 Book Priority Dispatch</a
+				>
+			</div>
+		</div>
+	</section>
+
+	<section class="service-content">
+		<div class="container">
+			<div class="service-intro">
+				<h2>No Waiting on Out-of-Town Austin Chains</h2>
+				<p class="lead">
+					When your air conditioner quits in July or your furnace stops during a hard Texas freeze, waiting days for a crew driving in from Austin isn't an option. Because String Prairie Heating & Air is locally based right here in Bastrop County, our stocked service vans reach Bastrop, Rosanky, Smithville, Elgin, Cedar Creek, and rural Highway 71 / FM 20 properties fast.
+				</p>
+			</div>
+
+			<div class="service-grid">
+				<div class="service-main">
+					<h3>Urgent HVAC Problems We Fix Fast</h3>
+					<ul class="service-list">
+						<li>
+							<strong>AC Blowing Warm Air or Won't Turn On</strong>
+							<p>We carry common dual-run capacitors, contactors, fan motors, and relays on our vans so most urgent repairs are completed on the first visit.</p>
+						</li>
+						<li>
+							<strong>Frozen Evaporator Coils & Refrigerant Leaks</strong>
+							<p>Turn your system off to let ice thaw and call us—we diagnose airflow restrictions and refrigerant leaks safely without guessing.</p>
+						</li>
+						<li>
+							<strong>Water Leaking From Attic Air Handler</strong>
+							<p>Clogged condensate drains and tripped float switches can damage ceilings quickly. We clear drain lines, flush pans, and test safety switches.</p>
+						</li>
+						<li>
+							<strong>Burning Smells, Breaker Trips, or No Heat in a Freeze</strong>
+							<p>Shut off power at the breaker if you smell electrical burning and call (512) 924-9744 immediately for safe electrical and furnace diagnostics.</p>
+						</li>
+					</ul>
+
+					<h3>Quick 3-Step Checklist While You Wait</h3>
+					<div class="checklist-box">
+						<ol>
+							<li><strong>Check the thermostat:</strong> Confirm it is set to Cool (or Heat), fan on Auto, and batteries aren't dead.</li>
+							<li><strong>Check the breaker & air filter:</strong> Reset a tripped breaker once (if it trips again, leave it off and call us) and replace any clogged filter.</li>
+							<li><strong>Turn off a frozen unit:</strong> If you see ice on the outdoor copper line, switch the thermostat to Off and Fan to On to speed up thawing before our technician arrives.</li>
+						</ol>
+					</div>
+
+					<h3>Related Services & Pricing Info</h3>
+					<div class="related-links">
+						<a href="/services/ac-repair">AC Repair</a>
+						<a href="/services/heating-repair">Heating Repair</a>
+						<a href="/blog/hvac-repair-costs-bastrop-2026">Bastrop HVAC Repair Cost Guide</a>
+						<a href="/transparent-pricing">Our Upfront Pricing Promise</a>
+					</div>
+				</div>
+
+				<aside class="service-sidebar">
+					<div class="cta-box">
+						<h3>Need Immediate Help?</h3>
+						<p>Talk directly to a local Bastrop County HVAC team—upfront quotes before any repair starts.</p>
+						<a href="tel:5129249744" class="btn btn-primary">Call (512) 924-9744</a>
+						<a
+							href="https://book.housecallpro.com/book/String-Prairie-Heating--Air/df82ded280ce43f4a9ee6ee6d36aef76?v2=true"
+							target="_blank"
+							rel="noopener noreferrer"
+							class="btn btn-secondary">🔖 Book Online</a
+						>
+					</div>
+
+					<div class="info-box">
+						<h4>Why Call String Prairie?</h4>
+						<ul>
+							<li>Locally based in Bastrop County (Rosanky)</li>
+							<li>Stocked service vans for faster fixes</li>
+							<li>Honest, upfront repair quotes</li>
+							<li>We service all major HVAC brands</li>
+							<li>Never pushy—we repair when it makes sense</li>
+						</ul>
+					</div>
+				</aside>
+			</div>
+		</div>
+	</section>
+</Layout>
+
+<style>
+	.page-header {
+		background-image:
+			linear-gradient(rgba(10, 30, 60, 0.82), rgba(10, 30, 60, 0.92)),
+			url("/Images/ac-repair-header-bg.webp");
+		background-size: cover;
+		background-position: center;
+		color: white;
+		padding: 6.5rem 0;
+		text-align: center;
+	}
+	.page-header h1 {
+		font-size: 3rem;
+		margin-bottom: 1rem;
+		font-weight: 800;
+		text-transform: uppercase;
+	}
+	.page-header p {
+		font-size: 1.3rem;
+		opacity: 0.95;
+		margin-bottom: 2rem;
+	}
+	.header-cta {
+		display: flex;
+		gap: 1rem;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+	.btn-urgent,
+	.btn-outline {
+		padding: 1.1rem 2.2rem;
+		border-radius: 50px;
+		text-decoration: none;
+		font-weight: 700;
+		text-transform: uppercase;
+	}
+	.btn-urgent {
+		background: linear-gradient(135deg, var(--accent-red), var(--dark-red));
+		color: white;
+	}
+	.btn-outline {
+		border: 2px solid white;
+		color: white;
+	}
+	.service-content {
+		padding: 5rem 0;
+		background: white;
+	}
+	.service-intro {
+		max-width: 900px;
+		margin: 0 auto 4rem;
+		text-align: center;
+	}
+	.service-intro h2 {
+		color: var(--dark-blue);
+		font-size: 2.3rem;
+		margin-bottom: 1.25rem;
+		font-weight: 800;
+		text-transform: uppercase;
+	}
+	.lead {
+		font-size: 1.15rem;
+		line-height: 1.8;
+	}
+	.service-grid {
+		display: grid;
+		grid-template-columns: 2fr 1fr;
+		gap: 3rem;
+	}
+	.service-main h3 {
+		color: var(--primary-blue);
+		font-size: 1.6rem;
+		margin: 2rem 0 1.25rem;
+		font-weight: 800;
+		text-transform: uppercase;
+	}
+	.service-main h3:first-child {
+		margin-top: 0;
+	}
+	.service-list {
+		list-style: none;
+		padding: 0;
+	}
+	.service-list li {
+		background: var(--bg-light);
+		padding: 1.5rem;
+		margin-bottom: 1rem;
+		border-radius: 10px;
+		border-left: 4px solid var(--accent-red);
+	}
+	.service-list strong {
+		display: block;
+		color: var(--dark-blue);
+		font-size: 1.15rem;
+		margin-bottom: 0.4rem;
+	}
+	.checklist-box {
+		background: #f0f9ff;
+		padding: 2rem;
+		border-radius: 12px;
+		border-left: 4px solid var(--primary-blue);
+	}
+	.checklist-box ol {
+		padding-left: 1.25rem;
+	}
+	.checklist-box li {
+		margin-bottom: 0.85rem;
+		line-height: 1.7;
+	}
+	.related-links {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.75rem;
+	}
+	.related-links a {
+		background: #eff6ff;
+		color: var(--primary-blue);
+		padding: 0.6rem 1.1rem;
+		border-radius: 50px;
+		text-decoration: none;
+		font-weight: 600;
+	}
+	.related-links a:hover {
+		background: var(--primary-blue);
+		color: white;
+	}
+	.cta-box {
+		background: linear-gradient(135deg, var(--dark-blue), var(--primary-blue));
+		color: white;
+		padding: 2.25rem;
+		border-radius: 12px;
+		text-align: center;
+		margin-bottom: 2rem;
+	}
+	.cta-box h3 {
+		font-size: 1.5rem;
+		margin-bottom: 0.75rem;
+		text-transform: uppercase;
+	}
+	.cta-box p {
+		margin-bottom: 1.5rem;
+	}
+	.btn {
+		display: block;
+		width: 100%;
+		padding: 1rem 1.5rem;
+		border-radius: 50px;
+		text-decoration: none;
+		font-weight: 700;
+		text-transform: uppercase;
+		margin-bottom: 0.75rem;
+	}
+	.btn-primary {
+		background: linear-gradient(135deg, var(--accent-red), var(--dark-red));
+		color: white;
+	}
+	.btn-secondary {
+		background: white;
+		color: var(--primary-blue);
+	}
+	.info-box {
+		background: var(--bg-light);
+		padding: 1.75rem;
+		border-radius: 12px;
+		border-left: 4px solid var(--primary-blue);
+	}
+	.info-box h4 {
+		color: var(--dark-blue);
+		margin-bottom: 1rem;
+		text-transform: uppercase;
+	}
+	.info-box ul {
+		list-style: none;
+		padding: 0;
+	}
+	.info-box li {
+		padding: 0.4rem 0;
+	}
+	@media (max-width: 900px) {
+		.service-grid {
+			grid-template-columns: 1fr;
+		}
+		.page-header h1 {
+			font-size: 2.1rem;
+		}
+	}
+</style>

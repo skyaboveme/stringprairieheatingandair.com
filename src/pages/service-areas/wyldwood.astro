@@ -1,0 +1,236 @@
+---
+import Layout from "../../layouts/Layout.astro";
+
+const breadcrumbs = [
+	{ name: "Home", url: "https://stringprairieheatingandair.com/" },
+	{
+		name: "Service Areas",
+		url: "https://stringprairieheatingandair.com/service-areas",
+	},
+	{
+		name: "Wyldwood",
+		url: "https://stringprairieheatingandair.com/service-areas/wyldwood",
+	},
+];
+
+const localSchema = {
+	"@context": "https://schema.org",
+	"@type": "Service",
+	serviceType: "HVAC Repair, Installation & Maintenance",
+	name: "HVAC & AC Repair Services in Wyldwood, TX",
+	description:
+		"Local AC repair, heating repair, ductwork sealing, and new HVAC installations for Wyldwood, TX and the Highway 71 corridor.",
+	provider: {
+		"@type": "HVACBusiness",
+		"@id": "https://stringprairieheatingandair.com/#business",
+		name: "String Prairie Heating & Air",
+		telephone: "+1-512-924-9744",
+		url: "https://stringprairieheatingandair.com",
+	},
+	areaServed: { "@type": "City", name: "Wyldwood" },
+	url: "https://stringprairieheatingandair.com/service-areas/wyldwood",
+};
+---
+
+<Layout
+	title="AC Repair & HVAC Services in Wyldwood, TX | String Prairie"
+	description="Fast, honest AC repair, heat pump service, and HVAC installation in Wyldwood, TX along Hwy 71. Local family-owned Bastrop County team. Call (512) 924-9744."
+	breadcrumbs={breadcrumbs}
+>
+	<script is:inline type="application/ld+json" set:html={JSON.stringify(localSchema)} />
+
+	<section class="page-header">
+		<div class="container">
+			<h1>AC Repair & HVAC Services in Wyldwood, TX</h1>
+			<p>Local Bastrop County heating & cooling experts along the Highway 71 corridor</p>
+		</div>
+	</section>
+
+	<section class="area-content">
+		<div class="container">
+			<div class="area-intro">
+				<h2>Keeping Wyldwood Homes Cool & Comfortable Year-Round</h2>
+				<p class="lead">
+					Located along Highway 71 between Bastrop and Cedar Creek, Wyldwood homes face heavy Texas summer sun, wooded lot pollen, and rapid humidity swings. String Prairie Heating & Air is just minutes away—giving Wyldwood families quick service calls, honest repair-vs-replace advice, and clean installations backed by strong warranties.
+				</p>
+			</div>
+
+			<div class="services-grid">
+				<div class="service-card">
+					<h3>❄️ Cooling & Emergency Repair</h3>
+					<ul>
+						<li><a href="/services/ac-repair">AC Repair & Troubleshooting</a></li>
+						<li><a href="/services/emergency-ac-repair">Urgent AC Breakdown Dispatch</a></li>
+						<li><a href="/services/ac-installation">High-Efficiency AC Installation</a></li>
+					</ul>
+				</div>
+				<div class="service-card">
+					<h3>🔥 Heating & Efficiency</h3>
+					<ul>
+						<li><a href="/services/heat-pump-services">Heat Pump Repair & Upgrades</a></li>
+						<li><a href="/services/heating-repair">Furnace Repair & Safety Checks</a></li>
+						<li><a href="/services/maintenance">Spring & Fall Tune-Ups</a></li>
+					</ul>
+				</div>
+				<div class="service-card">
+					<h3>💨 Air Quality & Airflow</h3>
+					<ul>
+						<li><a href="/services/indoor-air-quality">Cedar & Pollen Filtration + Dehumidifiers</a></li>
+						<li><a href="/services/ductwork-repair-installation">Attic Ductwork Repair & Sealing</a></li>
+						<li><a href="/services/thermostat-installation">Smart Thermostat Installation</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="local-details">
+				<h2>Serving Wyldwood & Neighboring Communities</h2>
+				<p>
+					We serve neighborhoods throughout Wyldwood, Highway 71, and nearby <a href="/service-areas/cedar-creek">Cedar Creek</a>, <a href="/service-areas/bastrop">Bastrop</a>, and <a href="/service-areas/the-colony">The Colony</a>. Check our <a href="/specials">current specials</a> or <a href="/financing">financing options</a> before scheduling.
+				</p>
+			</div>
+
+			<div class="cta-box">
+				<h2>Schedule HVAC Service in Wyldwood</h2>
+				<p>Upfront pricing, local technicians, and personal family-owned care.</p>
+				<div class="cta-buttons">
+					<a
+						href="https://book.housecallpro.com/book/String-Prairie-Heating--Air/df82ded280ce43f4a9ee6ee6d36aef76?v2=true"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="btn btn-primary">🔖 Book Online</a
+					>
+					<a href="tel:5129249744" class="btn btn-secondary">Call (512) 924-9744</a>
+				</div>
+			</div>
+		</div>
+	</section>
+</Layout>
+
+<style>
+	.page-header {
+		background: linear-gradient(135deg, var(--dark-blue), var(--primary-blue));
+		color: white;
+		padding: 6rem 0;
+		text-align: center;
+	}
+	.page-header h1 {
+		font-size: 3rem;
+		font-weight: 800;
+		text-transform: uppercase;
+		margin-bottom: 1rem;
+	}
+	.page-header p {
+		font-size: 1.25rem;
+		opacity: 0.95;
+	}
+	.area-content {
+		padding: 5rem 0;
+		background: white;
+	}
+	.area-intro {
+		max-width: 880px;
+		margin: 0 auto 3.5rem;
+		text-align: center;
+	}
+	.area-intro h2 {
+		color: var(--dark-blue);
+		font-size: 2.2rem;
+		font-weight: 800;
+		text-transform: uppercase;
+		margin-bottom: 1.25rem;
+	}
+	.lead {
+		font-size: 1.15rem;
+		line-height: 1.8;
+	}
+	.services-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+		gap: 2rem;
+		margin-bottom: 3.5rem;
+	}
+	.service-card {
+		background: var(--bg-light);
+		padding: 2rem;
+		border-radius: 12px;
+		border-left: 5px solid var(--accent-red);
+	}
+	.service-card h3 {
+		color: var(--primary-blue);
+		font-size: 1.35rem;
+		font-weight: 800;
+		margin-bottom: 1rem;
+	}
+	.service-card ul {
+		list-style: none;
+		padding: 0;
+	}
+	.service-card li {
+		padding: 0.5rem 0;
+	}
+	.service-card a,
+	.local-details a {
+		color: var(--primary-blue);
+		font-weight: 600;
+		text-decoration: none;
+	}
+	.service-card a:hover,
+	.local-details a:hover {
+		text-decoration: underline;
+	}
+	.local-details {
+		background: var(--bg-light);
+		padding: 2.5rem;
+		border-radius: 12px;
+		margin-bottom: 3.5rem;
+	}
+	.local-details h2 {
+		color: var(--dark-blue);
+		font-size: 1.8rem;
+		font-weight: 800;
+		margin-bottom: 1rem;
+	}
+	.cta-box {
+		background: linear-gradient(135deg, var(--dark-blue), var(--primary-blue));
+		color: white;
+		padding: 3.5rem 2rem;
+		border-radius: 14px;
+		text-align: center;
+	}
+	.cta-box h2 {
+		font-size: 2rem;
+		font-weight: 800;
+		text-transform: uppercase;
+		margin-bottom: 0.75rem;
+	}
+	.cta-box p {
+		font-size: 1.15rem;
+		margin-bottom: 2rem;
+	}
+	.cta-buttons {
+		display: flex;
+		gap: 1rem;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+	.btn {
+		padding: 1rem 2rem;
+		border-radius: 50px;
+		text-decoration: none;
+		font-weight: 700;
+		text-transform: uppercase;
+	}
+	.btn-primary {
+		background: linear-gradient(135deg, var(--accent-red), var(--dark-red));
+		color: white;
+	}
+	.btn-secondary {
+		background: white;
+		color: var(--primary-blue);
+	}
+	@media (max-width: 768px) {
+		.page-header h1 {
+			font-size: 2.1rem;
+		}
+	}
+</style>

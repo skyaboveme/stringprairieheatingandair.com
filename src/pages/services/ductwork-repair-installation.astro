@@ -1,0 +1,275 @@
+---
+import Layout from "../../layouts/Layout.astro";
+
+const breadcrumbs = [
+	{ name: "Home", url: "https://stringprairieheatingandair.com/" },
+	{ name: "Services", url: "https://stringprairieheatingandair.com/services" },
+	{
+		name: "Ductwork Repair & Installation",
+		url: "https://stringprairieheatingandair.com/services/ductwork-repair-installation",
+	},
+];
+
+const serviceSchema = {
+	"@context": "https://schema.org",
+	"@type": "Service",
+	serviceType: "Ductwork Repair and Installation",
+	name: "Air Duct Repair, Sealing & Replacement in Bastrop County, TX",
+	description:
+		"Professional HVAC ductwork repair, sealing, airflow balancing, and new duct installation for residential and commercial properties in Bastrop County, TX.",
+	provider: {
+		"@type": "HVACBusiness",
+		"@id": "https://stringprairieheatingandair.com/#business",
+		name: "String Prairie Heating & Air",
+		telephone: "+1-512-924-9744",
+		url: "https://stringprairieheatingandair.com",
+	},
+	url: "https://stringprairieheatingandair.com/services/ductwork-repair-installation",
+};
+---
+
+<Layout
+	title="Ductwork Repair & Installation in Bastrop, TX | String Prairie"
+	description="Fix hot rooms, high electric bills, and dusty air with expert ductwork repair, sealing, and replacement in Bastrop County, TX. Call (512) 924-9744."
+	breadcrumbs={breadcrumbs}
+>
+	<script is:inline type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
+
+	<section class="page-header">
+		<div class="container">
+			<h1>Ductwork Repair & Installation</h1>
+			<p>Stop losing cooled air into your 140°F Texas attic</p>
+		</div>
+	</section>
+
+	<section class="service-content">
+		<div class="container">
+			<div class="service-intro">
+				<h2>Improve Airflow, Comfort & Efficiency Across Every Room</h2>
+				<p class="lead">
+					Even a brand-new air conditioner can't cool your home efficiently if 20–30% of your conditioned air is leaking into the attic or crawlspace. In Bastrop County—where older ranch homes, manufactured homes, and humid attics take a toll on flex ducts and plenum boxes—proper ductwork repair and sealing delivers immediate comfort and lower electric bills.
+				</p>
+			</div>
+
+			<div class="service-grid">
+				<div class="service-main">
+					<h3>Ductwork Services We Provide</h3>
+					<ul class="service-list">
+						<li>
+							<strong>Air Duct Sealing & Leak Repair</strong>
+							<p>We locate disconnected boots, torn flex duct, and leaky plenum joints and seal them with professional-grade mastic and mechanical fasteners.</p>
+						</li>
+						<li>
+							<strong>Full & Partial Duct Replacement</strong>
+							<p>Replace crushed, undersized, or deteriorating attic ductwork with properly insulated, correctly sized R-8 duct runs.</p>
+						</li>
+						<li>
+							<strong>Airflow Balancing & Return Air Upgrades</strong>
+							<p>Solve stubborn hot bedrooms and noisy vents by adding dedicated return ducts, upgrading trunk lines, and installing balancing dampers.</p>
+						</li>
+						<li>
+							<strong>New Construction & Addition Duct Design</strong>
+							<p>Custom duct layout and installation for room additions, barndominiums, workshops, and commercial spaces across Bastrop County.</p>
+						</li>
+					</ul>
+
+					<h3>Signs Your Ducts Need Attention</h3>
+					<div class="signs-grid">
+						<div class="sign-card">Hot or stuffy back bedrooms</div>
+						<div class="sign-card">Excessive dust right after cleaning</div>
+						<div class="sign-card">Unusually high summer electric bills</div>
+						<div class="sign-card">Whistling, rattling, or weak vent airflow</div>
+						<div class="sign-card">Musty odors when the AC turns on</div>
+						<div class="sign-card">Visible condensation or sagging attic ducts</div>
+					</div>
+
+					<h3>Helpful Resources</h3>
+					<div class="related-links">
+						<a href="/blog/signs-ductwork-needs-repair">Read: Signs Your Ductwork Needs Repair</a>
+						<a href="/services/indoor-air-quality">Indoor Air Quality</a>
+						<a href="/services/ac-installation">AC Installation</a>
+						<a href="/services/maintenance">HVAC Maintenance</a>
+					</div>
+				</div>
+
+				<aside class="service-sidebar">
+					<div class="cta-box">
+						<h3>Schedule a Duct Inspection</h3>
+						<p>Get an honest attic inspection and upfront estimate with zero sales pressure.</p>
+						<a
+							href="https://book.housecallpro.com/book/String-Prairie-Heating--Air/df82ded280ce43f4a9ee6ee6d36aef76?v2=true"
+							target="_blank"
+							rel="noopener noreferrer"
+							class="btn btn-primary">🔖 Book Online</a
+						>
+						<a href="tel:5129249744" class="btn btn-secondary">Call (512) 924-9744</a>
+					</div>
+
+					<div class="info-box">
+						<h4>Built for Bastrop Homes</h4>
+						<p>We work on historic downtown Bastrop homes, Tahitian Village multi-level properties, rural ranch houses, and commercial buildings throughout Bastrop County.</p>
+					</div>
+				</aside>
+			</div>
+		</div>
+	</section>
+</Layout>
+
+<style>
+	.page-header {
+		background-image:
+			linear-gradient(rgba(10, 30, 60, 0.8), rgba(10, 30, 60, 0.9)),
+			url("/Images/attic-hvac-installation.webp");
+		background-size: cover;
+		background-position: center;
+		color: white;
+		padding: 7rem 0;
+		text-align: center;
+	}
+	.page-header h1 {
+		font-size: 3rem;
+		margin-bottom: 1rem;
+		font-weight: 800;
+		text-transform: uppercase;
+	}
+	.page-header p {
+		font-size: 1.3rem;
+		opacity: 0.95;
+	}
+	.service-content {
+		padding: 5rem 0;
+		background: white;
+	}
+	.service-intro {
+		max-width: 900px;
+		margin: 0 auto 4rem;
+		text-align: center;
+	}
+	.service-intro h2 {
+		color: var(--dark-blue);
+		font-size: 2.3rem;
+		margin-bottom: 1.25rem;
+		font-weight: 800;
+		text-transform: uppercase;
+	}
+	.lead {
+		font-size: 1.15rem;
+		line-height: 1.8;
+	}
+	.service-grid {
+		display: grid;
+		grid-template-columns: 2fr 1fr;
+		gap: 3rem;
+	}
+	.service-main h3 {
+		color: var(--primary-blue);
+		font-size: 1.6rem;
+		margin: 2rem 0 1.25rem;
+		font-weight: 800;
+		text-transform: uppercase;
+	}
+	.service-main h3:first-child {
+		margin-top: 0;
+	}
+	.service-list {
+		list-style: none;
+		padding: 0;
+	}
+	.service-list li {
+		background: var(--bg-light);
+		padding: 1.5rem;
+		margin-bottom: 1rem;
+		border-radius: 10px;
+		border-left: 4px solid var(--accent-red);
+	}
+	.service-list strong {
+		display: block;
+		color: var(--dark-blue);
+		font-size: 1.15rem;
+		margin-bottom: 0.4rem;
+	}
+	.signs-grid {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 1rem;
+	}
+	.sign-card {
+		background: #f0f9ff;
+		padding: 1rem 1.25rem;
+		border-radius: 8px;
+		font-weight: 600;
+		color: var(--dark-blue);
+		border-left: 3px solid var(--primary-blue);
+	}
+	.related-links {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.75rem;
+	}
+	.related-links a {
+		background: #eff6ff;
+		color: var(--primary-blue);
+		padding: 0.6rem 1.1rem;
+		border-radius: 50px;
+		text-decoration: none;
+		font-weight: 600;
+	}
+	.related-links a:hover {
+		background: var(--primary-blue);
+		color: white;
+	}
+	.cta-box {
+		background: linear-gradient(135deg, var(--dark-blue), var(--primary-blue));
+		color: white;
+		padding: 2.25rem;
+		border-radius: 12px;
+		text-align: center;
+		margin-bottom: 2rem;
+	}
+	.cta-box h3 {
+		font-size: 1.5rem;
+		margin-bottom: 0.75rem;
+		text-transform: uppercase;
+	}
+	.cta-box p {
+		margin-bottom: 1.5rem;
+	}
+	.btn {
+		display: block;
+		width: 100%;
+		padding: 1rem 1.5rem;
+		border-radius: 50px;
+		text-decoration: none;
+		font-weight: 700;
+		text-transform: uppercase;
+		margin-bottom: 0.75rem;
+	}
+	.btn-primary {
+		background: linear-gradient(135deg, var(--accent-red), var(--dark-red));
+		color: white;
+	}
+	.btn-secondary {
+		background: white;
+		color: var(--primary-blue);
+	}
+	.info-box {
+		background: var(--bg-light);
+		padding: 1.75rem;
+		border-radius: 12px;
+		border-left: 4px solid var(--primary-blue);
+	}
+	.info-box h4 {
+		color: var(--dark-blue);
+		margin-bottom: 0.75rem;
+		text-transform: uppercase;
+	}
+	@media (max-width: 900px) {
+		.service-grid,
+		.signs-grid {
+			grid-template-columns: 1fr;
+		}
+		.page-header h1 {
+			font-size: 2.1rem;
+		}
+	}
+</style>

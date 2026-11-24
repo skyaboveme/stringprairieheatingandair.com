@@ -1,0 +1,271 @@
+---
+import Layout from "../../layouts/Layout.astro";
+
+const breadcrumbs = [
+	{ name: "Home", url: "https://stringprairieheatingandair.com/" },
+	{
+		name: "Service Areas",
+		url: "https://stringprairieheatingandair.com/service-areas",
+	},
+	{ name: "Elgin", url: "https://stringprairieheatingandair.com/service-areas/elgin" },
+];
+
+const localSchema = {
+	"@context": "https://schema.org",
+	"@type": "Service",
+	serviceType: "HVAC Repair, Installation & Maintenance",
+	name: "HVAC & AC Repair Services in Elgin, TX",
+	description:
+		"Reliable air conditioning repair, new AC installation, heat pump service, and furnace repair for Elgin, TX homeowners and businesses.",
+	provider: {
+		"@type": "HVACBusiness",
+		"@id": "https://stringprairieheatingandair.com/#business",
+		name: "String Prairie Heating & Air",
+		telephone: "+1-512-924-9744",
+		url: "https://stringprairieheatingandair.com",
+	},
+	areaServed: {
+		"@type": "City",
+		name: "Elgin",
+		sameAs: "https://en.wikipedia.org/wiki/Elgin,_Texas",
+	},
+	url: "https://stringprairieheatingandair.com/service-areas/elgin",
+};
+
+const faqSchema = {
+	"@context": "https://schema.org",
+	"@type": "FAQPage",
+	mainEntity: [
+		{
+			"@type": "Question",
+			name: "Do you provide fast AC repair in Elgin, TX?",
+			acceptedAnswer: {
+				"@type": "Answer",
+				text: "Yes! String Prairie Heating & Air serves all of Elgin—including downtown historic homes, newer neighborhoods along Highway 290 and FM 1100, and rural Bastrop County properties around Elgin.",
+			},
+		},
+		{
+			"@type": "Question",
+			name: "What HVAC brands do you repair in Elgin?",
+			acceptedAnswer: {
+				"@type": "Answer",
+				text: "Our technicians service and repair all major residential and commercial brands, including Trane, Carrier, Lennox, Goodman, Rheem, Ruud, American Standard, York, and Mitsubishi.",
+			},
+		},
+	],
+};
+---
+
+<Layout
+	title="AC Repair & HVAC Services in Elgin, TX | String Prairie Heating & Air"
+	description="Need fast AC repair, heating service, or HVAC installation in Elgin, TX? Family-owned Bastrop County experts serving Hwy 290, downtown Elgin & nearby ranches."
+	breadcrumbs={breadcrumbs}
+>
+	<script is:inline type="application/ld+json" set:html={JSON.stringify(localSchema)} />
+	<script is:inline type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+	<section class="page-header">
+		<div class="container">
+			<h1>AC Repair & HVAC Services in Elgin, TX</h1>
+			<p>Honest, family-owned heating and cooling for Elgin homeowners and businesses</p>
+		</div>
+	</section>
+
+	<section class="area-content">
+		<div class="container">
+			<div class="area-intro">
+				<h2>Trusted Local HVAC Contractor Serving Elgin, Texas</h2>
+				<p class="lead">
+					From historic brick homes near downtown Main Street to fast-growing subdivisions like Homestead Estates, Saratoga Farms, and rural acreages along Highway 290 and Highway 95, Elgin homeowners count on reliable air conditioning and heating all year long. String Prairie Heating & Air brings personal, Bastrop County family-owned service—without the inflated prices or pushy sales pitches of big Austin franchises.
+				</p>
+			</div>
+
+			<div class="services-grid">
+				<div class="service-card">
+					<h3>❄️ Air Conditioning in Elgin</h3>
+					<ul>
+						<li><a href="/services/ac-repair">Fast AC Repair & Diagnostics</a></li>
+						<li><a href="/services/emergency-ac-repair">Emergency Same-Day AC Service</a></li>
+						<li><a href="/services/ac-installation">High-Efficiency AC Replacement</a></li>
+						<li><a href="/services/maintenance">Spring AC Tune-Ups</a></li>
+					</ul>
+				</div>
+				<div class="service-card">
+					<h3>🔥 Heating & Heat Pumps</h3>
+					<ul>
+						<li><a href="/services/heating-repair">Gas & Electric Furnace Repair</a></li>
+						<li><a href="/services/furnace-installation">New Furnace Installation</a></li>
+						<li><a href="/services/heat-pump-services">Heat Pump & Dual-Fuel Systems</a></li>
+						<li>Fall Carbon Monoxide & Safety Checks</li>
+					</ul>
+				</div>
+				<div class="service-card">
+					<h3>💨 Ductwork & Air Quality</h3>
+					<ul>
+						<li><a href="/services/ductwork-repair-installation">Attic Duct Sealing & Replacement</a></li>
+						<li><a href="/services/indoor-air-quality">Whole-Home Filtration & Dehumidifiers</a></li>
+						<li><a href="/services/thermostat-installation">Smart Thermostat Wiring & Setup</a></li>
+						<li><a href="/commercial-services">Elgin Commercial HVAC Service</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="local-details">
+				<h2>Serving Every Corner of Elgin & Northern Bastrop County</h2>
+				<p>
+					Whether your older Elgin pier-and-beam home needs careful ductwork retrofitting, your builder-grade AC unit is struggling in 102°F August heat, or your commercial shop on Highway 290 needs rooftop unit maintenance, our licensed technicians arrive on time with upfront written pricing.
+				</p>
+				<p>
+					Nearby communities we also serve: <a href="/service-areas/mcdade">McDade</a>, <a href="/service-areas/camp-swift">Camp Swift</a>, <a href="/service-areas/bastrop">Bastrop</a>, and <a href="/service-areas/paige">Paige</a>.
+				</p>
+			</div>
+
+			<div class="cta-box">
+				<h2>Need HVAC Service in Elgin, TX?</h2>
+				<p>Book online in seconds or call Ron and our team directly.</p>
+				<div class="cta-buttons">
+					<a
+						href="https://book.housecallpro.com/book/String-Prairie-Heating--Air/df82ded280ce43f4a9ee6ee6d36aef76?v2=true"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="btn btn-primary">🔖 Book Online</a
+					>
+					<a href="tel:5129249744" class="btn btn-secondary">Call (512) 924-9744</a>
+				</div>
+			</div>
+		</div>
+	</section>
+</Layout>
+
+<style>
+	.page-header {
+		background: linear-gradient(135deg, var(--dark-blue), var(--primary-blue));
+		color: white;
+		padding: 6rem 0;
+		text-align: center;
+	}
+	.page-header h1 {
+		font-size: 3rem;
+		font-weight: 800;
+		text-transform: uppercase;
+		margin-bottom: 1rem;
+	}
+	.page-header p {
+		font-size: 1.25rem;
+		opacity: 0.95;
+	}
+	.area-content {
+		padding: 5rem 0;
+		background: white;
+	}
+	.area-intro {
+		max-width: 880px;
+		margin: 0 auto 3.5rem;
+		text-align: center;
+	}
+	.area-intro h2 {
+		color: var(--dark-blue);
+		font-size: 2.2rem;
+		font-weight: 800;
+		text-transform: uppercase;
+		margin-bottom: 1.25rem;
+	}
+	.lead {
+		font-size: 1.15rem;
+		line-height: 1.8;
+	}
+	.services-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+		gap: 2rem;
+		margin-bottom: 3.5rem;
+	}
+	.service-card {
+		background: var(--bg-light);
+		padding: 2rem;
+		border-radius: 12px;
+		border-left: 5px solid var(--accent-red);
+	}
+	.service-card h3 {
+		color: var(--primary-blue);
+		font-size: 1.35rem;
+		font-weight: 800;
+		margin-bottom: 1rem;
+	}
+	.service-card ul {
+		list-style: none;
+		padding: 0;
+	}
+	.service-card li {
+		padding: 0.5rem 0;
+	}
+	.service-card a,
+	.local-details a {
+		color: var(--primary-blue);
+		font-weight: 600;
+		text-decoration: none;
+	}
+	.service-card a:hover,
+	.local-details a:hover {
+		text-decoration: underline;
+	}
+	.local-details {
+		background: var(--bg-light);
+		padding: 2.5rem;
+		border-radius: 12px;
+		margin-bottom: 3.5rem;
+	}
+	.local-details h2 {
+		color: var(--dark-blue);
+		font-size: 1.8rem;
+		font-weight: 800;
+		margin-bottom: 1rem;
+	}
+	.local-details p {
+		line-height: 1.8;
+		margin-bottom: 1rem;
+	}
+	.cta-box {
+		background: linear-gradient(135deg, var(--dark-blue), var(--primary-blue));
+		color: white;
+		padding: 3.5rem 2rem;
+		border-radius: 14px;
+		text-align: center;
+	}
+	.cta-box h2 {
+		font-size: 2rem;
+		font-weight: 800;
+		text-transform: uppercase;
+		margin-bottom: 0.75rem;
+	}
+	.cta-box p {
+		font-size: 1.15rem;
+		margin-bottom: 2rem;
+	}
+	.cta-buttons {
+		display: flex;
+		gap: 1rem;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+	.btn {
+		padding: 1rem 2rem;
+		border-radius: 50px;
+		text-decoration: none;
+		font-weight: 700;
+		text-transform: uppercase;
+	}
+	.btn-primary {
+		background: linear-gradient(135deg, var(--accent-red), var(--dark-red));
+		color: white;
+	}
+	.btn-secondary {
+		background: white;
+		color: var(--primary-blue);
+	}
+	@media (max-width: 768px) {
+		.page-header h1 {
+			font-size: 2.1rem;
+		}
+	}
+</style>

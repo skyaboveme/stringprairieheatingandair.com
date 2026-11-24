@@ -1,0 +1,242 @@
+---
+import Layout from "../../layouts/Layout.astro";
+
+const breadcrumbs = [
+	{ name: "Home", url: "https://stringprairieheatingandair.com/" },
+	{ name: "Blog", url: "https://stringprairieheatingandair.com/blog" },
+	{
+		name: "Bastrop HVAC Rebates & Tax Credits",
+		url: "https://stringprairieheatingandair.com/blog/bastrop-hvac-rebates-tax-credits",
+	},
+];
+
+const articleSchema = {
+	"@context": "https://schema.org",
+	"@type": "Article",
+	headline: "Bastrop County & Bluebonnet Electric HVAC Rebates and Tax Credits Guide",
+	description:
+		"How Bastrop County homeowners can save on high-efficiency AC units, heat pumps, and smart thermostats using local utility rebates, manufacturer promos, and tax credits.",
+	datePublished: "2026-11-24",
+	dateModified: "2026-11-24",
+	image: "https://stringprairieheatingandair.com/Images/ac-installation-banner.webp",
+	author: {
+		"@type": "Organization",
+		name: "String Prairie Heating & Air",
+		url: "https://stringprairieheatingandair.com",
+	},
+	publisher: {
+		"@type": "Organization",
+		name: "String Prairie Heating & Air",
+		url: "https://stringprairieheatingandair.com",
+		logo: {
+			"@type": "ImageObject",
+			url: "https://stringprairieheatingandair.com/SPLogo.svg",
+		},
+	},
+	mainEntityOfPage: {
+		"@type": "WebPage",
+		"@id": "https://stringprairieheatingandair.com/blog/bastrop-hvac-rebates-tax-credits",
+	},
+};
+
+const faqSchema = {
+	"@context": "https://schema.org",
+	"@type": "FAQPage",
+	mainEntity: [
+		{
+			"@type": "Question",
+			name: "What HVAC upgrades typically qualify for energy rebates in Bastrop County?",
+			acceptedAnswer: {
+				"@type": "Answer",
+				text: "High-efficiency SEER2 central air conditioners, ENERGY STAR heat pumps, smart thermostats, and duct sealing upgrades most commonly qualify for utility incentives and seasonal manufacturer rebates.",
+			},
+		},
+		{
+			"@type": "Question",
+			name: "Can I combine HVAC rebates with financing?",
+			acceptedAnswer: {
+				"@type": "Answer",
+				text: "Yes. Most Bastrop County homeowners finance their new system to keep upfront costs low and then apply any eligible utility rebates, manufacturer promotions, or tax credits toward their savings.",
+			},
+		},
+	],
+};
+---
+
+<Layout
+	title="Bastrop HVAC Rebates & Tax Credits Guide | String Prairie"
+	description="Save on a new AC or heat pump in Bastrop County. Learn how to check Bluebonnet Electric rebates, manufacturer promotions, and energy efficiency incentives."
+	breadcrumbs={breadcrumbs}
+>
+	<script is:inline type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+	<script is:inline type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+	<section class="page-header">
+		<div class="container">
+			<div class="breadcrumb"><a href="/blog">Blog</a> / Local Guides</div>
+			<h1>Bastrop County HVAC Rebates &amp; Energy Savings Guide</h1>
+			<p class="post-meta">Updated November 2026 • 6 min read</p>
+		</div>
+	</section>
+
+	<article class="blog-post">
+		<div class="container">
+			<div class="post-content">
+				<p class="lead">
+					Replacing an air conditioner or heat pump in Central Texas is a major investment—especially with rising equipment costs. The good news is that Bastrop County homeowners often leave hundreds or even thousands of dollars on the table simply because they don't know which efficiency tiers, electric co-op rebates, or seasonal manufacturer promotions to ask for before installation.
+				</p>
+
+				<h2>1. Check Your Local Electric Provider Programs</h2>
+				<p>
+					Depending on where you live in Bastrop County—Bastrop, Elgin, Smithville, Rosanky, Cedar Creek, or rural FM roads—your electric utility may be <strong>Bluebonnet Electric Cooperative</strong>, <strong>Bastrop Power &amp; Light</strong>, <strong>Austin Energy</strong> (select western pockets), or a deregulated Oncor/ERCOT retail provider.
+				</p>
+				<ul>
+					<li><strong>Smart Thermostat Incentives:</strong> Several Central Texas utilities offer bill credits or instant rebates when you install and enroll a qualifying Wi-Fi thermostat.</li>
+					<li><strong>High-Efficiency Equipment &amp; Tune-Up Programs:</strong> Rebate programs reset annually and depend on exact AHRI-matched SEER2 and EER2 ratings. Always verify current program availability *before* pulling the trigger on equipment.</li>
+					<li><strong>Home Weatherization &amp; Duct Sealing:</strong> Sealing leaky attic ducts lowers your summer peak kWh draw immediately—often paying for itself faster than any single rebate.</li>
+				</ul>
+
+				<h2>2. Federal &amp; Texas Energy Efficiency Incentives</h2>
+				<p>
+					Federal residential energy efficiency incentives and state-administered home energy rebate programs change frequently based on legislation and Texas State Energy Conservation Office (SECO) funding rollouts. When you plan an upgrade:
+				</p>
+				<ul>
+					<li>Request an <strong>AHRI Certificate of Product Ratings</strong> for the exact outdoor condenser + indoor coil + furnace/air handler combination being installed.</li>
+					<li>Keep your itemized invoice showing equipment model numbers, installation date, and contractor information for your tax advisor.</li>
+					<li>Ask specifically about <strong>high-efficiency heat pumps</strong> and <strong>two-stage or variable-speed central ACs</strong>, which typically receive the highest efficiency tiers.</li>
+				</ul>
+
+				<h2>3. Manufacturer Seasonal Rebates &amp; Financing</h2>
+				<p>
+					Major HVAC manufacturers routinely offer spring and fall promotional rebates (typically $200–$1,200 off qualifying complete systems) before peak Texas summer demand hits. Pairing an off-season installation with <a href="/financing">flexible monthly financing</a> can dramatically lower your total cost of ownership.
+				</p>
+
+				<h2>4. Why Proper Sizing Saves More Than Any Rebate</h2>
+				<p>
+					An oversized 4-ton unit in a home that only needs 3 tons will short-cycle, leave your Bastrop home humid and clammy, and burn extra electricity every summer for the next 12 years. That's why we always size systems carefully—learn more in our <a href="/blog/how-to-choose-right-ac-size">Texas AC Sizing Guide</a>.
+				</p>
+
+				<div class="cta-box">
+					<h3>Want Honest Options for Your Home?</h3>
+					<p>
+						We'll give you a free, written estimate comparing standard and high-efficiency <a href="/services/ac-installation">AC installations</a> and <a href="/services/heat-pump-services">heat pump systems</a>—with clear AHRI ratings and zero sales pressure.
+					</p>
+					<div class="cta-buttons">
+						<a
+							href="https://book.housecallpro.com/book/String-Prairie-Heating--Air/df82ded280ce43f4a9ee6ee6d36aef76?v2=true"
+							target="_blank"
+							rel="noopener noreferrer"
+							class="btn btn-primary">🔖 Book Free Estimate</a
+						>
+						<a href="tel:5129249744" class="btn btn-secondary">Call (512) 924-9744</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</article>
+</Layout>
+
+<style>
+	.page-header {
+		background: linear-gradient(135deg, var(--dark-blue), var(--primary-blue));
+		color: white;
+		padding: 5.5rem 0;
+		text-align: center;
+	}
+	.breadcrumb {
+		margin-bottom: 1rem;
+		font-size: 0.95rem;
+		opacity: 0.9;
+	}
+	.breadcrumb a {
+		color: white;
+		text-decoration: underline;
+	}
+	.page-header h1 {
+		font-size: 2.6rem;
+		font-weight: 800;
+		max-width: 900px;
+		margin: 0 auto 1rem;
+	}
+	.post-meta {
+		opacity: 0.9;
+	}
+	.blog-post {
+		padding: 4.5rem 0;
+		background: white;
+	}
+	.post-content {
+		max-width: 820px;
+		margin: 0 auto;
+	}
+	.lead {
+		font-size: 1.2rem;
+		line-height: 1.8;
+		margin-bottom: 2rem;
+		color: var(--text-dark);
+	}
+	.post-content h2 {
+		color: var(--dark-blue);
+		font-size: 1.7rem;
+		font-weight: 800;
+		margin: 2.25rem 0 1rem;
+	}
+	.post-content p {
+		line-height: 1.8;
+		margin-bottom: 1.2rem;
+	}
+	.post-content ul {
+		padding-left: 1.5rem;
+		margin-bottom: 1.5rem;
+		line-height: 1.8;
+	}
+	.post-content li {
+		margin-bottom: 0.65rem;
+	}
+	.post-content a {
+		color: var(--primary-blue);
+		font-weight: 600;
+	}
+	.cta-box {
+		margin-top: 3rem;
+		background: linear-gradient(135deg, var(--dark-blue), var(--primary-blue));
+		color: white;
+		padding: 2.5rem;
+		border-radius: 14px;
+		text-align: center;
+	}
+	.cta-box h3 {
+		font-size: 1.7rem;
+		margin-bottom: 0.75rem;
+	}
+	.cta-box a {
+		color: #bbf7d0;
+	}
+	.cta-buttons {
+		display: flex;
+		gap: 1rem;
+		justify-content: center;
+		flex-wrap: wrap;
+		margin-top: 1.5rem;
+	}
+	.btn {
+		padding: 0.95rem 1.8rem;
+		border-radius: 50px;
+		text-decoration: none;
+		font-weight: 700;
+		text-transform: uppercase;
+	}
+	.btn-primary {
+		background: linear-gradient(135deg, var(--accent-red), var(--dark-red));
+		color: white !important;
+	}
+	.btn-secondary {
+		background: white;
+		color: var(--primary-blue) !important;
+	}
+	@media (max-width: 768px) {
+		.page-header h1 {
+			font-size: 2rem;
+		}
+	}
+</style>

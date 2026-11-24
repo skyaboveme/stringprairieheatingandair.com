@@ -1,0 +1,263 @@
+---
+import Layout from "../../layouts/Layout.astro";
+
+const breadcrumbs = [
+	{ name: "Home", url: "https://stringprairieheatingandair.com/" },
+	{ name: "Services", url: "https://stringprairieheatingandair.com/services" },
+	{
+		name: "Indoor Air Quality",
+		url: "https://stringprairieheatingandair.com/services/indoor-air-quality",
+	},
+];
+
+const serviceSchema = {
+	"@context": "https://schema.org",
+	"@type": "Service",
+	serviceType: "Indoor Air Quality Solutions",
+	name: "Indoor Air Quality Services in Bastrop County, TX",
+	description:
+		"Whole-home air filtration, UV germicidal lights, air scrubbers, and whole-home dehumidifiers for Central Texas cedar fever, pine pollen, and humidity control.",
+	provider: {
+		"@type": "HVACBusiness",
+		"@id": "https://stringprairieheatingandair.com/#business",
+		name: "String Prairie Heating & Air",
+		telephone: "+1-512-924-9744",
+		url: "https://stringprairieheatingandair.com",
+	},
+	url: "https://stringprairieheatingandair.com/services/indoor-air-quality",
+};
+---
+
+<Layout
+	title="Indoor Air Quality & Allergy Relief in Bastrop, TX | String Prairie"
+	description="Breathe cleaner air in Bastrop County. Whole-home filtration, UV air purifiers, and dehumidifiers to fight Central Texas cedar fever, pine pollen, and humidity."
+	breadcrumbs={breadcrumbs}
+>
+	<script is:inline type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
+
+	<section class="page-header">
+		<div class="container">
+			<h1>Indoor Air Quality Solutions</h1>
+			<p>Cleaner, healthier, less humid indoor air for Bastrop County families</p>
+		</div>
+	</section>
+
+	<section class="service-content">
+		<div class="container">
+			<div class="service-intro">
+				<h2>Beat Cedar Fever, Lost Pines Pollen & Texas Humidity</h2>
+				<p class="lead">
+					Central Texas is famous for year-round allergens—from winter Mountain Cedar pollen and spring oak/pine pollen in the Lost Pines to stubborn summer humidity and rural dust. Because your home stays sealed tightly during hot summers, indoor air can trap allergens, mold spores, and VOCs. String Prairie Heating & Air installs practical, proven indoor air quality upgrades tailored to your home and HVAC system.
+				</p>
+			</div>
+
+			<div class="service-grid">
+				<div class="service-main">
+					<h3>Indoor Air Quality Upgrades We Install</h3>
+					<ul class="service-list">
+						<li>
+							<strong>High-Efficiency Media Air Cleaners (MERV 11–16)</strong>
+							<p>4- to 5-inch whole-home filter cabinets capture far more pollen, pet dander, and fine dust than standard 1-inch filters without choking your blower motor.</p>
+						</li>
+						<li>
+							<strong>Whole-Home Dehumidifiers</strong>
+							<p>Keep indoor humidity in the ideal 45–50% range during muggy Bastrop County spring and summer months—eliminating clammy air and helping prevent mold growth.</p>
+						</li>
+						<li>
+							<strong>UV-C Coil Lights & Active Air Purifiers</strong>
+							<p>Neutralize airborne bacteria, mold growth on damp evaporator coils, cooking odors, and VOCs directly inside your HVAC system.</p>
+						</li>
+						<li>
+							<strong>Fresh-Air Ventilation & Duct Sealing</strong>
+							<p>Stop leaky return ducts from pulling dusty, unconditioned attic air into your living spaces.</p>
+						</li>
+					</ul>
+
+					<h3>Related Services</h3>
+					<div class="related-links">
+						<a href="/services/ductwork-repair-installation">Ductwork Sealing & Repair</a>
+						<a href="/services/maintenance">Bi-Annual HVAC Tune-Ups</a>
+						<a href="/services/thermostat-installation">Smart Humidity-Control Thermostats</a>
+					</div>
+				</div>
+
+				<aside class="service-sidebar">
+					<div class="cta-box">
+						<h3>Want Cleaner Indoor Air?</h3>
+						<p>We'll evaluate your current filtration, airflow, and humidity levels and recommend only what actually fits your home.</p>
+						<a
+							href="https://book.housecallpro.com/book/String-Prairie-Heating--Air/df82ded280ce43f4a9ee6ee6d36aef76?v2=true"
+							target="_blank"
+							rel="noopener noreferrer"
+							class="btn btn-primary">🔖 Book IAQ Consultation</a
+						>
+						<a href="tel:5129249744" class="btn btn-secondary">Call (512) 924-9744</a>
+					</div>
+
+					<div class="info-box">
+						<h4>Common Local Air Challenges</h4>
+						<ul>
+							<li>Winter Mountain Cedar ("Cedar Fever")</li>
+							<li>Spring pine & oak pollen around Bastrop</li>
+							<li>High summer indoor humidity (60%+)</li>
+							<li>Rural road dust & pet dander</li>
+							<li>Musty smells from damp evaporator coils</li>
+						</ul>
+					</div>
+				</aside>
+			</div>
+		</div>
+	</section>
+</Layout>
+
+<style>
+	.page-header {
+		background-image:
+			linear-gradient(rgba(10, 30, 60, 0.8), rgba(10, 30, 60, 0.9)),
+			url("/Images/maintenance-header-bg.webp");
+		background-size: cover;
+		background-position: center;
+		color: white;
+		padding: 7rem 0;
+		text-align: center;
+	}
+	.page-header h1 {
+		font-size: 3rem;
+		margin-bottom: 1rem;
+		font-weight: 800;
+		text-transform: uppercase;
+	}
+	.page-header p {
+		font-size: 1.3rem;
+		opacity: 0.95;
+	}
+	.service-content {
+		padding: 5rem 0;
+		background: white;
+	}
+	.service-intro {
+		max-width: 900px;
+		margin: 0 auto 4rem;
+		text-align: center;
+	}
+	.service-intro h2 {
+		color: var(--dark-blue);
+		font-size: 2.3rem;
+		margin-bottom: 1.25rem;
+		font-weight: 800;
+		text-transform: uppercase;
+	}
+	.lead {
+		font-size: 1.15rem;
+		line-height: 1.8;
+	}
+	.service-grid {
+		display: grid;
+		grid-template-columns: 2fr 1fr;
+		gap: 3rem;
+	}
+	.service-main h3 {
+		color: var(--primary-blue);
+		font-size: 1.6rem;
+		margin: 2rem 0 1.25rem;
+		font-weight: 800;
+		text-transform: uppercase;
+	}
+	.service-main h3:first-child {
+		margin-top: 0;
+	}
+	.service-list {
+		list-style: none;
+		padding: 0;
+	}
+	.service-list li {
+		background: var(--bg-light);
+		padding: 1.5rem;
+		margin-bottom: 1rem;
+		border-radius: 10px;
+		border-left: 4px solid var(--accent-red);
+	}
+	.service-list strong {
+		display: block;
+		color: var(--dark-blue);
+		font-size: 1.15rem;
+		margin-bottom: 0.4rem;
+	}
+	.related-links {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.75rem;
+	}
+	.related-links a {
+		background: #eff6ff;
+		color: var(--primary-blue);
+		padding: 0.6rem 1.1rem;
+		border-radius: 50px;
+		text-decoration: none;
+		font-weight: 600;
+	}
+	.related-links a:hover {
+		background: var(--primary-blue);
+		color: white;
+	}
+	.cta-box {
+		background: linear-gradient(135deg, var(--dark-blue), var(--primary-blue));
+		color: white;
+		padding: 2.25rem;
+		border-radius: 12px;
+		text-align: center;
+		margin-bottom: 2rem;
+	}
+	.cta-box h3 {
+		font-size: 1.5rem;
+		margin-bottom: 0.75rem;
+		text-transform: uppercase;
+	}
+	.cta-box p {
+		margin-bottom: 1.5rem;
+	}
+	.btn {
+		display: block;
+		width: 100%;
+		padding: 1rem 1.5rem;
+		border-radius: 50px;
+		text-decoration: none;
+		font-weight: 700;
+		text-transform: uppercase;
+		margin-bottom: 0.75rem;
+	}
+	.btn-primary {
+		background: linear-gradient(135deg, var(--accent-red), var(--dark-red));
+		color: white;
+	}
+	.btn-secondary {
+		background: white;
+		color: var(--primary-blue);
+	}
+	.info-box {
+		background: var(--bg-light);
+		padding: 1.75rem;
+		border-radius: 12px;
+		border-left: 4px solid var(--primary-blue);
+	}
+	.info-box h4 {
+		color: var(--dark-blue);
+		margin-bottom: 1rem;
+		text-transform: uppercase;
+	}
+	.info-box ul {
+		list-style: none;
+		padding: 0;
+	}
+	.info-box li {
+		padding: 0.4rem 0;
+	}
+	@media (max-width: 900px) {
+		.service-grid {
+			grid-template-columns: 1fr;
+		}
+		.page-header h1 {
+			font-size: 2.1rem;
+		}
+	}
+</style>

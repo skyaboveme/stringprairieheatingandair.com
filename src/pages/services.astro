@@ -38,7 +38,7 @@ const breadcrumbs = [
 				</div>
 				<div class="service-hero-img">
 					<img
-						src="/Images/ron-working-ac-unit.jpg"
+						src="/Images/ron-working-ac-unit.webp"
 						alt="Ron from String Prairie working on AC unit"
 						loading="lazy"
 					/>
@@ -58,39 +58,39 @@ const breadcrumbs = [
 					</p>
 				</div>
 				<div class="service-list">
-					<div class="service-item">
-						<h3>AC Installation</h3>
+					<a href="/services/ac-installation" class="service-item service-link-card">
+						<h3>AC Installation →</h3>
 						<p>
 							Professional installation of new air conditioning
 							systems for optimal performance and efficiency. We
 							help you choose the right system for your space and
 							budget.
 						</p>
-					</div>
-					<div class="service-item">
-						<h3>AC Repair & Maintenance</h3>
+					</a>
+					<a href="/services/ac-repair" class="service-item service-link-card">
+						<h3>AC Repair & Diagnostics →</h3>
 						<p>
-							Expert repair services and preventive maintenance to
-							keep your AC running smoothly. Regular maintenance
-							extends system life and improves efficiency.
+							Expert repair services to diagnose and fix cooling
+							issues quickly across Bastrop County with upfront
+							pricing.
 						</p>
-					</div>
-					<div class="service-item">
-						<h3>System Replacement</h3>
+					</a>
+					<a href="/services/ac-installation" class="service-item service-link-card">
+						<h3>System Replacement →</h3>
 						<p>
 							Upgrade to a modern, energy-efficient cooling
 							system. We provide honest assessments and help you
 							make informed decisions about system replacement.
 						</p>
-					</div>
-					<div class="service-item">
-						<h3>Energy Efficiency Upgrades</h3>
+					</a>
+					<a href="/services/maintenance" class="service-item service-link-card">
+						<h3>Maintenance & Efficiency Tune-Ups →</h3>
 						<p>
-							Improve your system's efficiency and reduce energy
-							costs with modern upgrades and optimization
-							services.
+							Improve your system's efficiency, prevent summer
+							breakdowns, and reduce energy costs with seasonal
+							tune-ups.
 						</p>
-					</div>
+					</a>
 				</div>
 			</div>
 
@@ -103,35 +103,36 @@ const breadcrumbs = [
 					</p>
 				</div>
 				<div class="service-list">
-					<div class="service-item">
-						<h3>Furnace Installation</h3>
+					<a href="/services/furnace-installation" class="service-item service-link-card">
+						<h3>Furnace Installation →</h3>
 						<p>
-							Expert installation of gas and electric furnaces
-							tailored to your home or business needs.
+							Expert installation of gas, propane, and electric
+							furnaces tailored to your home or business needs.
 						</p>
-					</div>
-					<div class="service-item">
-						<h3>Heat Pump Services</h3>
+					</a>
+					<a href="/services/heat-pump-services" class="service-item service-link-card">
+						<h3>Heat Pump Services →</h3>
 						<p>
-							Installation, repair, and maintenance of heat pump
-							systems for year-round comfort and efficiency.
+							Installation, repair, dual-fuel upgrades, and
+							maintenance of heat pump systems for year-round
+							Central Texas comfort.
 						</p>
-					</div>
-					<div class="service-item">
-						<h3>Heating Repair</h3>
+					</a>
+					<a href="/services/heating-repair" class="service-item service-link-card">
+						<h3>Heating Repair →</h3>
 						<p>
 							Fast, reliable heating repairs to restore comfort
 							when you need it most. Emergency services available.
 						</p>
-					</div>
-					<div class="service-item">
-						<h3>Annual Maintenance</h3>
+					</a>
+					<a href="/services/maintenance" class="service-item service-link-card">
+						<h3>Annual Heating Maintenance →</h3>
 						<p>
 							Comprehensive heating system inspections and
 							tune-ups to ensure safe, efficient operation
 							throughout the winter.
 						</p>
-					</div>
+					</a>
 				</div>
 			</div>
 
@@ -144,37 +145,36 @@ const breadcrumbs = [
 					</p>
 				</div>
 				<div class="service-list">
-					<div class="service-item">
-						<h3>Duct Work Installation & Repair</h3>
+					<a href="/services/ductwork-repair-installation" class="service-item service-link-card">
+						<h3>Ductwork Installation & Repair →</h3>
 						<p>
 							Professional ductwork services to ensure proper
-							airflow and system efficiency. We repair leaks and
+							airflow and system efficiency. We seal leaks and
 							install new duct systems.
 						</p>
-					</div>
-					<div class="service-item">
-						<h3>Indoor Air Quality</h3>
+					</a>
+					<a href="/services/indoor-air-quality" class="service-item service-link-card">
+						<h3>Indoor Air Quality →</h3>
 						<p>
-							Improve your indoor air quality with air purifiers,
-							humidifiers, and filtration systems for healthier
-							living and working environments.
+							Beat cedar fever, pine pollen, and humidity with
+							whole-home air purifiers, dehumidifiers, and
+							high-efficiency filtration.
 						</p>
-					</div>
-					<div class="service-item">
-						<h3>Thermostat Installation</h3>
+					</a>
+					<a href="/services/thermostat-installation" class="service-item service-link-card">
+						<h3>Smart Thermostat Installation →</h3>
 						<p>
 							Upgrade to programmable or smart thermostats for
-							better comfort control and energy savings.
+							better comfort control and 10–30% energy savings.
 						</p>
-					</div>
-					<div class="service-item">
-						<h3>Emergency Services</h3>
+					</a>
+					<a href="/services/emergency-ac-repair" class="service-item service-link-card">
+						<h3>Emergency HVAC Services →</h3>
 						<p>
-							Fast response when your heating or cooling system
-							fails. We understand the importance of comfort in
-							extreme weather.
+							Fast local dispatch when your heating or cooling
+							system fails in extreme Central Texas weather.
 						</p>
-					</div>
+					</a>
 				</div>
 			</div>
 		</div>
@@ -239,8 +239,13 @@ const breadcrumbs = [
 </Layout>
 
 <style>
+	.service-link-card {
+		display: block;
+		text-decoration: none;
+		color: inherit;
+	}
 	.page-header {
-		background-image: url("/Images/services-header-bg.png");
+		background-image: url("/Images/services-header-bg.webp");
 		background-size: cover;
 		background-position: center;
 		color: white;

@@ -1,0 +1,236 @@
+---
+import Layout from "../../layouts/Layout.astro";
+
+const breadcrumbs = [
+	{ name: "Home", url: "https://stringprairieheatingandair.com/" },
+	{
+		name: "Service Areas",
+		url: "https://stringprairieheatingandair.com/service-areas",
+	},
+	{
+		name: "Camp Swift",
+		url: "https://stringprairieheatingandair.com/service-areas/camp-swift",
+	},
+];
+
+const localSchema = {
+	"@context": "https://schema.org",
+	"@type": "Service",
+	serviceType: "HVAC Repair, Installation & Maintenance",
+	name: "HVAC & AC Repair Services in Camp Swift, TX",
+	description:
+		"Dependable AC repair, heating service, heat pump installation, and seasonal HVAC maintenance in Camp Swift, TX along Highway 95 near Lake Bastrop.",
+	provider: {
+		"@type": "HVACBusiness",
+		"@id": "https://stringprairieheatingandair.com/#business",
+		name: "String Prairie Heating & Air",
+		telephone: "+1-512-924-9744",
+		url: "https://stringprairieheatingandair.com",
+	},
+	areaServed: { "@type": "City", name: "Camp Swift" },
+	url: "https://stringprairieheatingandair.com/service-areas/camp-swift",
+};
+---
+
+<Layout
+	title="AC Repair & HVAC Services in Camp Swift, TX | String Prairie"
+	description="Trusted local AC repair, furnace service, and HVAC installation in Camp Swift, TX along Hwy 95 and near Lake Bastrop. Call String Prairie at (512) 924-9744."
+	breadcrumbs={breadcrumbs}
+>
+	<script is:inline type="application/ld+json" set:html={JSON.stringify(localSchema)} />
+
+	<section class="page-header">
+		<div class="container">
+			<h1>AC Repair & HVAC Services in Camp Swift, TX</h1>
+			<p>Reliable heating & air conditioning along Highway 95 and the Lake Bastrop area</p>
+		</div>
+	</section>
+
+	<section class="area-content">
+		<div class="container">
+			<div class="area-intro">
+				<h2>Dedicated HVAC Care for Camp Swift Homeowners</h2>
+				<p class="lead">
+					Whether you live in a neighborhood off Highway 95, on rural acreage near Lake Bastrop, or along FM 1441, String Prairie Heating & Air delivers fast, straightforward HVAC repairs and installations to Camp Swift residents. We treat every customer like a neighbor—with clear upfront quotes and quality workmanship built for Central Texas heat.
+				</p>
+			</div>
+
+			<div class="services-grid">
+				<div class="service-card">
+					<h3>❄️ Air Conditioning Services</h3>
+					<ul>
+						<li><a href="/services/ac-repair">AC Repair & Diagnostics</a></li>
+						<li><a href="/services/emergency-ac-repair">Emergency AC Service</a></li>
+						<li><a href="/services/ac-installation">New AC System Replacement</a></li>
+					</ul>
+				</div>
+				<div class="service-card">
+					<h3>🔥 Heating & Maintenance</h3>
+					<ul>
+						<li><a href="/services/heating-repair">Heating & Furnace Repair</a></li>
+						<li><a href="/services/heat-pump-services">Heat Pump Repair & Installation</a></li>
+						<li><a href="/services/maintenance">Spring & Fall Tune-Ups</a></li>
+					</ul>
+				</div>
+				<div class="service-card">
+					<h3>💨 Comfort Upgrades</h3>
+					<ul>
+						<li><a href="/services/ductwork-repair-installation">Ductwork Repair & Sealing</a></li>
+						<li><a href="/services/indoor-air-quality">Indoor Air Quality & Dehumidifiers</a></li>
+						<li><a href="/services/thermostat-installation">Smart Thermostats</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="local-details">
+				<h2>Serving Camp Swift & Surrounding Communities</h2>
+				<p>
+					Our vans run daily between <a href="/service-areas/bastrop">Bastrop</a>, Camp Swift, <a href="/service-areas/elgin">Elgin</a>, <a href="/service-areas/circle-d">Circle D-KC Estates</a>, and <a href="/service-areas/mcdade">McDade</a>. Looking to upgrade an older system? Ask about our <a href="/financing">financing options</a> and <a href="/blog/bastrop-hvac-rebates-tax-credits">available rebates</a>.
+				</p>
+			</div>
+
+			<div class="cta-box">
+				<h2>Need Heating or AC Help in Camp Swift?</h2>
+				<p>Book online anytime or call our local Bastrop County team.</p>
+				<div class="cta-buttons">
+					<a
+						href="https://book.housecallpro.com/book/String-Prairie-Heating--Air/df82ded280ce43f4a9ee6ee6d36aef76?v2=true"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="btn btn-primary">🔖 Book Online</a
+					>
+					<a href="tel:5129249744" class="btn btn-secondary">Call (512) 924-9744</a>
+				</div>
+			</div>
+		</div>
+	</section>
+</Layout>
+
+<style>
+	.page-header {
+		background: linear-gradient(135deg, var(--dark-blue), var(--primary-blue));
+		color: white;
+		padding: 6rem 0;
+		text-align: center;
+	}
+	.page-header h1 {
+		font-size: 3rem;
+		font-weight: 800;
+		text-transform: uppercase;
+		margin-bottom: 1rem;
+	}
+	.page-header p {
+		font-size: 1.25rem;
+		opacity: 0.95;
+	}
+	.area-content {
+		padding: 5rem 0;
+		background: white;
+	}
+	.area-intro {
+		max-width: 880px;
+		margin: 0 auto 3.5rem;
+		text-align: center;
+	}
+	.area-intro h2 {
+		color: var(--dark-blue);
+		font-size: 2.2rem;
+		font-weight: 800;
+		text-transform: uppercase;
+		margin-bottom: 1.25rem;
+	}
+	.lead {
+		font-size: 1.15rem;
+		line-height: 1.8;
+	}
+	.services-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+		gap: 2rem;
+		margin-bottom: 3.5rem;
+	}
+	.service-card {
+		background: var(--bg-light);
+		padding: 2rem;
+		border-radius: 12px;
+		border-left: 5px solid var(--accent-red);
+	}
+	.service-card h3 {
+		color: var(--primary-blue);
+		font-size: 1.35rem;
+		font-weight: 800;
+		margin-bottom: 1rem;
+	}
+	.service-card ul {
+		list-style: none;
+		padding: 0;
+	}
+	.service-card li {
+		padding: 0.5rem 0;
+	}
+	.service-card a,
+	.local-details a {
+		color: var(--primary-blue);
+		font-weight: 600;
+		text-decoration: none;
+	}
+	.service-card a:hover,
+	.local-details a:hover {
+		text-decoration: underline;
+	}
+	.local-details {
+		background: var(--bg-light);
+		padding: 2.5rem;
+		border-radius: 12px;
+		margin-bottom: 3.5rem;
+	}
+	.local-details h2 {
+		color: var(--dark-blue);
+		font-size: 1.8rem;
+		font-weight: 800;
+		margin-bottom: 1rem;
+	}
+	.cta-box {
+		background: linear-gradient(135deg, var(--dark-blue), var(--primary-blue));
+		color: white;
+		padding: 3.5rem 2rem;
+		border-radius: 14px;
+		text-align: center;
+	}
+	.cta-box h2 {
+		font-size: 2rem;
+		font-weight: 800;
+		text-transform: uppercase;
+		margin-bottom: 0.75rem;
+	}
+	.cta-box p {
+		font-size: 1.15rem;
+		margin-bottom: 2rem;
+	}
+	.cta-buttons {
+		display: flex;
+		gap: 1rem;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+	.btn {
+		padding: 1rem 2rem;
+		border-radius: 50px;
+		text-decoration: none;
+		font-weight: 700;
+		text-transform: uppercase;
+	}
+	.btn-primary {
+		background: linear-gradient(135deg, var(--accent-red), var(--dark-red));
+		color: white;
+	}
+	.btn-secondary {
+		background: white;
+		color: var(--primary-blue);
+	}
+	@media (max-width: 768px) {
+		.page-header h1 {
+			font-size: 2.1rem;
+		}
+	}
+</style>

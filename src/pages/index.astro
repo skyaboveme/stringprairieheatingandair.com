@@ -2,23 +2,30 @@
 import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="String Prairie Heating & Air | HVAC Services in Bastrop, TX">
+<Layout
+	title="AC Repair & HVAC Services in Bastrop, TX | String Prairie Heating & Air"
+	description="Family-owned AC repair, heating service, heat pumps, and HVAC installation in Bastrop, Elgin, Smithville, Rosanky & Bastrop County, TX. Call (512) 924-9744."
+>
 	<section class="hero">
-		<video class="hero-video" autoplay muted loop playsinline>
-			<source
-				src="/String Paririe Heating and Air.mp4"
-				type="video/mp4"
-			/>
+		<video
+			class="hero-video"
+			autoplay
+			muted
+			loop
+			playsinline
+			preload="metadata"
+			poster="/hero-poster.webp"
+		>
+			<source src="/hero-video.mp4" type="video/mp4" />
 		</video>
 		<div class="hero-overlay"></div>
 		<div class="container">
 			<div class="hero-content">
-				<h1>Family-Owned and -Operated Heating & Air Services</h1>
+				<h1>Bastrop County Heating & AC Repair — Family-Owned HVAC</h1>
 				<p class="hero-subtitle">
-					Quality care, expert service from a local family you can
-					trust. Proudly serving Bastrop County, String Prairie,
-					Rosanky, Smithville, and surrounding Central Texas
-					communities.
+					Quality care, honest upfront pricing, and expert service from a local family you can
+					trust since 2014. Proudly serving Bastrop, Elgin, Rosanky, Smithville, Cedar Creek,
+					String Prairie, and surrounding Central Texas communities.
 				</p>
 				<div class="hero-buttons">
 					<a
@@ -47,7 +54,7 @@ import Layout from "../layouts/Layout.astro";
 				<a href="/residential-services" class="feature-card">
 					<div class="card-image-wrapper">
 						<img
-							src="/Images/residential-card.png"
+							src="/Images/residential-card.webp"
 							alt="Residential HVAC Services"
 							class="card-bg-image"
 						/>
@@ -64,7 +71,7 @@ import Layout from "../layouts/Layout.astro";
 				<a href="/commercial-services" class="feature-card">
 					<div class="card-image-wrapper">
 						<img
-							src="/Images/commercial-card.png"
+							src="/Images/commercial-card.webp"
 							alt="Commercial HVAC Services"
 							class="card-bg-image"
 						/>
@@ -245,73 +252,98 @@ import Layout from "../layouts/Layout.astro";
 				<div class="service-card">
 					<h3>Air Conditioning</h3>
 					<ul>
-						<li>AC Installation</li>
-						<li>AC Repair & Maintenance</li>
-						<li>System Replacement</li>
-						<li>Energy Efficiency Upgrades</li>
+						<li><a href="/services/ac-installation">AC Installation & Replacement</a></li>
+						<li><a href="/services/ac-repair">AC Repair & Diagnostics</a></li>
+						<li><a href="/services/emergency-ac-repair">Emergency AC Repair</a></li>
+						<li><a href="/services/maintenance">Spring AC Maintenance & Tune-Ups</a></li>
 					</ul>
 				</div>
 				<div class="service-card">
-					<h3>Heating</h3>
+					<h3>Heating & Heat Pumps</h3>
 					<ul>
-						<li>Furnace Installation</li>
-						<li>Heat Pump Services</li>
-						<li>Heating Repair</li>
-						<li>Annual Maintenance</li>
+						<li><a href="/services/heating-repair">Heating & Furnace Repair</a></li>
+						<li><a href="/services/furnace-installation">Furnace Installation & Replacement</a></li>
+						<li><a href="/services/heat-pump-services">Heat Pump & Dual-Fuel Systems</a></li>
+						<li><a href="/services/maintenance">Fall Heating Safety Checks</a></li>
 					</ul>
 				</div>
 				<div class="service-card">
-					<h3>HVAC Services</h3>
+					<h3>Air Quality & Efficiency</h3>
 					<ul>
-						<li>Duct Work Installation</li>
-						<li>Indoor Air Quality</li>
-						<li>Thermostat Installation</li>
-						<li>Emergency Services</li>
+						<li><a href="/services/ductwork-repair-installation">Ductwork Repair & Installation</a></li>
+						<li><a href="/services/indoor-air-quality">Indoor Air Quality & Allergy Relief</a></li>
+						<li><a href="/services/thermostat-installation">Smart Thermostat Installation</a></li>
+						<li><a href="/commercial-services">Commercial HVAC Services</a></li>
 					</ul>
 				</div>
 			</div>
-			<div class="text-center">
-				<a href="/services" class="btn btn-primary">View All Services</a
-				>
+			<div class="text-center services-cta-row">
+				<a href="/services" class="btn btn-primary">View All Services</a>
+				<a href="/specials" class="btn btn-outline-blue">View Current Specials</a>
+			</div>
+		</div>
+	</section>
+
+	<section class="brands-section">
+		<div class="container">
+			<h2>All Major HVAC Brands Serviced & Repaired</h2>
+			<p class="section-subtitle">
+				Whether you need repairs on an existing unit or a high-efficiency replacement, our licensed technicians work on all major residential and commercial brands.
+			</p>
+			<div class="brands-grid">
+				<span class="brand-pill">Trane</span>
+				<span class="brand-pill">Carrier</span>
+				<span class="brand-pill">Lennox</span>
+				<span class="brand-pill">Goodman</span>
+				<span class="brand-pill">Rheem</span>
+				<span class="brand-pill">Ruud</span>
+				<span class="brand-pill">American Standard</span>
+				<span class="brand-pill">Bryant</span>
+				<span class="brand-pill">York</span>
+				<span class="brand-pill">Mitsubishi Electric</span>
 			</div>
 		</div>
 	</section>
 
 	<section class="work-gallery">
 		<div class="container">
-			<h2>Our Work</h2>
+			<h2>Recent Bastrop County Projects</h2>
 			<p class="section-subtitle">
-				See our team in action throughout Bastrop County
+				Real installations, repairs, and clean workmanship from our local team across Bastrop County
 			</p>
 			<div class="gallery-grid">
-				<div class="gallery-item">
+				<figure class="gallery-item">
 					<img
-						src="/Images/team-with-service-van.jpg"
-						alt="String Prairie Heating & Air team with service van"
+						src="/Images/team-with-service-van.webp"
+						alt="String Prairie Heating & Air team with service van in Bastrop County"
 						loading="lazy"
 					/>
-				</div>
-				<div class="gallery-item">
+					<figcaption>Local Bastrop County Crew & Stocked Vans</figcaption>
+				</figure>
+				<figure class="gallery-item">
 					<img
-						src="/Images/ron-working-ac-unit.jpg"
-						alt="Ron working on AC unit repair"
+						src="/Images/ron-working-ac-unit.webp"
+						alt="Ron performing AC unit repair in Bastrop, TX"
 						loading="lazy"
 					/>
-				</div>
-				<div class="gallery-item">
+					<figcaption>AC Diagnostics & Repair — Bastrop, TX</figcaption>
+				</figure>
+				<figure class="gallery-item">
 					<img
-						src="/Images/attic-hvac-installation.jpg"
-						alt="HVAC installation in attic"
+						src="/Images/attic-hvac-installation.webp"
+						alt="Clean attic air handler and ductwork installation in Central Texas"
 						loading="lazy"
 					/>
-				</div>
-				<div class="gallery-item">
+					<figcaption>Attic Air Handler & Ductwork — Rosanky, TX</figcaption>
+				</figure>
+				<figure class="gallery-item">
 					<img
-						src="/Images/service-van-full.jpg"
-						alt="String Prairie branded service van"
+						src="/Images/hvac-work-1.webp"
+						alt="Residential HVAC condenser and system installation in Bastrop County"
 						loading="lazy"
 					/>
-				</div>
+					<figcaption>High-Efficiency System Upgrade — Smithville, TX</figcaption>
+				</figure>
 			</div>
 		</div>
 	</section>
@@ -320,8 +352,7 @@ import Layout from "../layouts/Layout.astro";
 		<div class="container">
 			<h2>What Our Customers Say</h2>
 			<p class="section-subtitle">
-				See why customers trust String Prairie Heating & Air for their
-				HVAC needs
+				See why Bastrop County homeowners trust String Prairie Heating & Air for honest HVAC care
 			</p>
 
 			<div class="reviews-grid">
@@ -335,7 +366,7 @@ import Layout from "../layouts/Layout.astro";
 						fixed our AC issue quickly. Highly recommend String
 						Prairie for any HVAC needs."
 					</p>
-					<div class="review-date">2 months ago</div>
+					<div class="review-date">Bastrop, TX • AC Repair</div>
 				</div>
 
 				<div class="review-card">
@@ -348,7 +379,7 @@ import Layout from "../layouts/Layout.astro";
 						heating system and did an amazing job. Fair pricing and
 						quality work."
 					</p>
-					<div class="review-date">3 months ago</div>
+					<div class="review-date">Bastrop, TX • Heating Installation</div>
 				</div>
 
 				<div class="review-card">
@@ -361,16 +392,17 @@ import Layout from "../layouts/Layout.astro";
 						everything clearly and got our air conditioning working
 						perfectly. Will definitely call them again!"
 					</p>
-					<div class="review-date">1 month ago</div>
+					<div class="review-date">Rosanky, TX • AC Service</div>
 				</div>
 			</div>
 
 			<div class="text-center reviews-buttons" style="margin-top: 2rem;">
+				<a href="/reviews" class="btn btn-outline-blue">Read Customer Reviews</a>
 				<a
 					href="https://www.google.com/maps/place/String+Prairie+Heating+%26+Air/@29.8918229,-97.3320232,17z"
 					target="_blank"
 					rel="noopener noreferrer"
-					class="btn btn-outline-blue">Read More Reviews on Google</a
+					class="btn btn-outline-blue">Google Reviews</a
 				>
 				<a
 					href="https://g.page/r/CeONyk8DcHYfEBM/review"
@@ -389,37 +421,182 @@ import Layout from "../layouts/Layout.astro";
 			justify-content: center;
 			flex-wrap: wrap;
 		}
+		.services-cta-row {
+			display: flex;
+			gap: 1rem;
+			justify-content: center;
+			flex-wrap: wrap;
+		}
+		.service-card li a {
+			color: var(--text-dark);
+			text-decoration: none;
+			font-weight: 500;
+			transition: color 0.2s;
+		}
+		.service-card li a:hover {
+			color: var(--primary-blue);
+			text-decoration: underline;
+		}
+		.brands-section {
+			padding: 4rem 0;
+			background: white;
+			border-top: 1px solid #e5e7eb;
+		}
+		.brands-section h2 {
+			text-align: center;
+			font-size: 2.1rem;
+			margin-bottom: 0.75rem;
+			color: var(--dark-blue);
+			font-weight: 800;
+			text-transform: uppercase;
+		}
+		.brands-grid {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			gap: 0.85rem;
+			max-width: 960px;
+			margin: 0 auto;
+		}
+		.brand-pill {
+			background: var(--bg-light);
+			border: 1px solid rgba(41, 94, 147, 0.2);
+			color: var(--dark-blue);
+			font-weight: 700;
+			padding: 0.7rem 1.35rem;
+			border-radius: 50px;
+			font-size: 1rem;
+		}
+		.gallery-item {
+			margin: 0;
+			position: relative;
+		}
+		.gallery-item figcaption {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			background: linear-gradient(transparent, rgba(11, 58, 105, 0.9));
+			color: white;
+			padding: 1.5rem 0.9rem 0.75rem;
+			font-size: 0.88rem;
+			font-weight: 600;
+		}
+		.home-guides {
+			padding: 4.5rem 0;
+			background: var(--bg-light);
+		}
+		.home-guides h2 {
+			text-align: center;
+			font-size: 2.25rem;
+			color: var(--dark-blue);
+			font-weight: 800;
+			text-transform: uppercase;
+			margin-bottom: 0.75rem;
+		}
+		.guides-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+			gap: 1.5rem;
+			margin-bottom: 2rem;
+		}
+		.guide-card {
+			background: white;
+			padding: 1.75rem;
+			border-radius: 12px;
+			border-top: 4px solid var(--primary-blue);
+			box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+			text-decoration: none;
+			color: inherit;
+			display: flex;
+			flex-direction: column;
+			transition: transform 0.2s;
+		}
+		.guide-card:hover {
+			transform: translateY(-4px);
+		}
+		.guide-card h3 {
+			color: var(--dark-blue);
+			font-size: 1.15rem;
+			font-weight: 700;
+			margin-bottom: 0.6rem;
+		}
+		.guide-card p {
+			color: var(--text-light);
+			font-size: 0.95rem;
+			flex-grow: 1;
+			margin-bottom: 1rem;
+		}
+		.guide-card span {
+			color: var(--primary-blue);
+			font-weight: 700;
+			font-size: 0.9rem;
+		}
 	</style>
 
 	<section class="service-areas">
 		<div class="container">
 			<h2>Serving Bastrop County & Beyond</h2>
 			<p class="section-subtitle">
-				From the historic downtown streets of Bastrop to the rolling
-				hills of String Prairie, we're your neighbors providing reliable
+				From the historic downtown streets of Bastrop and Elgin to the rolling
+				hills of String Prairie and Rosanky, we're your neighbors providing reliable
 				HVAC service throughout Central Texas.
 			</p>
 			<div class="areas-grid">
 				<a href="/service-areas/bastrop" class="area-link">Bastrop</a>
+				<a href="/service-areas/elgin" class="area-link">Elgin</a>
 				<a href="/service-areas/rosanky" class="area-link">Rosanky</a>
-				<a href="/service-areas/smithville" class="area-link"
-					>Smithville</a
-				>
+				<a href="/service-areas/smithville" class="area-link">Smithville</a>
+				<a href="/service-areas/cedar-creek" class="area-link">Cedar Creek</a>
+				<a href="/service-areas/wyldwood" class="area-link">Wyldwood</a>
+				<a href="/service-areas/tahitian-village" class="area-link">Tahitian Village</a>
+				<a href="/service-areas/the-colony" class="area-link">The Colony</a>
+				<a href="/service-areas/circle-d" class="area-link">Circle D</a>
 				<a href="/service-areas/paige" class="area-link">Paige</a>
-				<a href="/service-areas/string-prairie" class="area-link"
-					>String Prairie</a
-				>
-				<a href="/service-areas/red-rock" class="area-link">Red Rock</a>
-				<a href="/service-areas/cedar-creek" class="area-link"
-					>Cedar Creek</a
-				>
 				<a href="/service-areas/mcdade" class="area-link">McDade</a>
+				<a href="/service-areas/camp-swift" class="area-link">Camp Swift</a>
+				<a href="/service-areas/red-rock" class="area-link">Red Rock</a>
+				<a href="/service-areas/string-prairie" class="area-link">String Prairie</a>
 			</div>
 			<p class="areas-note">
 				Located near the Colorado River and Lake Bastrop? We've got you
-				covered. From properties along Highway 71 to rural acreages off
-				FM 20, we service all of Bastrop County.
+				covered. From properties along Highway 71 and Highway 290 to rural acreages off
+				FM 20, <a href="/service-areas" style="color: var(--primary-blue); font-weight: 700;">explore all Bastrop County service areas</a>.
 			</p>
+		</div>
+	</section>
+
+	<section class="home-guides">
+		<div class="container">
+			<h2>Local Bastrop County HVAC Guides</h2>
+			<p class="section-subtitle">
+				Honest pricing, rebates, and Central Texas comfort tips from our licensed technicians
+			</p>
+			<div class="guides-grid">
+				<a href="/blog/bastrop-hvac-rebates-tax-credits" class="guide-card">
+					<h3>Bastrop & Bluebonnet Electric HVAC Rebates & Tax Credits</h3>
+					<p>How Central Texas homeowners can stack federal 25C credits with local electric co-op rebates.</p>
+					<span>Read Guide →</span>
+				</a>
+				<a href="/blog/hvac-repair-costs-bastrop-2026" class="guide-card">
+					<h3>Average HVAC Repair Costs in Bastrop County</h3>
+					<p>Transparent breakdown of common AC and furnace repair prices—capacitors, motors, coils & diagnostics.</p>
+					<span>Read Guide →</span>
+				</a>
+				<a href="/blog/texas-r454b-refrigerant-transition" class="guide-card">
+					<h3>Texas R-454B Refrigerant Transition Explained</h3>
+					<p>What the EPA phaseout of R-410A means for AC repair costs and new system replacements.</p>
+					<span>Read Guide →</span>
+				</a>
+				<a href="/blog/how-long-does-ac-last-texas" class="guide-card">
+					<h3>How Long Does an AC Last in Texas Heat?</h3>
+					<p>Real lifespan expectations in 100°F summers and simple maintenance habits that add years to your unit.</p>
+					<span>Read Guide →</span>
+				</a>
+			</div>
+			<div class="text-center">
+				<a href="/blog" class="btn btn-outline-blue">Browse All HVAC Articles</a>
+			</div>
 		</div>
 	</section>
 

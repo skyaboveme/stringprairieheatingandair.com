@@ -88,7 +88,7 @@ const breadcrumbs = [
 
 				<div class="van-image">
 					<img
-						src="/Images/service-van-full.jpg"
+						src="/Images/service-van-full.webp"
 						alt="String Prairie Heating & Air service van"
 						loading="lazy"
 					/>
@@ -193,18 +193,18 @@ const breadcrumbs = [
 			</div>
 		</div>
 	</section>
-</Layout>
 
-<section class="emergency-banner">
-	<div class="container">
-		<h2>Need Emergency Service?</h2>
-		<p>
-			We understand that HVAC emergencies can't wait. Call us now for fast
-			response.
-		</p>
-		<a href="tel:5129249744" class="emergency-btn">Call (512) 924-9744</a>
-	</div>
-</section>
+	<section class="emergency-banner">
+		<div class="container">
+			<h2>Need Emergency Service?</h2>
+			<p>
+				We understand that HVAC emergencies can't wait. Call us now for fast
+				response.
+			</p>
+			<a href="tel:5129249744" class="emergency-btn">Call (512) 924-9744</a>
+		</div>
+	</section>
+</Layout>
 
 <style>
 	.page-header {
@@ -697,6 +697,12 @@ const breadcrumbs = [
 				});
 
 				if (response.ok && result.success !== "false" && result.success !== false) {
+					if (typeof window.gtag === "function") {
+						window.gtag("event", "generate_lead", {
+							event_category: "contact_form",
+							event_label: form.querySelector("#service")?.value || "general",
+						});
+					}
 					formMessage.style.display = "block";
 					formMessage.className = "form-message success";
 					formMessage.textContent =
